@@ -1,0 +1,62 @@
+export const courses = [
+  {
+    id: '01',
+    level: 'Beginner → Intermediate',
+    title: 'AI Infrastructure Fundamentals',
+    subtitle: 'From DevOps to AI Ops',
+    description:
+      'Master the foundations of GPU computing, container orchestration, and cloud infrastructure for AI teams. Practical cluster setup from day one.',
+    duration: '8 Weeks',
+    format: 'Live + Recorded',
+    cohortSize: '30 Engineers',
+    topics: [
+      'Linux & GPU fundamentals',
+      'Docker & Kubernetes for ML',
+      'GPU monitoring & profiling',
+      'Cloud-native storage for AI',
+      'CI/CD pipelines for models',
+    ],
+    price: '₹24,999',
+    accent: 'cyan',
+  },
+  {
+    id: '02',
+    level: 'Intermediate → Advanced',
+    title: 'LLM Engineering Bootcamp',
+    subtitle: 'Fine-tune, Deploy, Observe',
+    description:
+      'Hands-on training covering the complete LLM lifecycle — from fine-tuning open-source models to serving them at production scale with observability.',
+    duration: '10 Weeks',
+    format: 'Live Cohort',
+    cohortSize: '20 Engineers',
+    topics: [
+      'Transformer architecture deep-dive',
+      'LoRA / QLoRA fine-tuning',
+      'RAG pipeline construction',
+      'vLLM & TensorRT serving',
+      'LLM observability & cost control',
+    ],
+    price: '₹39,999',
+    accent: 'blue',
+  },
+  {
+    id: '03',
+    level: 'Advanced',
+    title: 'MLOps & AI Platform Engineering',
+    subtitle: 'Build the AI Factory',
+    description:
+      'Design and operate end-to-end ML platforms using Ray, Kubeflow, and custom orchestration pipelines. For senior engineers ready to lead AI infra teams.',
+    duration: '12 Weeks',
+    format: 'Live + Mentorship',
+    cohortSize: '15 Engineers',
+    topics: [
+      'Ray distributed computing',
+      'Kubeflow & ML pipelines',
+      'Feature stores & data versioning',
+      'Model governance & registry',
+      'Cost optimization at scale',
+    ],
+    price: '₹54,999',
+    accent: 'purple',
+  },
+]
