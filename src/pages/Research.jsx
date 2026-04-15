@@ -19,7 +19,7 @@ const focusAreas = [
 const papers = [
   { tag: 'Preprint', title: 'MIG-Aware Scheduler for Multi-Tenant LLM Serving', authors: 'Singh R., Menon K., Sharma A. — 2025', desc: 'A scheduler that dynamically allocates NVIDIA MIG slices across LLM serving and training workloads under SLA constraints.' },
   { tag: 'Workshop', title: 'Cost-Efficient RAG: Hybrid Search Without Dimension Overhead', authors: 'Gupta P., Nair S. — EMNLP 2025', desc: 'Demonstrates 60% retrieval cost reduction using hybrid sparse-dense search with learned aggregation weights.' },
-  { tag: 'Blog', title: 'Practical QLoRA at Scale: Lessons from 50 Fine-tuning Runs', authors: 'Mehta V., WD Labs Team — 2026', desc: 'Engineering insights from running QLoRA fine-tuning across multiple Indian-language datasets and model families.' },
+  { tag: 'Blog', title: 'Practical QLoRA at Scale: Lessons from 50 Fine-tuning Runs', authors: 'Mehta V., Single core labs Team — 2026', desc: 'Engineering insights from running QLoRA fine-tuning across multiple Indian-language datasets and model families.' },
 ]
 
 const oss = [
@@ -33,16 +33,31 @@ export default function Research() {
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
       {/* Hero */}
-      <section className="relative pt-48 pb-24 overflow-hidden bg-black">
-        <div className="absolute inset-0 grid-bg opacity-10" />
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
+        {/* Subtle grid and glows */}
+        <div className="absolute inset-0 grid-bg opacity-[0.05]" />
+        
+        {/* Centered glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
+
         <div className="section-container relative z-10 text-center">
           <SectionLabel className="justify-center">Research & Development</SectionLabel>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
+          >
             Advancing Sovereign AI Science
-          </h1>
-          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest"
+          >
             Engineering powered by active AI systems research.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -57,13 +72,14 @@ export default function Research() {
                 key={title}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white/5 border border-white/5 p-10 flex gap-8 items-start rounded-3xl backdrop-blur-sm"
+                className="card-surface p-10 flex flex-col md:flex-row gap-8 items-start group cursor-default"
               >
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/10 text-white shrink-0">
-                  <Icon className="w-6 h-6" />
+                <div className="relative w-16 h-16 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all duration-500">
+                  <div className="absolute inset-0 bg-accent-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Icon className="w-7 h-7 relative z-10" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-light text-white mb-3 tracking-tight">{title}</h3>
+                  <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">{title}</h3>
                   <p className="text-zinc-500 text-sm leading-relaxed">{desc}</p>
                 </div>
               </motion.div>

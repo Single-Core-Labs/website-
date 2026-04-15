@@ -230,7 +230,7 @@ export default function Home() {
         <div className="section-container">
           <div className="text-center mb-16">
             <SectionLabel className="justify-center">Our Advantage</SectionLabel>
-            <h2 className="font-sans text-4xl lg:text-5xl font-bold text-text-primary">Why WD Labs</h2>
+            <h2 className="font-sans text-4xl lg:text-5xl font-bold text-text-primary">Why Single core labs</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
             {[

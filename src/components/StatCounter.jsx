@@ -31,12 +31,12 @@ export default function StatCounter({ value, label, suffix = '' }) {
   }, [isVisible, value])
 
   return (
-    <div ref={ref} className="text-center lg:text-left">
-      <div className="text-5xl lg:text-6xl font-extrabold text-accent-primary tracking-tighter tabular-nums mb-2">
+    <div ref={ref} className="text-center lg:text-left group">
+      <div className="text-5xl lg:text-7xl font-light text-white tracking-tighter tabular-nums mb-2 group-hover:text-accent-cyan transition-colors">
         {count}
         {suffix}
       </div>
-      <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-text-muted">{label}</p>
+      <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-zinc-500 group-hover:text-zinc-400 transition-colors">{label}</p>
     </div>
   )
 }

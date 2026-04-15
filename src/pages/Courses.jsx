@@ -13,7 +13,7 @@ const pageVariants = {
 
 const testimonials = [
   { name: 'Arjun Mehta', role: 'Backend Engineer → AI Infra Lead, Fintech Startup', body: 'The LLM Bootcamp was incredibly hands-on. Within 3 months I went from writing REST APIs to leading our LLM fine-tuning infrastructure. The instructors are exactly the kind of engineers you want to learn from.' },
-  { name: 'Priya Sharma', role: 'Data Analyst → MLOps Engineer, HealthTech', body: 'The curriculum is dense in the best way — real production scenarios, real clusters. No toybox examples. WD Labs treated us like engineers, not students.' },
+  { name: 'Priya Sharma', role: 'Data Analyst → MLOps Engineer, HealthTech', body: 'The curriculum is dense in the best way — real production scenarios, real clusters. No toybox examples. Single core labs treated us like engineers, not students.' },
   { name: 'Rohan Kapoor', role: 'Software Engineer → GPU Infra Engineer, Defense Tech', body: 'I had zero knowledge about Kubernetes or GPU management. After 8 weeks I was running distributed training jobs on an actual H100 cluster. Life-changing.' },
 ]
 

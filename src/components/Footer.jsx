@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-1">
           <Link to="/" className="flex items-center gap-3 mb-6">
-            <span className="font-black text-2xl text-white tracking-tighter">WD</span>
+            <span className="font-black text-2xl text-white tracking-tighter">Single core labs</span>
           </Link>
           <p className="text-sm text-zinc-500 leading-relaxed mb-8 max-w-xs">
             Deep capability areas covering the full AI infrastructure lifecycle — from bare‑metal GPU clusters to production LLM observability.
@@ -77,8 +77,8 @@ export default function Footer() {
           <ul className="space-y-4 text-sm font-medium text-zinc-400">
             <li>Pune, Maharashtra</li>
             <li className="pt-2">
-              <a href="mailto:hello@wd.ai" className="hover:text-white transition-colors">
-                hello@wd.ai
+              <a href="mailto:hello@singlecorelabs.ai" className="hover:text-white transition-colors">
+                hello@singlecorelabs.ai
               </a>
             </li>
             <li>
@@ -93,7 +93,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5 max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
         <p className="text-xs font-medium text-zinc-600 uppercase tracking-widest">
-          &copy; {new Date().getFullYear()} WD. All rights reserved.
+          &copy; {new Date().getFullYear()} Single core labs. All rights reserved.
         </p>
         <p className="text-xs font-medium text-zinc-500 uppercase tracking-widest">
           intelligence meets instinct.

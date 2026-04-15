@@ -16,16 +16,31 @@ export default function Services() {
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
       {/* Page hero */}
-      <section className="relative pt-48 pb-24 overflow-hidden bg-black">
-        <div className="absolute inset-0 grid-bg opacity-10" />
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
+        {/* Subtle grid and glows */}
+        <div className="absolute inset-0 grid-bg opacity-[0.05]" />
+        
+        {/* Centered glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
+
         <div className="section-container relative z-10 text-center">
           <SectionLabel className="justify-center">Core Engineering</SectionLabel>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
+          >
             Deep AI Capabilities
-          </h1>
-          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed uppercase font-mono text-sm tracking-widest">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed uppercase font-mono text-sm tracking-widest"
+          >
             Six deep capability areas that cover the full AI infrastructure lifecycle
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -56,12 +71,12 @@ export default function Services() {
                 key={step}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white/5 border border-white/5 p-10 relative group rounded-3xl backdrop-blur-sm"
+                className="card-surface p-10 relative group rounded-3xl backdrop-blur-sm cursor-default"
               >
-                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.25em] mb-4">Step {step}</div>
-                <h3 className="text-2xl font-light text-white mb-3 tracking-tight">{title}</h3>
+                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.25em] mb-4 group-hover:text-accent-cyan transition-colors">Step {step}</div>
+                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">{title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{desc}</p>
-                <div className="absolute top-10 right-10 text-6xl font-black text-white/[0.02] select-none pointer-events-none">{step}</div>
+                <div className="absolute top-10 right-10 text-6xl font-black text-white/[0.02] select-none pointer-events-none group-hover:text-accent-cyan/[0.05] transition-colors">{step}</div>
               </motion.div>
             ))}
           </div>

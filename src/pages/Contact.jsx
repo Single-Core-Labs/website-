@@ -47,16 +47,31 @@ export default function Contact() {
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
       {/* Hero */}
-      <section className="relative pt-48 pb-24 overflow-hidden bg-black">
-        <div className="absolute inset-0 grid-bg opacity-10" />
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
+        {/* Subtle grid and glows */}
+        <div className="absolute inset-0 grid-bg opacity-[0.05]" />
+        
+        {/* Centered glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
+
         <div className="section-container relative z-10 text-center">
           <SectionLabel className="justify-center">Contact Us</SectionLabel>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
+          >
             Let's Build Something Great
-          </h1>
-          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest"
+          >
             Book a free architecture consultation.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -71,32 +86,35 @@ export default function Contact() {
             <h2 className="text-4xl font-light text-white mb-10 tracking-tight">Contact Details</h2>
 
             <div className="space-y-10 mb-16">
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 shadow-2xl">
-                  <MapPin className="w-6 h-6" />
+              <div className="flex gap-6 items-start group">
+                <div className="relative w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all duration-500 shadow-2xl">
+                  <div className="absolute inset-0 bg-accent-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <MapPin className="w-6 h-6 relative z-10" />
                 </div>
                 <div>
-                  <p className="text-xl font-light text-white mb-1">Our Studio</p>
+                  <p className="text-xl font-light text-white mb-1 group-hover:text-accent-cyan transition-colors">Our Studio</p>
                   <p className="text-zinc-500">Pune, Maharashtra<br />India</p>
                 </div>
               </div>
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 shadow-2xl">
-                  <Mail className="w-6 h-6" />
+              <div className="flex gap-6 items-start group">
+                <div className="relative w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all duration-500 shadow-2xl">
+                  <div className="absolute inset-0 bg-accent-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Mail className="w-6 h-6 relative z-10" />
                 </div>
                 <div>
-                  <p className="text-xl font-light text-white mb-1">General Inquiries</p>
-                  <a href="mailto:hello@wd.ai" className="text-zinc-500 hover:text-white transition-colors font-medium">
-                    hello@wd.ai
+                  <p className="text-xl font-light text-white mb-1 group-hover:text-accent-cyan transition-colors">General Inquiries</p>
+                  <a href="mailto:hello@singlecorelabs.ai" className="text-zinc-500 hover:text-white transition-colors font-medium">
+                    hello@singlecorelabs.ai
                   </a>
                 </div>
               </div>
-              <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 shadow-2xl">
-                  <Phone className="w-6 h-6" />
+              <div className="flex gap-6 items-start group">
+                <div className="relative w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all duration-500 shadow-2xl">
+                  <div className="absolute inset-0 bg-accent-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Phone className="w-6 h-6 relative z-10" />
                 </div>
                 <div>
-                  <p className="text-xl font-light text-white mb-1">Call Us</p>
+                  <p className="text-xl font-light text-white mb-1 group-hover:text-accent-cyan transition-colors">Call Us</p>
                   <a href="tel:+919999999999" className="text-zinc-500 hover:text-white transition-colors font-medium">
                     +91 99999 99999
                   </a>
@@ -115,7 +133,7 @@ export default function Contact() {
                 ].map(({ icon: Icon, label, href }) => (
                   <a
                     key={label} href={href} target="_blank" rel="noreferrer"
-                    className="flex items-center gap-2 px-6 py-2 rounded-full border border-white/5 bg-white/5 text-white/40 hover:bg-white/10 hover:text-white transition-all duration-300 font-medium text-xs"
+                    className="flex items-center gap-2 px-6 py-2 rounded-full border border-white/5 bg-white/5 text-white/40 hover:bg-white/10 hover:text-white hover:border-white/10 transition-all duration-300 font-medium text-xs"
                   >
                     <Icon className="w-3.5 h-3.5" />{label}
                   </a>
@@ -124,9 +142,9 @@ export default function Contact() {
             </div>
 
             {/* Message note */}
-            <div className="mt-16 p-8 rounded-3xl bg-white/5 border border-white/5 text-zinc-500">
-              <p className="text-[10px] font-mono uppercase tracking-[0.25em] mb-3">Availability</p>
-              <p className="text-base font-light leading-relaxed">
+            <div className="mt-16 p-8 rounded-3xl bg-white/5 border border-white/5 text-zinc-500 group hover:border-white/10 transition-colors">
+              <p className="text-[10px] font-mono uppercase tracking-[0.25em] mb-3 group-hover:text-accent-cyan transition-colors">Availability</p>
+              <p className="text-base font-light leading-relaxed group-hover:text-zinc-300 transition-colors">
                 We respond to all inquiries within 24 business hours. For urgent matters, please mark your email as [URGENT].
               </p>
             </div>
@@ -135,7 +153,7 @@ export default function Contact() {
           {/* Right — form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-            className="bg-zinc-950/50 border border-white/5 p-10 lg:p-16 rounded-3xl backdrop-blur-sm"
+            className="card-surface p-10 lg:p-16 rounded-3xl backdrop-blur-sm"
           >
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-20">

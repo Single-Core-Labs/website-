@@ -3,24 +3,19 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
-const links = [
+const linksLeft = [
+  { to: '/', label: 'Home' },
   { to: '/services', label: 'Services' },
-  { to: '/#how-it-works', label: 'How it works' },
-  { to: '/research', label: 'AI Security' },
-  { to: '/integrations', label: 'Integrations' },
-  { to: '/courses', label: 'Resources' },
+]
+
+const linksRight = [
+  { to: '/research', label: 'Research' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   // Close mobile menu on route change
   useEffect(() => { setMobileOpen(false) }, [location])
@@ -28,30 +23,21 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className="fixed top-6 left-0 right-0 z-50 w-full px-6 md:px-12 flex items-center justify-between pointer-events-none"
+        initial={{ y: -100, x: '-50%' }}
+        animate={{ y: 0, x: '-50%' }}
+        className="fixed top-8 left-1/2 z-50 flex items-center bg-zinc-950/80 backdrop-blur-xl border border-white/10 p-1.5 rounded-full shadow-2xl"
       >
-        {/* Brand/Logo - Left Side */}
-        <div className="flex items-center gap-2 shrink-0 pointer-events-auto">
-          <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-display font-medium text-2xl text-white tracking-tight group-hover:text-accent-secondary transition-colors">
-              qintara
-            </span>
-          </Link>
-        </div>
-
-        {/* Centered Pill Navigation */}
-        <nav className="hidden md:flex items-center bg-zinc-900/40 backdrop-blur-xl rounded-full px-1.5 py-1.5 border border-white/5 shadow-2xl absolute left-1/2 -translate-x-1/2 pointer-events-auto">
-          {links.map(({ to, label }) => (
+        {/* Desktop Nav - Unified Centered Pill */}
+        <nav className="hidden md:flex items-center gap-1">
+          {linksLeft.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               end={to === '/'}
               className={({ isActive }) =>
-                `px-5 py-2 rounded-full text-[13px] font-medium transition-all duration-300 ${
+                `px-6 py-2 rounded-full text-[12px] font-medium tracking-wide transition-all duration-300 ${
                   isActive 
-                    ? 'text-white bg-white/5' 
+                    ? 'text-white bg-white/10' 
                     : 'text-zinc-400 hover:text-white'
                 }`
               }
@@ -59,16 +45,52 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
+
+          {/* Centered Logo */}
+          <Link to="/" className="flex items-center justify-center px-6 group border-x border-white/5 mx-2">
+            <motion.span 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="font-display font-light text-xl text-white tracking-tight group-hover:text-accent-cyan transition-colors whitespace-nowrap"
+            >
+              Single core labs
+            </motion.span>
+          </Link>
+
+          {linksRight.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              className={({ isActive }) =>
+                `px-6 py-2 rounded-full text-[12px] font-medium tracking-wide transition-all duration-300 ${
+                  isActive 
+                    ? 'text-white bg-white/10' 
+                    : 'text-zinc-400 hover:text-white'
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+          
+          {/* Subtle separator and CTA */}
+          <div className="w-px h-4 bg-white/10 mx-2" />
+          <Link to="/contact" className="px-6 py-2 rounded-full text-[11px] uppercase tracking-wider font-bold bg-white text-black hover:bg-zinc-200 transition-colors">
+            Start
+          </Link>
         </nav>
 
-        {/* CTA - Right Side */}
-        <div className="flex items-center gap-4 justify-end pointer-events-auto">
-          <Link to="/contact" className="hidden sm:block bg-white text-black text-[13px] font-semibold py-2.5 px-7 rounded-full hover:bg-zinc-200 transition-colors">
-            Get started
+        {/* Mobile View - Compact Pill */}
+        <div className="md:hidden flex items-center gap-4 px-4 py-2">
+          <Link to="/" className="group">
+            <span className="font-display font-light text-lg text-white tracking-tight group-hover:text-accent-cyan transition-colors whitespace-nowrap">
+              Single core labs
+            </span>
           </Link>
-          
+          <div className="w-px h-4 bg-white/10" />
           <button
-            className="md:hidden text-white p-2 hover:bg-white/5 rounded-full transition-colors"
+            className="text-white p-1 hover:bg-white/5 rounded-full transition-colors"
             onClick={() => setMobileOpen((o) => !o)}
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -80,26 +102,26 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-x-4 top-24 z-40 bg-zinc-900 border border-white/10 p-8 rounded-3xl flex flex-col items-center gap-6"
+            initial={{ opacity: 0, y: -20, x: '-50%' }}
+            animate={{ opacity: 1, y: 0, x: '-50%' }}
+            exit={{ opacity: 0, y: -20, x: '-50%' }}
+            className="fixed inset-x-6 top-28 left-1/2 z-40 w-[calc(100%-3rem)] max-w-sm bg-zinc-900/90 backdrop-blur-2xl border border-white/10 p-8 rounded-3xl flex flex-col items-center gap-6 shadow-2xl"
           >
-            {links.map(({ to, label }) => (
+            {[...linksLeft, ...linksRight].map(({ to, label }) => (
               <NavLink
                 key={to}
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `text-2xl font-display font-medium ${
-                    isActive ? 'text-white' : 'text-zinc-500'
+                  `text-2xl font-medium transition-colors ${
+                    isActive ? 'text-white' : 'text-zinc-500 hover:text-white'
                   }`
                 }
               >
                 {label}
               </NavLink>
             ))}
-            <Link to="/contact" className="w-full text-center bg-white text-black py-4 rounded-full font-bold">Get started</Link>
+            <Link to="/contact" className="w-full text-center bg-white text-black py-4 rounded-full font-bold shadow-xl hover:bg-zinc-200 transition-colors">Get started</Link>
           </motion.div>
         )}
       </AnimatePresence>
