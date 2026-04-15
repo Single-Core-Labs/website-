@@ -17,25 +17,25 @@ export default function ServiceCard({ service, index = 0 }) {
       className="card-surface p-10 group cursor-default"
     >
       {/* Icon - Rounded with soft background */}
-      <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-accent-primary/5 mb-8 group-hover:bg-accent-primary group-hover:text-white transition-all duration-500">
+      <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white/5 mb-8 group-hover:bg-white group-hover:text-black transition-all duration-500">
         <Icon className="w-7 h-7" />
       </div>
 
-      <h3 className="text-2xl font-extrabold text-text-primary mb-2 tracking-tight">
+      <h3 className="text-2xl font-light text-white mb-2 tracking-tight">
         {service.title}
       </h3>
-      <p className="text-accent-primary font-bold text-xs uppercase tracking-widest mb-4">
+      <p className="text-zinc-500 font-mono text-[10px] uppercase tracking-widest mb-4">
         {service.subtitle}
       </p>
-      <p className="text-text-secondary text-sm leading-relaxed mb-8">
+      <p className="text-zinc-500 text-sm leading-relaxed mb-8">
         {service.description}
       </p>
 
       {/* Capabilities */}
       <ul className="space-y-3 mb-8">
         {service.capabilities.map((cap) => (
-          <li key={cap} className="flex items-center gap-3 text-sm text-text-secondary font-medium">
-            <div className="w-1.5 h-1.5 rounded-full bg-accent-primary/40" />
+          <li key={cap} className="flex items-center gap-3 text-sm text-zinc-400 font-medium">
+            <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
             {cap}
           </li>
         ))}

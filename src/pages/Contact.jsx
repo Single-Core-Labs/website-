@@ -41,66 +41,63 @@ export default function Contact() {
   }
 
   const inputClass = (field) =>
-    `w-full bg-white border ${errors[field] ? 'border-red-500' : 'border-black/10'} rounded-2xl px-6 py-4 text-base text-text-primary placeholder:text-text-faint focus:outline-none focus:border-accent-primary/60 focus:ring-4 focus:ring-accent-primary/5 transition-all shadow-soft overflow-hidden`
+    `w-full bg-white/5 border ${errors[field] ? 'border-red-500' : 'border-white/10'} rounded-2xl px-6 py-4 text-base text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/40 focus:ring-4 focus:ring-white/5 transition-all overflow-hidden`
 
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
       {/* Hero */}
-      <section className="relative pt-48 pb-24 overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-20" />
+      <section className="relative pt-48 pb-24 overflow-hidden bg-black">
+        <div className="absolute inset-0 grid-bg opacity-10" />
         <div className="section-container relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-primary/5 border border-accent-primary/10 rounded-full mb-8">
-            <div className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
-            <span className="text-xs font-extrabold text-accent-primary uppercase tracking-[0.2em]">Contact Us</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-text-primary max-w-4xl mx-auto leading-[0.9] tracking-[0.05em]">
-            Let's <span className="text-accent-primary">Build</span> Something Great
+          <SectionLabel className="justify-center">Contact Us</SectionLabel>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
+            Let's Build Something Great
           </h1>
-          <p className="text-text-secondary text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed">
-            Book a free architecture consultation. We'll assess your stack and design a clear roadmap — no commitment required.
+          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest">
+            Book a free architecture consultation.
           </p>
         </div>
       </section>
 
       {/* Main split */}
-      <section className="section-padding">
+      <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16">
 
           {/* Left — info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h2 className="text-4xl font-extrabold text-text-primary mb-10 tracking-tight">Contact Details</h2>
+            <h2 className="text-4xl font-light text-white mb-10 tracking-tight">Contact Details</h2>
 
             <div className="space-y-10 mb-16">
               <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-accent-primary/5 text-accent-primary shrink-0">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 shadow-2xl">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xl font-extrabold text-text-primary mb-1">Our Studio</p>
-                  <p className="text-text-secondary">Pune, Maharashtra<br />India</p>
+                  <p className="text-xl font-light text-white mb-1">Our Studio</p>
+                  <p className="text-zinc-500">Pune, Maharashtra<br />India</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-accent-primary/5 text-accent-primary shrink-0">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 shadow-2xl">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xl font-extrabold text-text-primary mb-1">General Inquiries</p>
-                  <a href="mailto:hello@singlecore.ai" className="text-text-secondary hover:text-accent-primary transition-colors font-bold">
-                    hello@singlecore.ai
+                  <p className="text-xl font-light text-white mb-1">General Inquiries</p>
+                  <a href="mailto:hello@wd.ai" className="text-zinc-500 hover:text-white transition-colors font-medium">
+                    hello@wd.ai
                   </a>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-accent-primary/5 text-accent-primary shrink-0">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 shadow-2xl">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xl font-extrabold text-text-primary mb-1">Call Us</p>
-                  <a href="tel:+919999999999" className="text-text-secondary hover:text-accent-primary transition-colors font-bold">
+                  <p className="text-xl font-light text-white mb-1">Call Us</p>
+                  <a href="tel:+919999999999" className="text-zinc-500 hover:text-white transition-colors font-medium">
                     +91 99999 99999
                   </a>
                 </div>
@@ -109,7 +106,7 @@ export default function Contact() {
 
             {/* Social */}
             <div>
-              <p className="text-[10px] font-extrabold text-text-faint uppercase tracking-[0.25em] mb-6">Social Networks</p>
+              <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-6">Social Networks</p>
               <div className="flex flex-wrap gap-4">
                 {[
                   { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
@@ -118,7 +115,7 @@ export default function Contact() {
                 ].map(({ icon: Icon, label, href }) => (
                   <a
                     key={label} href={href} target="_blank" rel="noreferrer"
-                    className="flex items-center gap-2 px-6 py-2 rounded-full border border-black/5 bg-white shadow-soft hover:bg-accent-primary hover:text-white transition-all duration-300 font-bold text-xs"
+                    className="flex items-center gap-2 px-6 py-2 rounded-full border border-white/5 bg-white/5 text-white/40 hover:bg-white/10 hover:text-white transition-all duration-300 font-medium text-xs"
                   >
                     <Icon className="w-3.5 h-3.5" />{label}
                   </a>
@@ -127,9 +124,9 @@ export default function Contact() {
             </div>
 
             {/* Message note */}
-            <div className="mt-16 p-8 rounded-4xl bg-accent-primary/5 text-accent-primary shadow-glow-accent/10">
-              <p className="text-[10px] font-extrabold uppercase tracking-[0.25em] mb-3">Availability</p>
-              <p className="text-base font-medium leading-relaxed">
+            <div className="mt-16 p-8 rounded-3xl bg-white/5 border border-white/5 text-zinc-500">
+              <p className="text-[10px] font-mono uppercase tracking-[0.25em] mb-3">Availability</p>
+              <p className="text-base font-light leading-relaxed">
                 We respond to all inquiries within 24 business hours. For urgent matters, please mark your email as [URGENT].
               </p>
             </div>
@@ -138,7 +135,7 @@ export default function Contact() {
           {/* Right — form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-            className="card-surface p-10 lg:p-16 shadow-premium"
+            className="bg-zinc-950/50 border border-white/5 p-10 lg:p-16 rounded-3xl backdrop-blur-sm"
           >
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-20">
@@ -206,12 +203,12 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="btn-primary w-full py-5 text-base shadow-premium disabled:opacity-60 disabled:cursor-not-allowed group transition-all"
+                  className="w-full py-5 text-base bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all disabled:opacity-60 disabled:cursor-not-allowed group"
                 >
                   {loading ? (
-                    <span className="flex items-center gap-3"><span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Processing...</span>
+                    <span className="flex items-center justify-center gap-3"><span className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" /> Processing...</span>
                   ) : (
-                    <span className="flex items-center gap-3">Send Message <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></span>
+                    <span className="flex items-center justify-center gap-3">Send Message <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></span>
                   )}
                 </button>
 

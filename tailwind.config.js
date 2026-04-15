@@ -5,24 +5,25 @@ export default {
     extend: {
       colors: {
         bg: {
-          primary: '#F9FBFF',
-          secondary: '#F1F4F9',
-          tertiary: '#E5EAF3',
-          surface: '#FFFFFF',
-          surface2: '#F8FAFC',
+          primary: '#000000',
+          secondary: '#0A0A0A',
+          tertiary: '#121212',
+          surface: '#18181B',
+          surface2: '#27272A',
         },
         accent: {
-          primary: '#6366F1',
-          secondary: '#8B5CF6',
+          primary: '#FFFFFF',
+          secondary: '#E4E4E7',
           blue: '#3B82F6',
           cyan: '#06B6D4',
-          glow: 'rgba(99, 102, 241, 0.15)',
+          purple: '#A855F7',
+          glow: 'rgba(255, 255, 255, 0.1)',
         },
         text: {
-          primary: '#111827',
-          secondary: '#374151',
-          muted: '#6B7280',
-          faint: '#9CA3AF',
+          primary: '#FFFFFF',
+          secondary: '#A1A1AA',
+          muted: '#71717A',
+          faint: '#52525B',
         },
       },
       fontFamily: {
@@ -30,8 +31,8 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {
-        'vignette-glow': 'radial-gradient(circle at center, transparent 0%, rgba(99, 102, 241, 0.03) 100%)',
-        'subtle-grid': 'linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px)',
+        'vignette-glow': 'radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.03) 100%)',
+        'subtle-grid': 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
       },
       borderRadius: {
         '4xl': '2rem',
