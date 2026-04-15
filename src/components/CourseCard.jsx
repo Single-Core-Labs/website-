@@ -39,7 +39,7 @@ export default function CourseCard({ course, index = 0 }) {
 
       <Link
         to="/contact"
-        className="relative w-full py-4 text-sm bg-white text-black font-bold rounded-full hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all text-center overflow-hidden"
+        className="relative w-full py-4 text-sm bg-black text-white font-bold rounded-full border border-white/10 hover:border-white/40 transition-all text-center overflow-hidden"
       >
         Enroll Now
       </Link>

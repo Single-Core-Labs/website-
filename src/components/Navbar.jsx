@@ -25,7 +25,7 @@ export default function Navbar() {
       <motion.header
         initial={{ y: -100, x: '-50%' }}
         animate={{ y: 0, x: '-50%' }}
-        className="fixed top-8 left-1/2 z-50 flex items-center bg-zinc-950/80 backdrop-blur-xl border border-white/10 p-1.5 rounded-full shadow-2xl"
+        className="fixed top-8 left-1/2 z-50 flex items-center bg-black/80 backdrop-blur-xl border border-white/10 p-1.5 rounded-full shadow-2xl"
       >
         {/* Desktop Nav - Unified Centered Pill */}
         <nav className="hidden md:flex items-center gap-1">
@@ -76,7 +76,7 @@ export default function Navbar() {
           
           {/* Subtle separator and CTA */}
           <div className="w-px h-4 bg-white/10 mx-2" />
-          <Link to="/contact" className="px-6 py-2 rounded-full text-[11px] uppercase tracking-wider font-bold bg-white text-black hover:bg-zinc-200 transition-colors">
+          <Link to="/contact" className="px-6 py-2 rounded-full text-[11px] uppercase tracking-wider font-bold bg-black text-white border border-white/10 hover:border-white/40 transition-all">
             Start
           </Link>
         </nav>
@@ -105,7 +105,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20, x: '-50%' }}
             animate={{ opacity: 1, y: 0, x: '-50%' }}
             exit={{ opacity: 0, y: -20, x: '-50%' }}
-            className="fixed inset-x-6 top-28 left-1/2 z-40 w-[calc(100%-3rem)] max-w-sm bg-zinc-900/90 backdrop-blur-2xl border border-white/10 p-8 rounded-3xl flex flex-col items-center gap-6 shadow-2xl"
+            className="fixed inset-x-6 top-28 left-1/2 z-40 w-[calc(100%-3rem)] max-w-sm bg-black/95 backdrop-blur-2xl border border-white/10 p-8 rounded-3xl flex flex-col items-center gap-6 shadow-2xl"
           >
             {[...linksLeft, ...linksRight].map(({ to, label }) => (
               <NavLink
@@ -121,7 +121,7 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
-            <Link to="/contact" className="w-full text-center bg-white text-black py-4 rounded-full font-bold shadow-xl hover:bg-zinc-200 transition-colors">Get started</Link>
+            <Link to="/contact" className="w-full text-center bg-black text-white py-4 rounded-full font-bold shadow-xl border border-white/10 hover:border-white/40 transition-all">Get started</Link>
           </motion.div>
         )}
       </AnimatePresence>

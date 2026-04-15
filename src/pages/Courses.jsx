@@ -68,7 +68,7 @@ export default function Courses() {
                 key={step}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white/5 border border-white/5 p-10 flex flex-col gap-4 rounded-3xl"
+                className="bg-black border border-white/5 p-10 flex flex-col gap-4 rounded-3xl group hover:border-white/10 transition-colors"
               >
                 <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.25em]">Phase {step}</div>
                 <h3 className="text-2xl font-light text-white tracking-tight">{title}</h3>
@@ -90,9 +90,9 @@ export default function Courses() {
                 key={m.name}
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8 }}
-                className="bg-white/5 border border-white/5 p-10 flex items-center gap-6 rounded-3xl"
+                className="bg-black border border-white/5 p-10 flex items-center gap-6 rounded-3xl group hover:border-white/10 transition-colors"
               >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl bg-white text-black shrink-0">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl bg-black text-white border border-white/10 shrink-0">
                   {m.initials}
                 </div>
                 <div>
@@ -116,7 +116,7 @@ export default function Courses() {
                 key={t.name}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8 }}
-                className="bg-zinc-950/50 border border-white/5 p-10 flex flex-col rounded-3xl"
+                className="bg-black border border-white/5 p-10 flex flex-col rounded-3xl group hover:border-white/10 transition-colors"
               >
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, j) => (
@@ -144,8 +144,8 @@ export default function Courses() {
           <p className="text-zinc-500 text-sm max-w-2xl mx-auto mb-12 font-mono uppercase tracking-widest">
             Limited seats per cohort. Apply now to secure shared cluster access.
           </p>
-          <Link to="/contact" className="bg-white text-black py-4 px-12 rounded-full font-bold hover:bg-zinc-200 transition-all">
-            Apply to Cohort
+          <Link to="/contact" className="bg-black text-white py-4 px-12 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all">
+            Join the Next Cohort
           </Link>
         </div>
       </section>

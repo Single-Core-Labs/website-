@@ -25,28 +25,31 @@ export default function Services() {
 
         <div className="section-container relative z-10 text-center">
           <SectionLabel className="justify-center">Core Engineering</SectionLabel>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
+            className="bg-white px-10 py-6 inline-block mb-10 rounded-3xl"
           >
-            Deep AI Capabilities
-          </motion.h1>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-black max-w-4xl mx-auto leading-[1.1] tracking-tight">
+              Deep AI Capabilities
+            </h1>
+          </motion.div>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed uppercase font-mono text-sm tracking-widest"
           >
-            Six deep capability areas that cover the full AI infrastructure lifecycle
+            Six deep capability areas covering the full AI infrastructure lifecycle
           </motion.p>
         </div>
       </section>
 
       {/* Full cards grid */}
-      <section className="section-padding bg-bg-secondary">
-        <div className="section-container">
+      <section className="section-padding bg-bg-secondary relative overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-[0.02]" />
+        <div className="section-container relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
           </div>
@@ -90,7 +93,7 @@ export default function Services() {
             <SectionLabel>Get Started</SectionLabel>
             <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight">Ready to architect your AI stack?</h2>
           </div>
-          <Link to="/contact" className="bg-white text-black py-4 px-10 rounded-full font-bold hover:bg-zinc-200 transition-all shrink-0">
+          <Link to="/contact" className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all shrink-0">
             Book a Consultation
           </Link>
         </div>

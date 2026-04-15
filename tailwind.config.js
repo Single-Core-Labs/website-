@@ -6,10 +6,10 @@ export default {
       colors: {
         bg: {
           primary: '#000000',
-          secondary: '#050505',
-          tertiary: '#0A0A0A',
-          surface: '#0F0F0F',
-          surface2: '#1A1A1A',
+          secondary: '#000000',
+          tertiary: '#000000',
+          surface: '#000000',
+          surface2: '#000000',
         },
         accent: {
           primary: '#FFFFFF',

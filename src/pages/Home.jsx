@@ -115,7 +115,7 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="flex justify-center"
           >
-            <Link to="/contact" className="group flex items-center gap-3 bg-white text-black py-3 px-8 rounded-full font-medium text-sm hover:bg-zinc-200 transition-all">
+            <Link to="/contact" className="group flex items-center gap-3 bg-black text-white py-3 px-8 rounded-full font-medium text-sm border border-white/10 hover:border-white/40 transition-all">
               See it in action <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
@@ -134,7 +134,9 @@ export default function Home() {
       <section className="section-padding bg-bg-secondary overflow-hidden border-t border-white/5">
         <div className="section-container relative">
           <SectionLabel>Core Capabilities</SectionLabel>
-          <h2 className="text-4xl lg:text-5xl font-light text-white mb-6 tracking-tight">Deep AI Capabilities</h2>
+          <div className="bg-white px-8 py-4 inline-block mb-8 rounded-2xl">
+            <h2 className="text-4xl lg:text-5xl font-display font-light text-black tracking-tight">Deep AI Capabilities</h2>
+          </div>
           <p className="text-zinc-500 text-lg max-w-2xl mb-16 leading-relaxed">
             Six deep capability areas that cover the full AI infrastructure lifecycle — from bare‑metal GPU clusters to production LLM observability.
           </p>
@@ -186,14 +188,14 @@ export default function Home() {
                 <a 
                   href="https://www.linkedin.com/in/manavsutar/" 
                   target="_blank" rel="noreferrer"
-                  className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-zinc-900 shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 font-bold text-sm text-white"
+                  className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-black shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 font-bold text-sm text-white"
                 >
                   <Linkedin className="w-5 h-5 text-[#0077B5]" /> LinkedIn
                 </a>
                 <a 
                   href="https://infraflowai.substack.com/" 
                   target="_blank" rel="noreferrer"
-                  className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-zinc-900 shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 font-bold text-sm text-white"
+                  className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-black shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 font-bold text-sm text-white"
                 >
                   <Shield className="w-5 h-5 text-zinc-400" /> InfraFlowAI
                 </a>
@@ -213,7 +215,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
-                  className="p-8 rounded-3xl bg-bg-secondary border border-black/5 shadow-soft hover:border-accent-primary/20 transition-all"
+                  className="p-8 rounded-3xl bg-black border border-white/5 shadow-soft hover:border-accent-cyan/20 transition-all"
                 >
                   <h4 className="font-medium text-white mb-2">{item.title}</h4>
                   <p className="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
@@ -282,7 +284,7 @@ export default function Home() {
           <p className="font-mono text-zinc-500 text-sm max-w-md mx-auto mb-10">
             Book a free 30-minute architecture consultation. We'll assess your stack and design a clear roadmap.
           </p>
-          <Link to="/contact" className="bg-white text-black py-4 px-10 rounded-full font-bold hover:bg-zinc-200 transition-all">
+          <Link to="/contact" className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all">
             Start the Conversation
           </Link>
         </div>

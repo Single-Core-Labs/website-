@@ -99,13 +99,13 @@ export default function Research() {
                 key={p.title}
                 initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8 }}
-                className="bg-zinc-950/50 border border-white/5 p-10 flex flex-col lg:flex-row gap-10 items-start rounded-3xl"
+                className="bg-black border border-white/5 p-10 flex flex-col lg:flex-row gap-10 items-start rounded-3xl group hover:border-white/10 transition-colors"
               >
-                <span className="px-4 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-mono uppercase tracking-widest shrink-0 border border-white/5">{p.tag}</span>
+                <span className="px-4 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-mono uppercase tracking-widest shrink-0 border border-white/5 group-hover:text-accent-cyan group-hover:border-accent-cyan/20 transition-all">{p.tag}</span>
                 <div>
-                  <h3 className="text-2xl font-light text-white mb-2 tracking-tight">{p.title}</h3>
+                  <h3 className="text-2xl font-light text-white mb-2 tracking-tight group-hover:text-accent-cyan transition-colors">{p.title}</h3>
                   <p className="text-xs font-medium text-zinc-600 uppercase tracking-widest mb-6">{p.authors}</p>
-                  <p className="text-zinc-500 text-sm leading-relaxed">{p.desc}</p>
+                  <p className="text-zinc-500 text-sm leading-relaxed group-hover:text-zinc-400 transition-colors">{p.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -144,7 +144,7 @@ export default function Research() {
             <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight">Partner with our research team</h2>
             <p className="text-zinc-500 text-sm mt-4 max-w-2xl font-mono uppercase tracking-widest">University collaborations and industry partnerships available.</p>
           </div>
-          <Link to="/contact" className="bg-white text-black py-4 px-10 rounded-full font-bold hover:bg-zinc-200 transition-all shrink-0">
+          <Link to="/contact" className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all shrink-0">
             Get in Touch
           </Link>
         </div>

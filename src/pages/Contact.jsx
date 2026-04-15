@@ -221,7 +221,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-5 text-base bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all disabled:opacity-60 disabled:cursor-not-allowed group"
+                  className="w-full py-5 text-base bg-black text-white font-bold rounded-full border border-white/10 hover:border-white/40 transition-all disabled:opacity-60 disabled:cursor-not-allowed group"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center gap-3"><span className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" /> Processing...</span>
