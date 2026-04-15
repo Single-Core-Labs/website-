@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, BookOpen, Cpu, Network, FlaskConical } from 'lucide-react'
+import { Cpu, Network, FlaskConical, BookOpen } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 
 const pageVariants = {
@@ -14,12 +14,6 @@ const focusAreas = [
   { icon: Network, title: 'Distributed Training', desc: 'Multi-node, multi-GPU training architectures using FSDP, DeepSpeed, and custom gradient communication protocols.' },
   { icon: FlaskConical, title: 'LLM Evaluation', desc: 'Rigorous, reproducible evaluation pipelines for fine-tuned models — from accuracy benchmarks to domain-specific red-teaming.' },
   { icon: BookOpen, title: 'AI Systems Research', desc: 'Foundational research on AI resource scheduling, memory-efficient training, and energy-aware GPU allocation.' },
-]
-
-const oss = [
-  { name: 'sovereign-cluster', desc: 'Terraform modules for deploying sovereign GPU clusters on Indian cloud providers.' },
-  { name: 'llm-bench-india', desc: 'Benchmarking suite for evaluating LLMs on Indian-language tasks and compliance scenarios.' },
-  { name: 'mig-scheduler', desc: 'Open-source MIG-aware scheduler for Kubernetes, supporting fractional GPU allocation policies.' },
 ]
 
 export default function Research() {
@@ -42,7 +36,7 @@ export default function Research() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
           >
-            Advancing Sovereign AI Science
+            AI Research That Powers Real Products
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -77,29 +71,6 @@ export default function Research() {
                   <p className="text-zinc-500 text-sm leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OSS */}
-      <section className="section-padding bg-bg-secondary">
-        <div className="section-container">
-          <SectionLabel>Open Source</SectionLabel>
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-text-primary mb-16 tracking-tight">Our Contributions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {oss.map((o, i) => (
-              <motion.a
-                key={o.name} href="https://github.com" target="_blank" rel="noreferrer"
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="card-surface p-8 group block"
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-base font-extrabold text-accent-secondary tracking-tight group-hover:scale-110 transition-transform origin-left">{o.name}</span>
-                </div>
-                <p className="text-text-secondary text-sm leading-relaxed">{o.desc}</p>
-              </motion.a>
             ))}
           </div>
         </div>

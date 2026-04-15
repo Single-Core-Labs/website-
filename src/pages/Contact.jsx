@@ -115,8 +115,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xl font-light text-white mb-1 group-hover:text-accent-cyan transition-colors">Call Us</p>
-                  <a href="tel:+919999999999" className="text-zinc-500 hover:text-white transition-colors font-medium">
-                    +91 99999 99999
+                  <a href="tel:+917517570046" className="text-zinc-500 hover:text-white transition-colors font-medium">
+                    +91 75175 70046
                   </a>
                 </div>
               </div>

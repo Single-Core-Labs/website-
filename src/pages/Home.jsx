@@ -50,8 +50,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-sans font-light text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white mb-8 max-w-4xl mx-auto">
-              When intelligence reaches out <br />
-              to instinct, the future takes shape
+              We build AI products and own the tech side with you
             </h1>
           </motion.div>
 
@@ -61,8 +60,7 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-zinc-400 font-mono text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-wider"
           >
-            an unlikely alliance — where human intuition <br />
-            and algorithmic precision move as one
+            Custom builds · Ready-to-deploy products · Fractional CTO
           </motion.p>
 
           <motion.div
@@ -221,7 +219,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-display font-light text-black tracking-tight">Deep AI Capabilities</h2>
           </div>
           <p className="text-zinc-500 text-lg max-w-2xl mb-16 leading-relaxed">
-            Six deep capability areas that cover the full AI infrastructure lifecycle — from bare‑metal GPU clusters to production LLM observability.
+            The technical muscle behind every engagement — from bare-metal GPU clusters to production LLM observability.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
@@ -321,7 +319,7 @@ export default function Home() {
             {[
               { num: '01', icon: Shield, title: 'Sovereign by Design', desc: 'Total control of your IP, models, and customer data. Infrastructure that gives you ownership, free from centralized vendor lock-in and opaque pricing.' },
               { num: '02', icon: FlaskConical, title: 'Research-Backed Engineering', desc: 'Solutions grounded in active research — not copy-pasted workflows. We leverage the latest AI systems research to optimize model inference and orchestration.' },
-              { num: '03', icon: Cpu, title: 'Cost-Optimized GPUs', desc: 'Fractional GPU partitioning and cluster balancing dramatically reduce overhead for AI operations, making enterprise AI accessible at every scale.' },
+              { num: '03', icon: Cpu, title: 'Skin in the Game', desc: 'We work on base build cost + revenue share. We don\'t just deliver and disappear — we grow when you grow, so our incentives are fully aligned with yours.' },
             ].map(({ num, icon: Icon, title, desc }, i) => (
               <motion.div
                 key={num}
@@ -361,11 +359,11 @@ export default function Home() {
         <div className="section-container py-32 text-center">
           <p className="font-mono text-xs text-zinc-500 uppercase tracking-[3px] mb-4">{'> Ready to build?'}</p>
           <h2 className="font-sans text-4xl lg:text-6xl font-light text-white mb-8 max-w-2xl mx-auto">
-            Ready to build your<br />
-            AI cloud?
+            Let's build your<br />
+            next AI product.
           </h2>
           <p className="font-mono text-zinc-500 text-sm max-w-md mx-auto mb-10">
-            Book a free 30-minute architecture consultation. We'll assess your stack and design a clear roadmap.
+            Book a free 30-minute consultation. We'll understand your problem and tell you exactly how we'd solve it.
           </p>
           <Link to="/contact" className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all">
             Start the Conversation

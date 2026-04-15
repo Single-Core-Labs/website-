@@ -41,7 +41,7 @@ export default function Services() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed uppercase font-mono text-sm tracking-widest"
           >
-            Six deep capability areas covering the full AI infrastructure lifecycle
+            The technical muscle behind every engagement
           </motion.p>
         </div>
       </section>
