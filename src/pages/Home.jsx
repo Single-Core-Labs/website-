@@ -1,79 +1,18 @@
-import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Shield, FlaskConical, Cpu, Linkedin } from 'lucide-react'
+import LightPillar from '../components/LightPillar'
 import SectionLabel from '../components/SectionLabel'
 import ServiceCard from '../components/ServiceCard'
 import FAQAccordion from '../components/FAQAccordion'
 import { services } from '../data/services'
 import { faq } from '../data/faq'
 
-/* ---------- Hero animated grid canvas ---------- */
-function HeroCanvas() {
-  const canvasRef = useRef(null)
-  const mouse = useRef({ x: -9999, y: -9999 })
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    const ctx = canvas.getContext('2d')
-    let animId
-
-    function resize() {
-      canvas.width = canvas.offsetWidth
-      canvas.height = canvas.offsetHeight
-    }
-    resize()
-    window.addEventListener('resize', resize)
-
-    const onMouseMove = (e) => {
-      const rect = canvas.getBoundingClientRect()
-      mouse.current = { x: e.clientX - rect.left, y: e.clientY - rect.top }
-    }
-    window.addEventListener('mousemove', onMouseMove)
-
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-      const spacing = 40
-      const cols = Math.ceil(canvas.width / spacing) + 1
-      const rows = Math.ceil(canvas.height / spacing) + 1
-
-      for (let i = 0; i < cols; i++) {
-        for (let j = 0; j < rows; j++) {
-          const x = i * spacing
-          const y = j * spacing
-          const dx = x - mouse.current.x
-          const dy = y - mouse.current.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          const radius = Math.max(0, 1.5 - dist / 120)
-          const alpha = Math.max(0.04, Math.min(0.6, radius))
-          ctx.beginPath()
-          ctx.arc(x, y, Math.max(0.8, radius * 2), 0, Math.PI * 2)
-          ctx.fillStyle = `rgba(0, 212, 255, ${alpha})`
-          ctx.fill()
-        }
-      }
-      animId = requestAnimationFrame(draw)
-    }
-    draw()
-
-    return () => {
-      cancelAnimationFrame(animId)
-      window.removeEventListener('resize', resize)
-      window.removeEventListener('mousemove', onMouseMove)
-    }
-  }, [])
-
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
-}
-
-/* ---------- Page ---------- */
 const pageVariants = {
   initial: { opacity: 0 },
   animate: { opacity: 1, transition: { duration: 0.5 } },
   exit: { opacity: 0, transition: { duration: 0.3 } },
 }
-
-const headline = 'Build Strategies. Deploy Intelligence. Own Your Cloud.'.split(' ')
 
 export default function Home() {
   return (
@@ -81,16 +20,33 @@ export default function Home() {
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        {/* Subtle grid and glows */}
-        <div className="absolute inset-0 grid-bg opacity-[0.05]" />
-        
-        {/* Centered glow like the reference */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
 
+        {/* Layer 1 — LightPillar fills the entire hero */}
+        <div className="absolute inset-0 pointer-events-none">
+          <LightPillar
+            topColor="#5227FF"
+            bottomColor="#FF9FFC"
+            intensity={1}
+            rotationSpeed={0.3}
+            glowAmount={0.002}
+            pillarWidth={3}
+            pillarHeight={0.4}
+            noiseIntensity={0.5}
+            pillarRotation={25}
+            interactive={false}
+            mixBlendMode="screen"
+            quality="high"
+          />
+        </div>
+
+        {/* Layer 2 — subtle vignette to keep text readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 pointer-events-none" />
+
+        {/* Layer 3 — content */}
         <div className="section-container relative z-10 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-sans font-light text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white mb-8 max-w-4xl mx-auto">
@@ -100,34 +56,27 @@ export default function Home() {
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-zinc-500 font-mono text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-wider"
+            className="text-zinc-400 font-mono text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-wider"
           >
             an unlikely alliance — where human intuition <br />
             and algorithmic precision move as one
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }} 
-            animate={{ opacity: 1, scale: 1 }} 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             className="flex justify-center"
           >
-            <Link to="/contact" className="group flex items-center gap-3 bg-black text-white py-3 px-8 rounded-full font-medium text-sm border border-white/10 hover:border-white/40 transition-all">
+            <Link to="/contact" className="group flex items-center gap-3 bg-black/60 backdrop-blur-sm text-white py-3 px-8 rounded-full font-medium text-sm border border-white/20 hover:border-white/50 transition-all">
               See it in action <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>
 
-        {/* Artistic hands / Graphic placeholder - Absolute bottom positioning */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[300px] md:h-[400px] opacity-30 pointer-events-none select-none">
-           <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl animate-pulse" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-purple-500 blur-2xl" />
-           </div>
-        </div>
       </section>
 
       {/* ─── SERVICES ─── */}
