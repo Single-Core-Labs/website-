@@ -79,6 +79,140 @@ export default function Home() {
 
       </section>
 
+      {/* ─── OUR SERVICES ─── */}
+      <section className="section-padding bg-black border-t border-white/5">
+        <div className="section-container">
+
+          {/* Header */}
+          <div className="mb-16">
+            <SectionLabel>Our Services</SectionLabel>
+            <h2 className="font-sans font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-4">
+              Building AI products and solutions<br className="hidden lg:block" /> that drive real business value.
+            </h2>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            {/* Card 1 — Custom Software Builds */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0, ease: [0.16, 1, 0.3, 1] }}
+              className="card-surface p-10 flex flex-col group"
+            >
+              <div className="flex-1">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-4">01</p>
+                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                  Custom Software Builds
+                </h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+                  Have a specific problem? Budget of $5k? Forward-deployed engineers will understand your challenge and build a custom solution.
+                </p>
+                <ul className="space-y-3 mb-10">
+                  {[
+                    'Prototypes delivered within 24 hours of a clear scope',
+                  ].map(item => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-400">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
+              >
+                Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            {/* Card 2 — Ready-to-Deploy AI Products */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="card-surface p-10 flex flex-col group relative overflow-hidden"
+            >
+              {/* Subtle highlight on this card */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-transparent pointer-events-none" />
+              <div className="flex-1 relative">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-4">02</p>
+                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                  Ready-to-Deploy AI Products
+                </h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+                  Plug-and-play, modular solutions we originally built as internal tools or for client projects. Each one is production-tested, configurable, and ready to drop into your stack.
+                </p>
+                <ul className="space-y-3 mb-10">
+                  {[
+                    'Skip the build phase. Go live within 72 hours',
+                  ].map(item => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-400">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-wrap gap-3 relative">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all"
+                >
+                  Get in touch <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 border border-white/5 rounded-full px-6 py-3 hover:text-white hover:border-white/20 transition-all"
+                >
+                  Explore Solutions
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Card 3 — Fractional CTO */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="card-surface p-10 flex flex-col group"
+            >
+              <div className="flex-1">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-4">03</p>
+                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                  Fractional CTO / Technical Co-founders
+                </h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+                  Not looking for a vendor. Looking for someone who owns the tech side with you. Base build cost + revenue share — we grow when you grow.
+                </p>
+                <ul className="space-y-3 mb-10">
+                  {[
+                    'Product strategy, architecture, and execution. All handled',
+                  ].map(item => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-400">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
+              >
+                Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ─── SERVICES ─── */}
       <section className="section-padding bg-bg-secondary overflow-hidden border-t border-white/5">
         <div className="section-container relative">

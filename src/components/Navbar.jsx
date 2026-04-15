@@ -46,15 +46,22 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-          {/* Centered Logo */}
-          <Link to="/" className="flex items-center justify-center px-6 group border-x border-white/5 mx-2">
-            <motion.span 
+          {/* Centered Logo — image + name */}
+          <Link to="/" className="flex items-center gap-2.5 px-6 group border-x border-white/5 mx-2">
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-display font-light text-xl text-white tracking-tight group-hover:text-accent-cyan transition-colors whitespace-nowrap"
+              className="flex items-center gap-2.5"
             >
-              Single core labs
-            </motion.span>
+              <img
+                src={`${import.meta.env.BASE_URL}assets/logo.png`}
+                alt="Single core labs"
+                className="w-7 h-7 object-contain"
+              />
+              <span className="font-display font-light text-xl text-white tracking-tight group-hover:text-accent-cyan transition-colors whitespace-nowrap">
+                Single core labs
+              </span>
+            </motion.div>
           </Link>
 
           {linksRight.map(({ to, label }) => (
@@ -83,7 +90,12 @@ export default function Navbar() {
 
         {/* Mobile View - Compact Pill */}
         <div className="md:hidden flex items-center gap-4 px-4 py-2">
-          <Link to="/" className="group">
+          <Link to="/" className="flex items-center gap-2 group">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/logo.png`}
+              alt="Single core labs"
+              className="w-6 h-6 object-contain"
+            />
             <span className="font-display font-light text-lg text-white tracking-tight group-hover:text-accent-cyan transition-colors whitespace-nowrap">
               Single core labs
             </span>

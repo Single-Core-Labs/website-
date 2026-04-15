@@ -16,12 +16,6 @@ const focusAreas = [
   { icon: BookOpen, title: 'AI Systems Research', desc: 'Foundational research on AI resource scheduling, memory-efficient training, and energy-aware GPU allocation.' },
 ]
 
-const papers = [
-  { tag: 'Preprint', title: 'MIG-Aware Scheduler for Multi-Tenant LLM Serving', authors: 'Singh R., Menon K., Sharma A. — 2025', desc: 'A scheduler that dynamically allocates NVIDIA MIG slices across LLM serving and training workloads under SLA constraints.' },
-  { tag: 'Workshop', title: 'Cost-Efficient RAG: Hybrid Search Without Dimension Overhead', authors: 'Gupta P., Nair S. — EMNLP 2025', desc: 'Demonstrates 60% retrieval cost reduction using hybrid sparse-dense search with learned aggregation weights.' },
-  { tag: 'Blog', title: 'Practical QLoRA at Scale: Lessons from 50 Fine-tuning Runs', authors: 'Mehta V., Single core labs Team — 2026', desc: 'Engineering insights from running QLoRA fine-tuning across multiple Indian-language datasets and model families.' },
-]
-
 const oss = [
   { name: 'sovereign-cluster', desc: 'Terraform modules for deploying sovereign GPU clusters on Indian cloud providers.' },
   { name: 'llm-bench-india', desc: 'Benchmarking suite for evaluating LLMs on Indian-language tasks and compliance scenarios.' },
@@ -81,31 +75,6 @@ export default function Research() {
                 <div>
                   <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">{title}</h3>
                   <p className="text-zinc-500 text-sm leading-relaxed">{desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Papers */}
-      <section className="section-padding bg-black border-t border-white/5">
-        <div className="section-container">
-          <SectionLabel>Publications</SectionLabel>
-          <h2 className="text-4xl lg:text-5xl font-light text-white mb-16 tracking-tight">Published Work</h2>
-          <div className="space-y-8">
-            {papers.map((p, i) => (
-              <motion.div
-                key={p.title}
-                initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8 }}
-                className="bg-black border border-white/5 p-10 flex flex-col lg:flex-row gap-10 items-start rounded-3xl group hover:border-white/10 transition-colors"
-              >
-                <span className="px-4 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-mono uppercase tracking-widest shrink-0 border border-white/5 group-hover:text-accent-cyan group-hover:border-accent-cyan/20 transition-all">{p.tag}</span>
-                <div>
-                  <h3 className="text-2xl font-light text-white mb-2 tracking-tight group-hover:text-accent-cyan transition-colors">{p.title}</h3>
-                  <p className="text-xs font-medium text-zinc-600 uppercase tracking-widest mb-6">{p.authors}</p>
-                  <p className="text-zinc-500 text-sm leading-relaxed group-hover:text-zinc-400 transition-colors">{p.desc}</p>
                 </div>
               </motion.div>
             ))}
