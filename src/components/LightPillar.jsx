@@ -28,11 +28,24 @@ const LightPillar = ({
   const timeRef = useRef(0);
   const rotationSpeedRef = useRef(rotationSpeed);
   const [webGLSupported, setWebGLSupported] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const canvas = document.createElement('canvas');
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
     if (!gl) setWebGLSupported(false);
+  }, []);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -241,6 +254,10 @@ const LightPillar = ({
     const frameTime = 1000 / targetFPS;
 
     const animate = currentTime => {
+      if (!isVisible) {
+        rafRef.current = requestAnimationFrame(animate);
+        return;
+      }
       if (!materialRef.current || !rendererRef.current || !sceneRef.current || !cameraRef.current) return;
       const deltaTime = currentTime - lastTime;
       if (deltaTime >= frameTime) {
@@ -290,7 +307,7 @@ const LightPillar = ({
       geometryRef.current = null;
       rafRef.current = null;
     };
-  }, [webGLSupported, quality]);
+  }, [webGLSupported, quality, isVisible]);
 
   useEffect(() => { rotationSpeedRef.current = rotationSpeed; }, [rotationSpeed]);
 
