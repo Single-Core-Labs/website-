@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import Research from './pages/Research'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -24,6 +25,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-bg-primary flex flex-col">
         <Navbar />
         <main className="flex-1">

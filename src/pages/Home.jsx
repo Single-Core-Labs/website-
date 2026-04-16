@@ -237,76 +237,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── LEADERSHIP ─── */}
-      <section className="section-padding bg-black relative overflow-hidden border-t border-white/5">
-        <div className="section-container relative z-10">
-          <SectionLabel>Leadership</SectionLabel>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
-            {/* Founder Text */}
-            <div className="lg:col-span-7">
-              <h2 className="text-5xl lg:text-6xl font-light text-white mb-8 tracking-tight">
-                Manav Sutar
-              </h2>
-              <p className="text-accent-primary font-bold text-lg uppercase tracking-widest mb-10">
-                Founder & CTO
-              </p>
-              
-              <div className="space-y-6 text-zinc-500 text-lg leading-relaxed max-w-2xl mb-12">
-                <p>
-                  A Bachelor of Engineering from <span className="text-white font-medium">BITS Pilani</span>, Manav is dedicated to bridging the gap between AI research and production systems.
-                </p>
-                <p>
-                  As a Technical Lead, KitOps Champion, and MiniMax Ambassador, he specializes in identifying and resolving bottlenecks in distributed AI systems — from bare-metal GPU clusters to production-grade LLM observability.
-                </p>
-                <p>
-                  Through his publication <span className="text-white font-medium italic">InfraFlowAI</span>, he actively contributes to the global AI ecosystem, making complex infrastructure simple and actionable for the next generation of engineers.
-                </p>
-              </div>
 
-              {/* Founder CTA / Socials */}
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="https://www.linkedin.com/in/manavsutar/" 
-                  target="_blank" rel="noreferrer"
-                  className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-black shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 font-bold text-sm text-white"
-                >
-                  <Linkedin className="w-5 h-5 text-[#0077B5]" /> LinkedIn
-                </a>
-                <a 
-                  href="https://infraflowai.substack.com/" 
-                  target="_blank" rel="noreferrer"
-                  className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-black shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 font-bold text-sm text-white"
-                >
-                  <Shield className="w-5 h-5 text-zinc-400" /> InfraFlowAI
-                </a>
-              </div>
-            </div>
-
-            {/* Expertise Cards Sidebar */}
-            <div className="lg:col-span-5 grid grid-cols-1 gap-6">
-              {[
-                { title: 'AI Infrastructure', desc: 'Expertise in bare-metal GPU orchestration and sovereign cloud design.' },
-                { title: 'Distributed Systems', desc: 'Optimization for high-scale AI workloads and inference throughput.' },
-                { title: 'Applied MLOps', desc: 'Building seamless pipelines from research papers to production APIs.' }
-              ].map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.6 }}
-                  className="p-8 rounded-3xl bg-black border border-white/5 shadow-soft hover:border-accent-cyan/20 transition-all"
-                >
-                  <h4 className="font-medium text-white mb-2">{item.title}</h4>
-                  <p className="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* ─── WHY US ─── */}
       <section className="section-padding border-t border-white/[0.06] bg-bg-secondary">
