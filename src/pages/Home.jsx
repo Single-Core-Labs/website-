@@ -94,12 +94,9 @@ export default function Home() {
           <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-12">
             Backed by Engineers & Researchers from
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="flex flex-wrap justify-center gap-10 md:gap-20 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
             <div className="flex justify-center">
               <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Bank of America</span>
-            </div>
-            <div className="flex justify-center">
-              <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">HackerOne</span>
             </div>
             <div className="flex justify-center">
               <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">GlobalLogic</span>
