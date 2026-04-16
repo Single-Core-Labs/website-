@@ -27,13 +27,13 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-1">
           <Link to="/" className="inline-block mb-6">
-            <span className="font-black text-2xl text-white tracking-tighter">Single core labs</span>
+            <span className="font-display font-light text-xl text-white tracking-tight">Single core labs</span>
           </Link>
           <p className="text-sm text-zinc-500 leading-relaxed mb-8 max-w-xs">
-            Deep capability areas covering the full AI infrastructure lifecycle — from bare‑metal GPU clusters to production LLM observability.
+            We translate deep expertise in building frontier models and agents into enterprise solutions. Combining our platform, experienced teams, and advanced processes to accelerate your AI transformation journey.
           </p>
           <div className="flex gap-3">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white transition-all duration-300">
+            <a href="https://www.linkedin.com/company/single-core-labs/" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white transition-all duration-300">
               <Linkedin className="w-4 h-4" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center bg-white/5 text-zinc-400 hover:bg-white/10 hover:text-white transition-all duration-300">

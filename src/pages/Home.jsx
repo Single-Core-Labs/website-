@@ -139,8 +139,37 @@ export default function Home() {
               AI for the Enterprise
             </h2>
             <p className="text-zinc-500 text-lg max-w-xl mx-auto">
-              Full-Stack AI Solutions — outcomes delivered with world-class data, models, agents, and deployment.
+              Enterprise AI solutions built by engineers who've shipped production AI at the world's leading labs.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── HOW WE DELIVER VALUE ─── */}
+      <section className="py-32 bg-black border-t border-white/[0.06]">
+        <div className="section-container">
+          <div className="text-center mb-16">
+            <SectionLabel className="justify-center">Why Us</SectionLabel>
+            <h2 className="font-display text-4xl lg:text-5xl font-light text-white mt-4 mb-4 tracking-tight">
+              How We Deliver Value
+            </h2>
+            <p className="text-zinc-500 text-lg max-w-2xl mx-auto">
+              We translate deep expertise in building frontier models and agents into enterprise solutions. Combining our platform, experienced teams, and advanced processes to accelerate your AI transformation journey.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-2xl bg-black border border-white/10">
+              <h3 className="text-lg font-semibold text-white mb-2">AI Native Expertise</h3>
+              <p className="text-zinc-500 text-sm">Founded to accelerate AI adoption. Our platform powers nearly every leading AI model, helping enterprises capture real business value.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-black border border-white/10">
+              <h3 className="text-lg font-semibold text-white mb-2">Dedicated Engineering Teams</h3>
+              <p className="text-zinc-500 text-sm">Our dedicated AI engineering teams work with you side-by-side to deliver powerful solutions.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-black border border-white/10">
+              <h3 className="text-lg font-semibold text-white mb-2">Frontier Research</h3>
+              <p className="text-zinc-500 text-sm">We evaluate the latest LLMs and perform frontier research to stay at the cutting edge.</p>
+            </div>
           </div>
         </div>
       </section>
