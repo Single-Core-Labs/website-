@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import LightPillar from '../components/LightPillar'
 import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
+import StarBorder from '../components/StarBorder'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -62,14 +63,9 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="flex justify-center"
           >
-            <a
-              href={googleFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 bg-black/60 backdrop-blur-sm text-white py-3 px-8 rounded-full font-medium text-sm border border-white/20 hover:border-white/50 transition-all"
-            >
-              See it in action <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <StarBorder as="a" href={googleFormUrl} color="#5227FF" speed="4s" className="text-white font-medium text-sm flex items-center gap-2">
+              See it in action <ArrowRight className="w-4 h-4" />
+            </StarBorder>
           </motion.div>
         </div>
       </section>
@@ -84,6 +80,24 @@ export default function Home() {
             <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Bank of America</span>
             <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">GlobalLogic</span>
             <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Cognizant</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── AGENTIC SOLUTIONS ─── */}
+      <section className="py-32 bg-black border-t border-white/[0.06]">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionLabel className="justify-center">Applied AI</SectionLabel>
+            <h2 className="font-display text-4xl lg:text-5xl font-light text-white mt-4 mb-6 tracking-tight">
+              Agentic Solutions
+            </h2>
+            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+              Convert your proprietary data and domain expertise into intelligent agents that evolve through continuous human feedback. Build AI systems that don't just respond — they learn, adapt, and improve with every interaction.
+            </p>
+            <StarBorder as={Link} to="/enterprise/agentic" color="#5227FF" speed="4s" className="inline-flex items-center gap-2 font-medium">
+              Explore Agentic Solutions <ArrowRight className="w-4 h-4" />
+            </StarBorder>
           </div>
         </div>
       </section>
@@ -113,14 +127,9 @@ export default function Home() {
           <p className="font-mono text-zinc-500 text-sm max-w-md mx-auto mb-10">
             Book a free 30-minute consultation. We'll understand your problem and tell you exactly how we'd solve it.
           </p>
-          <a
-            href={googleFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all"
-          >
+          <StarBorder as="a" href={googleFormUrl} color="#5227FF" speed="4s" className="font-bold">
             Start the Conversation
-          </a>
+          </StarBorder>
         </div>
       </section>
 
