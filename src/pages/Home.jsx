@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Shield, FlaskConical, Cpu } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import LightPillar from '../components/LightPillar'
 import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
@@ -45,7 +45,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-sans font-light text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white mb-8 max-w-4xl mx-auto">
-              We build AI products and own the tech side with you
+              Building AI Infrastructure for Engineering Teams
             </h1>
           </motion.div>
           <motion.p
@@ -54,7 +54,7 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-zinc-400 font-mono text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-wider"
           >
-            Custom builds · Ready-to-deploy products · Fractional CTO
+            Research-driven · Production-ready · Built to scale
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -91,7 +91,7 @@ export default function Home() {
       {/* ─── AI FOR THE ENTERPRISE ─── */}
       <section className="section-padding border-t border-white/[0.06] bg-black">
         <div className="section-container">
-          <div className="text-center mb-16">
+          <div className="text-center">
             <SectionLabel className="justify-center">Enterprise</SectionLabel>
             <h2 className="font-display text-4xl lg:text-6xl font-light text-white mt-4 mb-4 tracking-tight">
               AI for the Enterprise
@@ -99,27 +99,6 @@ export default function Home() {
             <p className="text-zinc-500 text-lg max-w-xl mx-auto">
               Full-Stack AI Solutions — outcomes delivered with world-class data, models, agents, and deployment.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
-            {[
-              { num: '01', icon: Shield, title: 'Sovereign by Design', desc: 'Total control of your IP, models, and customer data. Infrastructure that gives you ownership, free from centralized vendor lock-in and opaque pricing.' },
-              { num: '02', icon: FlaskConical, title: 'Research-Backed Engineering', desc: 'Solutions grounded in active research — not copy-pasted workflows. We leverage the latest AI systems research to optimize model inference and orchestration.' },
-              { num: '03', icon: Cpu, title: 'Skin in the Game', desc: "We work on base build cost + revenue share. We don't just deliver and disappear — we grow when you grow, so our incentives are fully aligned with yours." },
-            ].map(({ num, icon: Icon, title, desc }, i) => (
-              <motion.div
-                key={num}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="px-8 py-10 text-center flex flex-col items-center"
-              >
-                <div className="font-display text-6xl font-light text-white/[0.06] mb-4 leading-none">{num}</div>
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center border border-white/10 mb-5">
-                  <Icon className="w-5 h-5 text-accent-cyan" />
-                </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-4">{title}</h3>
-                <p className="font-mono text-sm text-zinc-500 leading-relaxed max-w-xs">{desc}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
