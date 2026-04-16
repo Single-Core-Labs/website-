@@ -6,10 +6,16 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-framer': ['framer-motion'],
-          'vendor-three': ['three'],
-          'vendor-icons': ['lucide-react'],
+        manualChunks(id) {
+          if (id.includes('framer-motion')) {
+            return 'vendor-framer';
+          }
+          if (id.includes('three')) {
+            return 'vendor-three';
+          }
+          if (id.includes('lucide-react')) {
+            return 'vendor-icons';
+          }
         },
       },
     },

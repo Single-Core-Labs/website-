@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Shield, FlaskConical, Cpu, Linkedin } from 'lucide-react'
+import { 
+  ArrowRight, Shield, FlaskConical, Cpu, Linkedin,
+  Terminal, CreditCard, Cloud, Activity, Brain, 
+  ShoppingBag, Lock, Dna 
+} from 'lucide-react'
 import LightPillar from '../components/LightPillar'
 import SectionLabel from '../components/SectionLabel'
 import ServiceCard from '../components/ServiceCard'
@@ -128,7 +132,7 @@ export default function Home() {
               </div>
               <a
                 href={googleFormUrl}
-                target="_blank"
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
               >
@@ -168,7 +172,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3 relative">
                 <a
                   href={googleFormUrl}
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all"
                 >
@@ -212,7 +216,7 @@ export default function Home() {
               </div>
               <a
                 href={googleFormUrl}
-                target="_blank"
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
               >
@@ -247,6 +251,64 @@ export default function Home() {
               View All Services <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ─── INDUSTRY EXPERTISE ─── */}
+      <section className="section-padding bg-black border-t border-white/5 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-cyan/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="section-container relative z-10">
+          <div className="text-center mb-20">
+            <SectionLabel className="justify-center">Industry Expertise</SectionLabel>
+            <h2 className="font-sans font-light text-4xl lg:text-6xl text-white tracking-tight mt-4">
+              Domains We Power
+            </h2>
+            <p className="text-zinc-500 text-lg max-w-2xl mx-auto mt-6">
+              From regulated industries to cutting-edge tech, we architect solutions that scale across diverse ecosystems.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
+            {[
+              { label: 'DevOps & Infra', icon: Terminal },
+              { label: 'FinTech', icon: CreditCard },
+              { label: 'Cloud Computing', icon: Cloud },
+              { label: 'Healthcare', icon: Activity },
+              { label: 'AI Research', icon: Brain },
+              { label: 'E-commerce', icon: ShoppingBag },
+              { label: 'Cybersecurity', icon: Lock },
+              { label: 'BioTech', icon: Dna },
+            ].map((domain, i) => (
+              <motion.div
+                key={domain.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05, duration: 0.5 }}
+                className="group relative"
+              >
+                <div className="card-surface p-8 h-full flex flex-col items-center justify-center text-center border-white/[0.03] hover:border-accent-cyan/30 transition-all duration-500">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-accent-cyan/10 group-hover:border-accent-cyan/20 transition-all">
+                    <domain.icon className="w-5 h-5 text-zinc-400 group-hover:text-accent-cyan transition-colors" />
+                  </div>
+                  <h3 className="text-sm md:text-base font-medium text-zinc-400 group-hover:text-white transition-colors">
+                    {domain.label}
+                  </h3>
+                  
+                  {/* Subtle hover line */}
+                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent-cyan/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="mt-20 text-center">
+            <p className="text-zinc-600 font-mono text-[10px] uppercase tracking-[0.3em]">
+              & + many more industry specific applications
+            </p>
+          </div>
         </div>
       </section>
 
