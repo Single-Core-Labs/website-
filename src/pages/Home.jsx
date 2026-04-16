@@ -88,6 +88,29 @@ export default function Home() {
 
       </section>
 
+      {/* ─── TRUST BAR ─── */}
+      <section className="py-20 bg-black border-y border-white/5">
+        <div className="section-container">
+          <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-12">
+            Backed by Engineers & Researchers from
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="flex justify-center">
+              <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Bank of America</span>
+            </div>
+            <div className="flex justify-center">
+              <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">HackerOne</span>
+            </div>
+            <div className="flex justify-center">
+              <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">GlobalLogic</span>
+            </div>
+            <div className="flex justify-center">
+              <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Cognizant</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── OUR SERVICES ─── */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
