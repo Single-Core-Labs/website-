@@ -65,10 +65,12 @@
 @layer components {
   .btn-primary {
     @apply inline-flex items-center gap-2 px-8 py-3 bg-black text-white font-medium text-sm rounded-full border border-white/10 transition-all duration-300 hover:border-white/40 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:-translate-y-0.5;
+    will-change: transform, border-color;
   }
 
   .btn-secondary {
     @apply inline-flex items-center gap-2 px-8 py-3 bg-black/40 text-white font-medium text-sm rounded-full border border-white/5 backdrop-blur-md transition-all duration-300 hover:bg-white/[0.02] hover:border-white/10;
+    will-change: background-color, border-color;
   }
 
   .section-container {
@@ -87,6 +89,9 @@
 
   .card-surface {
     @apply bg-black border border-white/5 shadow-soft rounded-4xl transition-all duration-500 overflow-hidden backdrop-blur-sm;
+    will-change: transform, border-color, box-shadow;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .card-surface:hover {
@@ -107,6 +112,12 @@
 }
 
 @layer utilities {
+  .gpu {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
   .text-gradient-blue {
     background: linear-gradient(135deg, #00d4ff, #0066ff);
     -webkit-background-clip: text;

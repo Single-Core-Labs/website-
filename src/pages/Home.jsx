@@ -237,7 +237,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── PRODUCTS PREVIEW ─── */}
+      <section className="section-padding bg-black border-t border-white/5">
+        <div className="section-container">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <SectionLabel>Products</SectionLabel>
+              <h2 className="font-sans font-light text-4xl lg:text-5xl text-white tracking-tight mt-4">
+                Proprietary tools built for <br />
+                the next generation of AI.
+              </h2>
+            </div>
+            <Link to="/products" className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-2">
+              Learn more about our products <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card-surface p-1 relative overflow-hidden group h-[400px]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative h-full border border-white/5 rounded-[20px] p-8 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                    <Cpu className="w-6 h-6 text-accent-cyan" />
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-3">Model Orchestration Engine</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed max-w-sm">
+                    Automated deployment and scaling of open-source LLMs on private infrastructure.
+                  </p>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-wider text-zinc-400">Coming Soon</span>
+                  <Link to="/products" className="text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="card-surface p-1 relative overflow-hidden group h-[400px]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative h-full border border-white/5 rounded-[20px] p-8 flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                    <Shield className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-3">Privacy-First Data Guard</h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed max-w-sm">
+                    PII redaction and compliance layer for LLM applications.
+                  </p>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-wider text-zinc-400">Coming Soon</span>
+                  <Link to="/products" className="text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* ─── WHY US ─── */}
       <section className="section-padding border-t border-white/[0.06] bg-bg-secondary">
