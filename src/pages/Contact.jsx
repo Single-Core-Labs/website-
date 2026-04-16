@@ -103,8 +103,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xl font-light text-white mb-1 group-hover:text-accent-cyan transition-colors">General Inquiries</p>
-                  <a href="mailto:hello@singlecorelabs.ai" className="text-zinc-500 hover:text-white transition-colors font-medium">
-                    hello@singlecorelabs.ai
+                  <a href="mailto:manav.singlecorelabs@gmail.com" className="text-zinc-500 hover:text-white transition-colors font-medium">
+                    manav.singlecorelabs@gmail.com
                   </a>
                 </div>
               </div>

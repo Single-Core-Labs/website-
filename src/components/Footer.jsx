@@ -78,8 +78,8 @@ export default function Footer() {
           <ul className="space-y-4 text-sm font-medium text-zinc-400">
             <li>Pune, Maharashtra</li>
             <li className="pt-2">
-              <a href="mailto:hello@singlecorelabs.ai" className="hover:text-white transition-colors">
-                hello@singlecorelabs.ai
+              <a href="mailto:manav.singlecorelabs@gmail.com" className="hover:text-white transition-colors">
+                manav.singlecorelabs@gmail.com
               </a>
             </li>
             <li>
