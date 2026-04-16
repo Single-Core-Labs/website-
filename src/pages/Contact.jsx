@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { MapPin, Mail, Phone, Linkedin, Github, Twitter, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { MapPin, Mail, Phone, Linkedin, Github, Twitter, Send, CheckCircle, AlertCircle, ArrowRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 
 const pageVariants = {
@@ -150,91 +150,34 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right — form */}
+          {/* Right — CTA Card */}
           <motion.div
             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-            className="card-surface p-10 lg:p-16 rounded-3xl backdrop-blur-sm"
+            className="card-surface p-10 lg:p-16 rounded-3xl backdrop-blur-sm flex flex-col items-center justify-center text-center relative overflow-hidden group"
           >
-            {submitted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center py-20">
-                <div className="w-20 h-20 rounded-full bg-accent-primary/10 flex items-center justify-center mb-8">
-                  <CheckCircle className="w-10 h-10 text-accent-primary" />
-                </div>
-                <h3 className="text-3xl font-extrabold text-text-primary mb-4 tracking-tight">Message Received</h3>
-                <p className="text-text-secondary text-lg max-w-sm">
-                  Thanks for reaching out! Our team will be in touch within 24 hours to schedule your consultation.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-8">
-                <div>
-                  <label className="text-[10px] font-extrabold text-text-faint uppercase tracking-[0.25em] block mb-3 ml-1">Your Name</label>
-                  <input
-                    type="text" name="name" value={form.name} onChange={handleChange}
-                    placeholder="Rahul Mehta"
-                    className={inputClass('name')}
-                  />
-                  {errors.name && (
-                    <p className="text-xs font-bold text-red-500 mt-2 ml-1 flex items-center gap-1.5">
-                      <AlertCircle className="w-3.5 h-3.5" /> {errors.name}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="text-[10px] font-extrabold text-text-faint uppercase tracking-[0.25em] block mb-3 ml-1">Work Email</label>
-                  <input
-                    type="email" name="email" value={form.email} onChange={handleChange}
-                    placeholder="rahul@company.ai"
-                    className={inputClass('email')}
-                  />
-                  {errors.email && (
-                    <p className="text-xs font-bold text-red-500 mt-2 ml-1 flex items-center gap-1.5">
-                      <AlertCircle className="w-3.5 h-3.5" /> {errors.email}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="text-[10px] font-extrabold text-text-faint uppercase tracking-[0.25em] block mb-3 ml-1">Company</label>
-                  <input
-                    type="text" name="company" value={form.company} onChange={handleChange}
-                    placeholder="Acme AI Labs"
-                    className={inputClass('company')}
-                  />
-                </div>
-
-                <div>
-                  <label className="text-[10px] font-extrabold text-text-faint uppercase tracking-[0.25em] block mb-3 ml-1">Your Message</label>
-                  <textarea
-                    name="message" value={form.message} onChange={handleChange} rows={5}
-                    placeholder="Tell us about your project infrastructure goals..."
-                    className={`${inputClass('message')} resize-none`}
-                  />
-                  {errors.message && (
-                    <p className="text-xs font-bold text-red-500 mt-2 ml-1 flex items-center gap-1.5">
-                      <AlertCircle className="w-3.5 h-3.5" /> {errors.message}
-                    </p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full py-5 text-base bg-black text-white font-bold rounded-full border border-white/10 hover:border-white/40 transition-all disabled:opacity-60 disabled:cursor-not-allowed group"
-                >
-                  {loading ? (
-                    <span className="flex items-center justify-center gap-3"><span className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" /> Processing...</span>
-                  ) : (
-                    <span className="flex items-center justify-center gap-3">Send Message <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></span>
-                  )}
-                </button>
-
-                <p className="text-xs font-bold text-text-faint text-center uppercase tracking-widest">
-                  Secure & Confidential
-                </p>
-              </form>
-            )}
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/5 to-transparent pointer-events-none" />
+            
+            <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+              <Send className="w-8 h-8 text-accent-cyan" />
+            </div>
+            
+            <h3 className="text-3xl font-light text-white mb-6 tracking-tight">Ready to start?</h3>
+            <p className="text-zinc-500 text-lg mb-10 max-w-sm leading-relaxed">
+              Click the button below to open our official inquiry form in a new tab. It takes less than 2 minutes.
+            </p>
+            
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeun_SPonSQJWNztbl7TNoNCkUku-ormIfOKkDJAHmEsYlFTA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-5 text-base bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-3 shadow-2xl"
+            >
+              Open Inquiry Form <ArrowRight className="w-5 h-5" />
+            </a>
+            
+            <p className="mt-8 text-[10px] font-mono text-zinc-600 uppercase tracking-[0.2em]">
+              Powered by Google Forms
+            </p>
           </motion.div>
         </div>
       </section>

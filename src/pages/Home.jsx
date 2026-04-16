@@ -14,6 +14,8 @@ const pageVariants = {
   exit: { opacity: 0, transition: { duration: 0.3 } },
 }
 
+const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeun_SPonSQJWNztbl7TNoNCkUku-ormIfOKkDJAHmEsYlFTA/viewform";
+
 export default function Home() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
@@ -69,9 +71,14 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="flex justify-center"
           >
-            <Link to="/contact" className="group flex items-center gap-3 bg-black/60 backdrop-blur-sm text-white py-3 px-8 rounded-full font-medium text-sm border border-white/20 hover:border-white/50 transition-all">
+            <a 
+              href={googleFormUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-black/60 backdrop-blur-sm text-white py-3 px-8 rounded-full font-medium text-sm border border-white/20 hover:border-white/50 transition-all"
+            >
               See it in action <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </motion.div>
         </div>
 
@@ -119,12 +126,14 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <Link
-                to="/contact"
+              <a
+                href={googleFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
               >
                 Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </motion.div>
 
             {/* Card 2 — Ready-to-Deploy AI Products */}
@@ -157,12 +166,14 @@ export default function Home() {
                 </ul>
               </div>
               <div className="flex flex-wrap gap-3 relative">
-                <Link
-                  to="/contact"
+                <a
+                  href={googleFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all"
                 >
                   Get in touch <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
                 <Link
                   to="/services"
                   className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 border border-white/5 rounded-full px-6 py-3 hover:text-white hover:border-white/20 transition-all"
@@ -199,12 +210,14 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <Link
-                to="/contact"
+              <a
+                href={googleFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
               >
                 Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </motion.div>
 
           </div>
@@ -367,9 +380,14 @@ export default function Home() {
           <p className="font-mono text-zinc-500 text-sm max-w-md mx-auto mb-10">
             Book a free 30-minute consultation. We'll understand your problem and tell you exactly how we'd solve it.
           </p>
-          <Link to="/contact" className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all">
+          <a 
+            href={googleFormUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all"
+          >
             Start the Conversation
-          </Link>
+          </a>
         </div>
       </section>
 

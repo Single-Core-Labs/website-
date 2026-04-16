@@ -14,6 +14,8 @@ const linksRight = [
   { to: '/contact', label: 'Contact' },
 ]
 
+const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeun_SPonSQJWNztbl7TNoNCkUku-ormIfOKkDJAHmEsYlFTA/viewform";
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
@@ -84,9 +86,14 @@ export default function Navbar() {
           
           {/* Subtle separator and CTA */}
           <div className="w-px h-4 bg-white/10 mx-2" />
-          <Link to="/contact" className="px-6 py-2 rounded-full text-[11px] uppercase tracking-wider font-bold bg-black text-white border border-white/10 hover:border-white/40 transition-all">
+          <a 
+            href={googleFormUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-2 rounded-full text-[11px] uppercase tracking-wider font-bold bg-black text-white border border-white/10 hover:border-white/40 transition-all"
+          >
             Start
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile View - Compact Pill */}
@@ -134,7 +141,14 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
-            <Link to="/contact" className="w-full text-center bg-black text-white py-4 rounded-full font-bold shadow-xl border border-white/10 hover:border-white/40 transition-all">Get started</Link>
+            <a 
+              href={googleFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-center bg-black text-white py-4 rounded-full font-bold shadow-xl border border-white/10 hover:border-white/40 transition-all"
+            >
+              Get started
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
