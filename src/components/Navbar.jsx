@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react'
 
 const linksLeft = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
+  { to: '/solutions', label: 'Solutions' },
   { to: '/products', label: 'Product' },
 ]
 

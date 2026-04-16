@@ -1,4 +1,4 @@
-export const services = [
+export const solutions = [
   {
     id: '01',
     icon: 'Cpu',

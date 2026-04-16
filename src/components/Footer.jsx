@@ -3,13 +3,13 @@ import { Github, Linkedin, Twitter } from 'lucide-react'
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
+  { to: '/solutions', label: 'Solutions' },
   { to: '/products', label: 'Product' },
   { to: '/research', label: 'Research' },
   { to: '/contact', label: 'Contact' },
 ]
 
-const serviceLinks = [
+const solutionLinks = [
   'GPU Infrastructure',
   'AI Orchestration',
   'MLOps',
@@ -58,13 +58,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Services */}
+        {/* Solutions */}
         <div>
-          <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-8">Services</h4>
+          <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-8">Solutions</h4>
           <ul className="space-y-4">
-            {serviceLinks.map((s) => (
+            {solutionLinks.map((s) => (
               <li key={s}>
-                <Link to="/services" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+                <Link to="/solutions" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
                   {s}
                 </Link>
               </li>

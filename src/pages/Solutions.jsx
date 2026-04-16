@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
-import ServiceCard from '../components/ServiceCard'
-import { services } from '../data/services'
+import SolutionCard from '../components/SolutionCard'
+import { solutions } from '../data/solutions'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -11,7 +11,7 @@ const pageVariants = {
   exit: { opacity: 0, transition: { duration: 0.3 } },
 }
 
-export default function Services() {
+export default function Solutions() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
@@ -51,7 +51,7 @@ export default function Services() {
         <div className="absolute inset-0 grid-bg opacity-[0.02]" />
         <div className="section-container relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
+            {solutions.map((s, i) => <SolutionCard key={s.id} solution={s} index={i} />)}
           </div>
         </div>
       </section>

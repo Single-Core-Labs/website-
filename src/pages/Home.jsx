@@ -7,9 +7,9 @@ import {
 } from 'lucide-react'
 import LightPillar from '../components/LightPillar'
 import SectionLabel from '../components/SectionLabel'
-import ServiceCard from '../components/ServiceCard'
+import SolutionCard from '../components/SolutionCard'
 import FAQAccordion from '../components/FAQAccordion'
-import { services } from '../data/services'
+import { solutions } from '../data/solutions'
 import { faq } from '../data/faq'
 
 const pageVariants = {
@@ -108,13 +108,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── OUR SERVICES ─── */}
+      {/* ─── OUR SOLUTIONS ─── */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
 
           {/* Header */}
           <div className="mb-16">
-            <SectionLabel>Our Services</SectionLabel>
+            <SectionLabel>Our Solutions</SectionLabel>
             <h2 className="font-sans font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-4">
               Building AI products and solutions<br className="hidden lg:block" /> that drive real business value.
             </h2>
@@ -199,7 +199,7 @@ export default function Home() {
                   Get in touch <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link
-                  to="/services"
+                  to="/solutions"
                   className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 border border-white/5 rounded-full px-6 py-3 hover:text-white hover:border-white/20 transition-all"
                 >
                   Explore Solutions
@@ -248,7 +248,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SERVICES ─── */}
+      {/* ─── SOLUTIONS ─── */}
       <section className="section-padding bg-bg-secondary overflow-hidden border-t border-white/5">
         <div className="section-container relative">
           <SectionLabel>Core Capabilities</SectionLabel>
@@ -259,7 +259,7 @@ export default function Home() {
             The technical muscle behind every engagement — from bare-metal GPU clusters to production LLM observability.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
+            {solutions.map((s, i) => <SolutionCard key={s.id} solution={s} index={i} />)}
           </div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -267,8 +267,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <Link to="/services" className="btn-secondary">
-              View All Services <ArrowRight className="w-4 h-4 ml-2" />
+            <Link to="/solutions" className="btn-secondary">
+              View All Solutions <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </motion.div>
         </div>
