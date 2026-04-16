@@ -21,7 +21,7 @@ export default function FAQAccordion({ items }) {
               <motion.span
                 animate={{ rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.2 }}
-                className="shrink-0 w-8 h-8 flex items-center justify-center border border-white/10 text-accent-cyan group-hover:border-accent-cyan/40 transition-colors"
+                className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center border border-white/10 text-accent-cyan group-hover:border-accent-cyan/40 transition-colors"
               >
                 <Plus className="w-4 h-4" />
               </motion.span>

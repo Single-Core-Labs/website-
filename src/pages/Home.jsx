@@ -6,6 +6,7 @@ import {
   ShoppingBag, Lock, Dna 
 } from 'lucide-react'
 import LightPillar from '../components/LightPillar'
+import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
 import SolutionCard from '../components/SolutionCard'
 import FAQAccordion from '../components/FAQAccordion'
@@ -45,7 +46,10 @@ export default function Home() {
           />
         </div>
 
-        {/* Layer 2 — subtle vignette to keep text readable */}
+        {/* Layer 2 — data flow canvas */}
+        <DataFlowCanvas />
+
+        {/* Layer 3 — subtle vignette to keep text readable */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 pointer-events-none" />
 
         {/* Layer 3 — content */}
@@ -112,7 +116,6 @@ export default function Home() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
 
-          {/* Header */}
           <div className="mb-16">
             <SectionLabel>Our Solutions</SectionLabel>
             <h2 className="font-sans font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-4">
@@ -120,86 +123,75 @@ export default function Home() {
             </h2>
           </div>
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-4">
 
-            {/* Card 1 — Custom Software Builds */}
+            {/* Card 1 — Custom Software Builds — tall, spans 2 rows on lg */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0, ease: [0.16, 1, 0.3, 1] }}
-              className="card-surface p-10 flex flex-col group"
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:row-span-2 card-surface p-10 flex flex-col group relative overflow-hidden min-h-[340px]"
             >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
               <div className="flex-1">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-4">01</p>
-                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-6">01</p>
+                <h3 className="text-2xl font-light text-white mb-4 tracking-tight group-hover:text-accent-cyan transition-colors">
                   Custom Software Builds
                 </h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-8">
                   Have a specific problem? Budget of $5k? Forward-deployed engineers will understand your challenge and build a custom solution.
                 </p>
-                <ul className="space-y-3 mb-10">
-                  {[
-                    'Prototypes delivered within 24 hours of a clear scope',
-                  ].map(item => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-400">
+                <div className="space-y-3 mb-10">
+                  {['Prototypes delivered within 24 hours of a clear scope', 'Engineers embedded in your workflow', 'Full IP ownership — yours from day one'].map(item => (
+                    <div key={item} className="flex items-start gap-3 text-sm text-zinc-400">
                       <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
                       {item}
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
-              <a
-                href={googleFormUrl}
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a href={googleFormUrl} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
               >
                 Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
 
-            {/* Card 2 — Ready-to-Deploy AI Products */}
+            {/* Card 2 — Ready-to-Deploy — wide top-right */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="card-surface p-10 flex flex-col group relative overflow-hidden"
+              className="md:col-span-1 lg:col-span-2 card-surface p-10 flex flex-col group relative overflow-hidden"
             >
-              {/* Subtle highlight on this card */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
               <div className="flex-1 relative">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-4">02</p>
-                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-6">02</p>
+                <h3 className="text-2xl font-light text-white mb-4 tracking-tight group-hover:text-accent-cyan transition-colors">
                   Ready-to-Deploy AI Products
                 </h3>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                  Plug-and-play, modular solutions we originally built as internal tools or for client projects. Each one is production-tested, configurable, and ready to drop into your stack.
+                <p className="text-zinc-500 text-sm leading-relaxed max-w-xl">
+                  Plug-and-play, modular solutions we originally built as internal tools or for client projects. Production-tested, configurable, and ready to drop into your stack.
                 </p>
-                <ul className="space-y-3 mb-10">
-                  {[
-                    'Skip the build phase. Go live within 72 hours',
-                  ].map(item => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-400">
-                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
-                      {item}
-                    </li>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {['Production-tested', 'Configurable', 'Go live in 72h', 'No build phase'].map(tag => (
+                    <span key={tag} className="px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-white/[0.03] border border-white/[0.07] text-zinc-500 group-hover:text-zinc-300 group-hover:border-white/[0.12] transition-all">
+                      {tag}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-3 relative">
-                <a
-                  href={googleFormUrl}
-                  target="_blank" 
-                  rel="noopener noreferrer"
+              <div className="flex flex-wrap gap-3 mt-8 relative">
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all"
                 >
                   Get in touch <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link
-                  to="/solutions"
+                <Link to="/solutions"
                   className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 border border-white/5 rounded-full px-6 py-3 hover:text-white hover:border-white/20 transition-all"
                 >
                   Explore Solutions
@@ -207,41 +199,39 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Card 3 — Fractional CTO */}
+            {/* Card 3 — Fractional CTO — bottom-right, spans 2 cols */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="card-surface p-10 flex flex-col group"
+              className="md:col-span-2 lg:col-span-2 card-surface p-10 flex flex-col md:flex-row gap-10 group relative overflow-hidden"
             >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
               <div className="flex-1">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-4">03</p>
-                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
-                  Fractional CTO / Technical Co-founders
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 mb-6">03</p>
+                <h3 className="text-2xl font-light text-white mb-4 tracking-tight group-hover:text-accent-cyan transition-colors">
+                  Fractional CTO / Technical Co-founder
                 </h3>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+                <p className="text-zinc-500 text-sm leading-relaxed">
                   Not looking for a vendor. Looking for someone who owns the tech side with you. Base build cost + revenue share — we grow when you grow.
                 </p>
-                <ul className="space-y-3 mb-10">
-                  {[
-                    'Product strategy, architecture, and execution. All handled',
-                  ].map(item => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-400">
-                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
-              <a
-                href={googleFormUrl}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
-              >
-                Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <div className="flex flex-col justify-between gap-6 md:min-w-[200px]">
+                <div className="space-y-3">
+                  {['Product strategy', 'Architecture', 'Execution'].map(item => (
+                    <div key={item} className="flex items-center gap-3 text-sm text-zinc-400">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-accent-cyan group-hover:border-accent-cyan/40 transition-all duration-300" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <a href={googleFormUrl} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-white/30 transition-all w-fit"
+                >
+                  Get in touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
             </motion.div>
 
           </div>
@@ -410,7 +400,7 @@ export default function Home() {
         <div className="section-container">
           <div className="text-center mb-16">
             <SectionLabel className="justify-center">Our Advantage</SectionLabel>
-            <h2 className="font-sans text-4xl lg:text-5xl font-bold text-text-primary">Why Single core labs</h2>
+            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-white">Why Single core labs</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
             {[
@@ -422,14 +412,14 @@ export default function Home() {
                 key={num}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="px-8 py-10 text-center"
+                className="px-8 py-10 text-center flex flex-col items-center"
               >
-                <div className="font-sans text-5xl font-extrabold text-white/[0.04] mb-4">{num}</div>
-                <div className="w-12 h-12 flex items-center justify-center border border-white/10 mx-auto mb-5">
+                <div className="font-display text-6xl font-light text-white/[0.06] mb-4 leading-none">{num}</div>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center border border-white/10 mb-5">
                   <Icon className="w-5 h-5 text-accent-cyan" />
                 </div>
-                <h3 className="font-sans text-xl font-bold text-text-primary mb-4">{title}</h3>
-                <p className="font-mono text-sm text-text-muted leading-relaxed">{desc}</p>
+                <h3 className="font-display text-xl font-semibold text-white mb-4">{title}</h3>
+                <p className="font-mono text-sm text-zinc-500 leading-relaxed max-w-xs">{desc}</p>
               </motion.div>
             ))}
           </div>
@@ -443,7 +433,7 @@ export default function Home() {
         <div className="section-container">
           <div className="max-w-3xl mx-auto">
             <SectionLabel className="justify-center">Common Questions</SectionLabel>
-            <h2 className="font-sans text-4xl lg:text-5xl font-bold text-text-primary text-center mb-12">
+            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-white text-center mb-12">
               Frequently Asked
             </h2>
             <FAQAccordion items={faq} />

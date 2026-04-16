@@ -34,7 +34,7 @@ export default function Research() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
           >
             AI Research That Powers Real Products
           </motion.h1>
