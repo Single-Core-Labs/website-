@@ -4,8 +4,6 @@ import { ArrowRight, Shield, FlaskConical, Cpu } from 'lucide-react'
 import LightPillar from '../components/LightPillar'
 import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
-import FAQAccordion from '../components/FAQAccordion'
-import { faq } from '../data/faq'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -90,12 +88,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── WHY US ─── */}
+      {/* ─── AI FOR THE ENTERPRISE ─── */}
       <section className="section-padding border-t border-white/[0.06] bg-black">
         <div className="section-container">
           <div className="text-center mb-16">
-            <SectionLabel className="justify-center">Our Advantage</SectionLabel>
-            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-white">Why Single core labs</h2>
+            <SectionLabel className="justify-center">Enterprise</SectionLabel>
+            <h2 className="font-display text-4xl lg:text-6xl font-light text-white mt-4 mb-4 tracking-tight">
+              AI for the Enterprise
+            </h2>
+            <p className="text-zinc-500 text-lg max-w-xl mx-auto">
+              Full-Stack AI Solutions — outcomes delivered with world-class data, models, agents, and deployment.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/[0.06]">
             {[
@@ -117,19 +120,6 @@ export default function Home() {
                 <p className="font-mono text-sm text-zinc-500 leading-relaxed max-w-xs">{desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── FAQ ─── */}
-      <section className="section-padding border-t border-white/[0.06]">
-        <div className="section-container">
-          <div className="max-w-3xl mx-auto">
-            <SectionLabel className="justify-center">Common Questions</SectionLabel>
-            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-white text-center mb-12">
-              Frequently Asked
-            </h2>
-            <FAQAccordion items={faq} />
           </div>
         </div>
       </section>
