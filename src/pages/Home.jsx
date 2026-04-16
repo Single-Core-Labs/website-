@@ -64,7 +64,7 @@ export default function Home() {
             className="flex justify-center"
           >
             <StarBorder as="a" href={googleFormUrl} color="#5227FF" speed="4s" className="text-white font-medium text-sm flex items-center gap-2">
-              See it in action <ArrowRight className="w-4 h-4" />
+              See it in action <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </StarBorder>
           </motion.div>
         </div>
@@ -96,7 +96,35 @@ export default function Home() {
               Convert your proprietary data and domain expertise into intelligent agents that evolve through continuous human feedback. Build AI systems that don't just respond — they learn, adapt, and improve with every interaction.
             </p>
             <StarBorder as={Link} to="/enterprise/agentic" color="#5227FF" speed="4s" className="inline-flex items-center gap-2 font-medium">
-              Explore Agentic Solutions <ArrowRight className="w-4 h-4" />
+              Explore Agentic Solutions <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </StarBorder>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── DOMAINS ─── */}
+      <section className="py-32 bg-black border-t border-white/[0.06]">
+        <div className="section-container">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl lg:text-5xl font-light text-white mb-4 tracking-tight">
+              Powering AI Transformation for<br />the World's Leading Enterprises
+            </h2>
+            <p className="text-zinc-500 text-lg max-w-2xl mx-auto">
+              Trusted across industries where reliable agents matter most — healthcare, insurance, financial services, and more.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <StarBorder as="div" color="#5227FF" speed="4s" className="group p-8 rounded-2xl bg-black border border-white/10 hover:border-purple-500/30 transition-all cursor-pointer block">
+              <h3 className="text-xl font-semibold text-white mb-2">Insurance</h3>
+              <p className="text-zinc-500 text-sm">AI-powered claims processing, risk assessment, and fraud detection agents.</p>
+            </StarBorder>
+            <StarBorder as="div" color="#5227FF" speed="4s" className="group p-8 rounded-2xl bg-black border border-white/10 hover:border-cyan-500/30 transition-all cursor-pointer block">
+              <h3 className="text-xl font-semibold text-white mb-2">Healthcare</h3>
+              <p className="text-zinc-500 text-sm">Clinical decision support, patient intake automation, and medical data analysis.</p>
+            </StarBorder>
+            <StarBorder as="div" color="#5227FF" speed="4s" className="group p-8 rounded-2xl bg-black border border-white/10 hover:border-green-500/30 transition-all cursor-pointer block">
+              <h3 className="text-xl font-semibold text-white mb-2">Financial Services</h3>
+              <p className="text-zinc-500 text-sm">Algorithmic trading, portfolio management, and compliance automation agents.</p>
             </StarBorder>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
+import StarBorder from '../components/StarBorder'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -37,19 +38,14 @@ export default function Enterprise() {
           >
             Two distinct tracks — Agentic Solutions for teams building autonomous workflows, and GenAI Solutions for teams shipping production AI products. Both backed by research. Both built to last.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+<motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <a
-              href={googleFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 bg-white text-black py-4 px-10 rounded-full font-semibold text-sm hover:bg-zinc-100 transition-all"
-            >
+            <StarBorder as="a" href={googleFormUrl} color="#5227FF" speed="4s" className="inline-flex items-center gap-2 font-semibold text-sm text-black">
               Book a Meeting <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </StarBorder>
           </motion.div>
         </div>
       </section>
@@ -89,12 +85,9 @@ export default function Enterprise() {
                   ))}
                 </ul>
               </div>
-              <Link
-                to="/enterprise/agentic"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-purple-500/40 hover:text-purple-400 transition-all w-fit"
-              >
+              <StarBorder as={Link} to="/enterprise/agentic" color="#5227FF" speed="4s" className="inline-flex items-center gap-2 text-sm font-medium text-white w-fit">
                 Explore Agentic Solutions <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </StarBorder>
             </motion.div>
 
             {/* GenAI */}
@@ -123,12 +116,9 @@ export default function Enterprise() {
                   ))}
                 </ul>
               </div>
-              <Link
-                to="/enterprise/genai"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white border border-white/10 rounded-full px-6 py-3 hover:border-accent-cyan/40 hover:text-accent-cyan transition-all w-fit"
-              >
+              <StarBorder as={Link} to="/enterprise/genai" color="#5227FF" speed="4s" className="inline-flex items-center gap-2 text-sm font-medium text-white w-fit">
                 Explore GenAI Solutions <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </StarBorder>
             </motion.div>
 
           </div>
@@ -176,14 +166,9 @@ export default function Enterprise() {
           <p className="text-zinc-500 font-mono text-sm max-w-md mx-auto mb-10">
             Book a 30-minute call. We'll listen to your problem and tell you exactly how we'd approach it.
           </p>
-          <a
-            href={googleFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-black py-4 px-10 rounded-full font-semibold text-sm hover:bg-zinc-100 transition-all group"
-          >
+          <StarBorder as="a" href={googleFormUrl} color="#5227FF" speed="4s" className="inline-flex items-center gap-2 font-semibold text-sm text-black">
             Book a Meeting <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </StarBorder>
         </div>
       </section>
 

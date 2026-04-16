@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Rocket } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 
 const pageVariants = {
@@ -19,17 +19,6 @@ export default function Products() {
       className="min-h-screen pt-32 pb-20 bg-black flex flex-col items-center justify-center text-center px-4"
     >
       <div className="section-container">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8 flex justify-center"
-        >
-          <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center">
-            <Rocket className="w-10 h-10 text-accent-cyan" />
-          </div>
-        </motion.div>
-
         <SectionLabel className="justify-center">Product</SectionLabel>
         
         <h1 className="font-sans font-light text-5xl md:text-7xl text-white tracking-tight mt-6 mb-8">
