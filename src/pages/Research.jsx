@@ -63,9 +63,9 @@ export default function Research() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest"
+            className="text-zinc-400 text-lg max-w-2xl mx-auto mt-6 leading-relaxed"
           >
-            Engineering powered by active AI systems research.
+            We don't just implement AI — we study it. Our research feeds directly into the products and services we build for enterprises.
           </motion.p>
         </div>
       </section>
