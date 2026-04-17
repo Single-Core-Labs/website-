@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Cpu, Network, FlaskConical, BookOpen } from 'lucide-react'
+import { Activity, Bot, Stethoscope, Container, Database } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 
 const pageVariants = {
@@ -10,10 +10,31 @@ const pageVariants = {
 }
 
 const focusAreas = [
-  { icon: Cpu, title: 'Inference Systems', desc: 'Optimizing large-model serving at scale — quantization, speculative decoding, continuous batching, and kernel-level tuning.' },
-  { icon: Network, title: 'Distributed Training', desc: 'Multi-node, multi-GPU training architectures using FSDP, DeepSpeed, and custom gradient communication protocols.' },
-  { icon: FlaskConical, title: 'LLM Evaluation', desc: 'Rigorous, reproducible evaluation pipelines for fine-tuned models — from accuracy benchmarks to domain-specific red-teaming.' },
-  { icon: BookOpen, title: 'AI Systems Research', desc: 'Foundational research on AI resource scheduling, memory-efficient training, and energy-aware GPU allocation.' },
+  { 
+    icon: Activity, 
+    title: 'AI Observability & Reliability', 
+    desc: 'LLM monitoring in production, cost visibility for AI inference, and failure detection in agentic systems.'
+  },
+  { 
+    icon: Bot, 
+    title: 'Autonomous AI Agents & Orchestration', 
+    desc: 'Multi-agent coordination, self-healing AI pipelines, and agentic workflows for enterprise.'
+  },
+  { 
+    icon: Stethoscope, 
+    title: 'Clinical AI & Medical Intelligence', 
+    desc: 'AI-assisted diagnostics, medical document understanding, patient outcome prediction, and privacy-preserving ML in clinical settings.'
+  },
+  { 
+    icon: Container, 
+    title: 'MLOps & Kubernetes-Native AI Infrastructure', 
+    desc: 'LLM + RL for incident remediation, AI workload scheduling, and cost-efficient model serving.'
+  },
+  { 
+    icon: Database, 
+    title: 'Data-Centric AI', 
+    desc: 'Training data quality measurement, domain-specific dataset construction, and active learning pipelines.'
+  },
 ]
 
 export default function Research() {

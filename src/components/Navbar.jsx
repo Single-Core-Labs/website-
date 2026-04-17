@@ -8,6 +8,7 @@ const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeun_SPonSQJWNzt
 // Nav config — items with `children` get a dropdown
 const navItems = [
   { to: '/', label: 'Home' },
+  { to: '/services', label: 'Services' },
   { to: '/products', label: 'Products' },
   { to: '/research', label: 'Research' },
   {
@@ -27,6 +28,7 @@ const navItems = [
 // Flat list for mobile drawer
 const allLinks = [
   { to: '/', label: 'Home' },
+  { to: '/services', label: 'Services' },
   { to: '/products', label: 'Products' },
   { to: '/research', label: 'Research' },
   { to: '/enterprise', label: 'Enterprise' },

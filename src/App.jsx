@@ -14,6 +14,7 @@ const Enterprise = lazy(() => import('./pages/Enterprise'))
 const About = lazy(() => import('./pages/About'))
 const AgenticSolutions = lazy(() => import('./pages/AgenticSolutions'))
 const GenAISolutions = lazy(() => import('./pages/GenAISolutions'))
+const Services = lazy(() => import('./pages/Services'))
 
 function PageLoader() {
   return (
@@ -38,6 +39,7 @@ function AnimatedRoutes() {
           <Route path="/enterprise/agentic" element={<AgenticSolutions />} />
           <Route path="/enterprise/genai" element={<GenAISolutions />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </Suspense>
     </AnimatePresence>
