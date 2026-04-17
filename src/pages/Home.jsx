@@ -46,7 +46,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-sans font-light text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white mb-8 max-w-4xl mx-auto">
-              Building AI Infrastructure for Engineering Teams
+              Building AI Infrastructure for Companies
             </h1>
           </motion.div>
           <motion.p
@@ -138,8 +138,11 @@ export default function Home() {
             <h2 className="font-display text-4xl lg:text-6xl font-light text-white mt-4 mb-4 tracking-tight">
               AI for the Enterprise
             </h2>
-            <p className="text-zinc-500 text-lg max-w-xl mx-auto">
-              Enterprise AI solutions built by engineers who've shipped production AI at the world's leading labs.
+            <p className="text-zinc-500 text-lg max-w-xl mx-auto mb-8">
+              Full-Stack AI Solutions
+            </p>
+            <p className="text-zinc-400 text-base max-w-2xl mx-auto">
+              Outcomes delivered with data, models, agents, and deployment.
             </p>
           </div>
         </div>
