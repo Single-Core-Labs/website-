@@ -45,17 +45,17 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-sans font-light text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white mb-8 max-w-4xl mx-auto">
-              Building AI Infrastructure for Companies
+            <h1 className="font-sans font-light text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight text-white mb-6 max-w-4xl mx-auto">
+              AI at scale.&nbsp;Without the chaos.
             </h1>
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-zinc-400 font-mono text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-wider"
+            className="text-zinc-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed"
           >
-            Research-driven · Production-ready · Built to scale
+            Single Core Labs helps enterprises design, build, and ship production-ready AI systems — from raw data to deployed models.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
