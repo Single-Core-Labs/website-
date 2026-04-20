@@ -56,8 +56,8 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-zinc-400">
             <li>Pune, Maharashtra</li>
             <li>
-              <a href="mailto:manav.singlecorelabs@gmail.com" className="hover:text-white transition-colors">
-                manav.singlecorelabs@gmail.com
+              <a href="mailto:singlecorelabs.in@gmail.com" className="hover:text-white transition-colors">
+                singlecorelabs.in@gmail.com
               </a>
             </li>
           </ul>
