@@ -18,26 +18,25 @@ export default function Home() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
-      {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0 pointer-events-none">
-          <LightPillar
-            topColor="#5227FF"
-            bottomColor="#FF9FFC"
-            intensity={1}
-            rotationSpeed={0.3}
-            glowAmount={0.002}
-            pillarWidth={3}
-            pillarHeight={0.4}
-            noiseIntensity={0.5}
-            pillarRotation={25}
-            interactive={false}
-            mixBlendMode="screen"
-            quality="high"
-          />
-        </div>
-        <DataFlowCanvas />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 pointer-events-none" />
+       {/* ─── HERO ─── */}
+       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+         <div className="absolute inset-0 pointer-events-none">
+           <LightPillar
+             topColor="#5227FF"
+             bottomColor="#FF9FFC"
+             intensity={1}
+             rotationSpeed={0.3}
+             glowAmount={0.002}
+             pillarWidth={3}
+             pillarHeight={0.4}
+             noiseIntensity={0}
+             pillarRotation={25}
+             interactive={false}
+             mixBlendMode="screen"
+             quality="high"
+           />
+         </div>
+         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 pointer-events-none" />
 
         <div className="section-container relative z-10 text-center">
           <motion.div
