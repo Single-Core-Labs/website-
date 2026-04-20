@@ -60,11 +60,6 @@ export default function Footer() {
                 manav.singlecorelabs@gmail.com
               </a>
             </li>
-            <li>
-              <a href="tel:+919999999999" className="hover:text-white transition-colors">
-                +91 99999 99999
-              </a>
-            </li>
           </ul>
         </div>
       </div>
