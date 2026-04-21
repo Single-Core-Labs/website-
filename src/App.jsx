@@ -38,7 +38,6 @@ function AnimatedRoutes() {
           <Route path="/enterprise/agentic" element={<AgenticSolutions />} />
           <Route path="/enterprise/genai" element={<GenAISolutions />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
         </Routes>
       </Suspense>
     </AnimatePresence>

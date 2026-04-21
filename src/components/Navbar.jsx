@@ -31,14 +31,13 @@ const navItems = [
 // Flat list for mobile drawer
 const allLinks = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
   { to: '/products', label: 'Products' },
+  { to: '/services', label: 'Services' },
   { to: '/research', label: 'Research' },
   { to: '/enterprise', label: 'Enterprise' },
   { to: '/enterprise/agentic', label: '↳ Agentic Solutions' },
   { to: '/enterprise/genai', label: '↳ GenAI Solutions' },
   { to: '/about', label: 'About' },
-  { to: '/resources', label: 'Resources' },
   { to: '/contact', label: 'Contact' },
 ]
 
