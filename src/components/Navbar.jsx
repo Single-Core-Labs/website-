@@ -152,13 +152,16 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
         className="fixed top-6 left-6 z-50"
       >
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <img
-            src={`${import.meta.env.BASE_URL}assets/logo.png`}
-            alt="Single core labs"
-            className="w-8 h-8 object-contain"
-          />
-          <span className="font-display font-light text-lg text-white tracking-tight group-hover:text-accent-cyan transition-colors whitespace-nowrap hidden sm:block">
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="relative">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/logo.png`}
+              alt="Single core labs"
+              className="w-9 h-9 object-contain relative z-10"
+            />
+            <div className="absolute inset-0 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          </div>
+          <span className="font-display font-medium text-xl text-white tracking-tightest group-hover:text-accent-cyan transition-colors whitespace-nowrap hidden sm:block">
             Single core labs
           </span>
         </Link>
@@ -168,7 +171,7 @@ export default function Navbar() {
       <motion.header
         initial={{ y: -100, x: '-50%' }}
         animate={{ y: 0, x: '-50%' }}
-        className="fixed top-6 left-1/2 z-50 hidden md:flex items-center bg-black/80 backdrop-blur-xl border border-white/10 p-1.5 rounded-full shadow-2xl"
+        className="fixed top-6 left-1/2 z-50 hidden md:flex items-center bg-black/60 backdrop-blur-3xl border border-white/5 p-1.5 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
       >
         <nav className="flex items-center gap-1">
           {navItems.map(item => (

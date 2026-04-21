@@ -42,7 +42,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white mt-4 mb-6 tracking-tight"
+            className="font-display text-6xl md:text-8xl lg:text-9xl font-medium text-white mt-6 mb-8 tracking-tightest leading-[0.9]"
           >
             Services
           </motion.h1>
@@ -60,10 +60,10 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="p-8 rounded-2xl bg-black border border-white/10 hover:border-purple-500/30 transition-all"
+                className="p-10 card-surface"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">{service.title}</h3>
+                <p className="text-zinc-400 text-base leading-relaxed font-light">{service.description}</p>
               </motion.div>
             ))}
           </div>

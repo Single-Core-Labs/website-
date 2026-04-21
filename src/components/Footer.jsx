@@ -17,10 +17,10 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="lg:col-span-1">
-          <Link to="/" className="inline-block mb-6">
-            <span className="font-display font-light text-xl text-white tracking-tight">Single core labs</span>
+          <Link to="/" className="inline-block mb-8 group">
+            <span className="font-display font-medium text-2xl text-white tracking-tightest group-hover:text-accent-cyan transition-colors">Single core labs</span>
           </Link>
-          <p className="text-sm text-zinc-500 leading-relaxed mb-8 max-w-xs">
+          <p className="text-sm text-zinc-500 leading-relaxed mb-10 max-w-xs font-light">
             We translate deep expertise in building frontier models and agents into enterprise solutions. Combining our platform, experienced teams, and advanced processes to accelerate your AI transformation journey.
           </p>
           <div className="flex gap-3">
@@ -65,11 +65,11 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/5 max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <p className="text-xs font-medium text-zinc-600 uppercase tracking-widest">
+      <div className="border-t border-white/5 max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em]">
           &copy; {new Date().getFullYear()} Single core labs. All rights reserved.
         </p>
-        <p className="text-xs font-medium text-zinc-500 uppercase tracking-widest">
+        <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.3em] italic">
           intelligence meets instinct.
         </p>
       </div>

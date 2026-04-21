@@ -46,7 +46,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
              <SectionLabel className="justify-center mb-4 opacity-70 scale-90">The Generative AI Platform</SectionLabel>
-             <h1 className="font-display font-light text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tightest text-white mb-6 max-w-3xl mx-auto">
+             <h1 className="font-display font-light text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tightest text-white mb-8 max-w-4xl mx-auto">
                AI at scale.<br />
                Without the chaos.
              </h1>
@@ -55,7 +55,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-zinc-400 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light"
+            className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light tracking-tight"
           >
             Single Core Labs delivers the data engine and agentic solutions to power the next generation of AI.
           </motion.p>
@@ -67,7 +67,7 @@ export default function Home() {
           >
             <Link 
               to="/contact" 
-              className="px-6 py-2.5 bg-white text-black hover:bg-zinc-200 transition-all rounded-full text-sm font-semibold flex items-center gap-2 shadow-xl shadow-white/10 group"
+              className="btn-primary group"
             >
               Book a Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -118,7 +118,7 @@ export default function Home() {
             <h2 className="font-display text-3xl md:text-5xl font-light text-white mt-4 mb-4 tracking-tight">
               Powering AI Transformation for<br />the World's Leading Enterprises
             </h2>
-            <p className="text-zinc-500 text-base md:text-lg max-w-2xl mx-auto">
+            <p className="text-zinc-500 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               Trusted across industries where reliable agents matter most — healthcare, insurance, financial services, and more.
             </p>
           </div>

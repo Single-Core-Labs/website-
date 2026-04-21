@@ -82,7 +82,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-zinc-400 text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed font-light tracking-tight"
           >
             SingleCore Labs builds intelligent systems, scalable infrastructure, and AI-driven solutions for modern enterprises — simplifying complex operations and accelerating innovation.
           </motion.p>
@@ -96,7 +96,7 @@ export default function About() {
               href={googleFormUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 bg-white text-black py-4 px-10 rounded-full font-semibold text-sm hover:bg-zinc-100 transition-all"
+              className="btn-primary group"
             >
               Work with us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
@@ -113,14 +113,14 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="card-surface p-10 relative overflow-hidden group"
+              className="card-surface p-12 relative overflow-hidden group"
             >
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-purple-400 mb-4">Vision</p>
-              <h3 className="font-display text-2xl font-light text-white mb-4 tracking-tight">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-purple-400 mb-6">Vision</p>
+              <h3 className="font-display text-2xl md:text-3xl font-medium text-white mb-4 tracking-tight">
                 The backbone of next-generation intelligent infrastructure
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
+              <p className="text-zinc-500 text-base leading-relaxed font-light">
                 Powering startups and enterprises globally with infrastructure that thinks, adapts, and scales — without the operational overhead that slows teams down.
               </p>
             </motion.div>
@@ -129,14 +129,14 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="card-surface p-10 relative overflow-hidden group"
+              className="card-surface p-12 relative overflow-hidden group"
             >
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-accent-cyan mb-4">Mission</p>
-              <h3 className="font-display text-2xl font-light text-white mb-4 tracking-tight">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-cyan mb-6">Mission</p>
+              <h3 className="font-display text-2xl md:text-3xl font-medium text-white mb-4 tracking-tight">
                 Scalable AI systems that automate, improve, and decide
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
+              <p className="text-zinc-500 text-base leading-relaxed font-light">
                 We develop AI-driven systems that automate operations, improve reliability, and enable faster decision-making — across every industry that runs on software.
               </p>
             </motion.div>
@@ -392,7 +392,7 @@ export default function About() {
             href={googleFormUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-black py-4 px-10 rounded-full font-semibold text-sm hover:bg-zinc-100 transition-all group"
+            className="btn-primary group"
           >
             Book a Meeting <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
