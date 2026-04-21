@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import SectionLabel from '../components/SectionLabel'
 import StarBorder from '../components/StarBorder'
-
-const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeun_SPonSQJWNztbl7TNoNCkUku-ormIfOKkDJAHmEsYlFTA/viewform"
 
 const services = [
   {
@@ -78,7 +77,7 @@ export default function Services() {
           <h2 className="font-sans text-4xl lg:text-6xl font-light text-white mb-8 max-w-2xl mx-auto">
             Let's build your<br />next AI solution.
           </h2>
-          <StarBorder as="a" href={googleFormUrl} color="#5227FF" speed="4s" className="font-bold">
+          <StarBorder as={Link} to="/contact" color="#5227FF" speed="4s" className="font-bold">
             Start the Conversation
           </StarBorder>
         </div>

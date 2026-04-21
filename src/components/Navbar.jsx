@@ -1,27 +1,30 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
-
-const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeun_SPonSQJWNztbl7TNoNCkUku-ormIfOKkDJAHmEsYlFTA/viewform"
+import { Menu, X, ChevronDown, Cpu, Sparkles, Shield, BarChart3, Users, Zap } from 'lucide-react'
 
 // Nav config — items with `children` get a dropdown
 const navItems = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
-  { to: '/products', label: 'Products' },
-  { to: '/research', label: 'Research' },
   {
-    label: 'Enterprise',
-    to: '/enterprise',
+    label: 'Platform',
+    to: '/products',
     children: [
-      { to: '/enterprise', label: 'Overview', desc: 'AI solutions at enterprise scale' },
-      { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build, train, and scale domain-specific agents' },
-      { to: '/enterprise/genai', label: 'GenAI Solutions', desc: 'RAG, fine-tuning, APIs, and evaluation' },
+      { to: '/products', label: 'Overview', desc: 'The full-stack AI platform', icon: Cpu },
+      { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents', icon: Zap },
+      { to: '/enterprise/genai', label: 'GenAI Solutions', desc: 'RAG and LLM fine-tuning', icon: Sparkles },
+    ],
+  },
+  {
+    label: 'Solutions',
+    to: '/services',
+    children: [
+      { to: '/services', label: 'Services', desc: 'Expert AI implementation', icon: Users },
+      { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale', icon: Shield },
+      { to: '/research', label: 'Research', desc: 'Frontier AI evaluations', icon: BarChart3 },
     ],
   },
   { to: '/about', label: 'About' },
-  { to: '/resources', label: 'Resources' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -46,24 +49,36 @@ function DropdownMenu({ items }) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 8, scale: 0.97 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl z-50"
+      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-80 bg-black/90 backdrop-blur-3xl border border-white/10 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-50 p-2"
     >
-      {items.map((item, i) => (
-        <Link
-          key={i}
-          to={item.to}
-          className="flex flex-col gap-0.5 px-5 py-4 hover:bg-white/5 transition-colors border-b border-white/[0.04] last:border-0 group"
-        >
-          <span className="text-[12px] font-medium text-white group-hover:text-accent-cyan transition-colors">
-            {item.label}
-          </span>
-          {item.desc && (
-            <span className="text-[11px] text-zinc-600 group-hover:text-zinc-400 transition-colors leading-snug">
-              {item.desc}
-            </span>
-          )}
-        </Link>
-      ))}
+      <div className="grid gap-1">
+        {items.map((item, i) => {
+          const Icon = item.icon
+          return (
+            <Link
+              key={i}
+              to={item.to}
+              className="flex items-start gap-4 px-4 py-3 hover:bg-white/5 rounded-2xl transition-all group"
+            >
+              {Icon && (
+                <div className="mt-1 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
+                  <Icon className="w-4 h-4 text-zinc-400 group-hover:text-white" />
+                </div>
+              )}
+              <div className="flex flex-col gap-0.5">
+                <span className="text-[13px] font-medium text-white group-hover:text-accent-cyan transition-colors">
+                  {item.label}
+                </span>
+                {item.desc && (
+                  <span className="text-[11px] text-zinc-500 group-hover:text-zinc-400 transition-colors leading-snug">
+                    {item.desc}
+                  </span>
+                )}
+              </div>
+            </Link>
+          )
+        })}
+      </div>
     </motion.div>
   )
 }
@@ -161,14 +176,12 @@ export default function Navbar() {
             <NavItem key={item.label} item={item} />
           ))}
           <div className="w-px h-4 bg-white/10 mx-2" />
-          <a
-            href={googleFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact"
             className="px-5 py-2 rounded-full text-[11px] uppercase tracking-wider font-bold bg-black text-white border border-white/10 hover:border-white/40 transition-all"
           >
             Start
-          </a>
+          </Link>
         </nav>
       </motion.header>
 
@@ -207,14 +220,12 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
-            <a
-              href={googleFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="w-full text-center bg-black text-white py-4 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all mt-2"
             >
               Get started
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

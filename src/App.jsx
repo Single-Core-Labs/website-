@@ -49,7 +49,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-bg-primary flex flex-col">
+      <div className="min-h-screen bg-bg-primary flex flex-col relative">
+        <div className="grain-overlay pointer-events-none" />
         <Navbar />
         <main className="flex-1">
           <AnimatedRoutes />

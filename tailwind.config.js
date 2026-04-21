@@ -27,14 +27,25 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"Outfit"', '"Instrument Sans"', 'system-ui', 'sans-serif'],
+        sans: ['"Instrument Sans"', '"Outfit"', 'system-ui', 'sans-serif'],
         display: ['"Instrument Sans"', '"Outfit"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {
         'vignette-glow': 'radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.02) 100%)',
-        'subtle-grid': 'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+        'subtle-grid': 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
+        'subtle-grid-dot': 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)',
         'halftone': 'radial-gradient(circle, #fff 1px, transparent 1px)',
+        'premium-gradient': 'linear-gradient(135deg, #5227FF 0%, #FF9FFC 100%)',
+      },
+      backgroundSize: {
+        'grid-20': '20px 20px',
+        'grid-40': '40px 40px',
+      },
+      letterSpacing: {
+        'tightest': '-0.05em',
+        'tighter': '-0.02em',
+        'widest-xl': '0.3em',
       },
       borderRadius: {
         '4xl': '1.5rem',
