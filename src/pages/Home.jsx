@@ -55,7 +55,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-zinc-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light"
+            className="text-zinc-400 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light"
           >
             Single Core Labs delivers the data engine and agentic solutions to power the next generation of AI.
           </motion.p>
@@ -79,28 +79,28 @@ export default function Home() {
       </section>
 
       {/* ─── TRUST BAR ─── */}
-      <section className="py-20 bg-black border-y border-white/5">
+      <section className="py-12 md:py-20 bg-black border-y border-white/5">
         <div className="section-container">
-          <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-12">
+          <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-8 md:mb-12">
             Backed by Engineers & Researchers from
           </p>
-          <div className="flex flex-wrap justify-center gap-10 md:gap-20 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-            <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Bank of America</span>
-            <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">GlobalLogic</span>
-            <span className="text-xl md:text-2xl font-semibold text-white tracking-tighter">Cognizant</span>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-20 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+            <span className="text-lg md:text-2xl font-semibold text-white tracking-tighter">Bank of America</span>
+            <span className="text-lg md:text-2xl font-semibold text-white tracking-tighter">GlobalLogic</span>
+            <span className="text-lg md:text-2xl font-semibold text-white tracking-tighter">Cognizant</span>
           </div>
         </div>
       </section>
 
       {/* ─── AGENTIC SOLUTIONS ─── */}
-      <section className="py-32 bg-black border-t border-white/[0.06]">
+      <section className="py-20 md:py-32 bg-black border-t border-white/[0.06]">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <SectionLabel className="justify-center">Applied AI</SectionLabel>
-            <h2 className="font-display text-4xl lg:text-5xl font-light text-white mt-4 mb-6 tracking-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-white mt-4 mb-6 tracking-tight">
               Agentic Solutions
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+            <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-8">
               Convert your proprietary data and domain expertise into intelligent agents that evolve through continuous human feedback. Build AI systems that don't just respond — they learn, adapt, and improve with every interaction.
             </p>
             <StarBorder as={Link} to="/enterprise/agentic" color="#5227FF" speed="4s" className="inline-flex items-center gap-2 font-medium">
@@ -111,14 +111,14 @@ export default function Home() {
       </section>
 
       {/* ─── DOMAINS (BENTO BOX) ─── */}
-      <section className="py-32 bg-black border-t border-white/[0.06]">
+      <section className="py-20 md:py-32 bg-black border-t border-white/[0.06]">
         <div className="section-container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <SectionLabel className="justify-center">Impact</SectionLabel>
-            <h2 className="font-display text-4xl lg:text-5xl font-light text-white mt-4 mb-4 tracking-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-light text-white mt-4 mb-4 tracking-tight">
               Powering AI Transformation for<br />the World's Leading Enterprises
             </h2>
-            <p className="text-zinc-500 text-lg max-w-2xl mx-auto">
+            <p className="text-zinc-500 text-base md:text-lg max-w-2xl mx-auto">
               Trusted across industries where reliable agents matter most — healthcare, insurance, financial services, and more.
             </p>
           </div>

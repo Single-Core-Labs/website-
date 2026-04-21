@@ -22,6 +22,7 @@
     overflow-x: hidden;
     position: relative;
     letter-spacing: -0.01em;
+    line-height: 1.6;
   }
 
   /* Grain Texture Overlay */
@@ -54,7 +55,8 @@
     z-index: -1;
   }
 
-  body::before {
+  /* Subtitle grid background */
+  .global-grid {
     content: "";
     position: fixed;
     top: 0;
@@ -75,7 +77,11 @@
     font-weight: 400;
     color: #FFFFFF;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    line-height: 1.15;
+  }
+
+  p {
+    @apply leading-relaxed text-zinc-400;
   }
 }
 
