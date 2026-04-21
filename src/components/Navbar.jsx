@@ -21,9 +21,9 @@ const navItems = [
     children: [
       { to: '/services', label: 'Services', desc: 'Expert AI implementation', icon: Users },
       { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale', icon: Shield },
-      { to: '/research', label: 'Research', desc: 'Frontier AI evaluations', icon: BarChart3 },
     ],
   },
+  { to: '/research', label: 'Research' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
