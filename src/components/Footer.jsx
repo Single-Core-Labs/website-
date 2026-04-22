@@ -20,7 +20,7 @@ export default function Footer() {
           <Link to="/" className="inline-block mb-8 group">
             <span className="font-display font-medium text-2xl text-white tracking-tightest group-hover:text-accent-cyan transition-colors">Single core labs</span>
           </Link>
-          <p className="text-sm text-zinc-500 leading-relaxed mb-10 max-w-xs font-light">
+          <p className="text-sm text-zinc-500 leading-relaxed mb-10 max-w-xs font-light opacity-80">
             We translate deep expertise in building frontier models and agents into enterprise solutions. Combining our platform, experienced teams, and advanced processes to accelerate your AI transformation journey.
           </p>
           <div className="flex gap-3">

@@ -21,11 +21,11 @@ export default function Products() {
       <div className="section-container">
         <SectionLabel className="justify-center">Product</SectionLabel>
         
-        <h1 className="font-sans font-light text-5xl md:text-7xl text-white tracking-tight mt-6 mb-8">
+        <h1 className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white tracking-tightest mt-10 mb-10 leading-[0.9]">
           Coming Soon
         </h1>
         
-        <p className="text-zinc-400 font-mono text-sm max-w-xl mx-auto mb-12 leading-relaxed uppercase tracking-widest">
+        <p className="text-zinc-500 font-mono text-[11px] max-w-xl mx-auto mb-16 leading-relaxed uppercase tracking-[0.4em]">
           We are currently building proprietary AI products that will change the way you interact with data and infrastructure.
         </p>
 

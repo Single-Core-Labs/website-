@@ -42,7 +42,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display text-6xl md:text-8xl lg:text-9xl font-medium text-white mt-6 mb-8 tracking-tightest leading-[0.9]"
+            className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white mt-10 mb-8 tracking-tightest leading-[0.9]"
           >
             Services
           </motion.h1>
@@ -60,10 +60,10 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="p-10 card-surface"
+                className="p-12 card-surface"
               >
-                <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">{service.title}</h3>
-                <p className="text-zinc-400 text-base leading-relaxed font-light">{service.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4 tracking-tight">{service.title}</h3>
+                <p className="text-zinc-500 text-base leading-relaxed font-light">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -73,8 +73,8 @@ export default function Services() {
       {/* CTA */}
       <section className="border-t border-white/5 bg-black">
         <div className="section-container py-32 text-center">
-          <p className="font-mono text-xs text-zinc-500 uppercase tracking-[3px] mb-4">{'> Ready to get started?'}</p>
-          <h2 className="font-sans text-4xl lg:text-6xl font-light text-white mb-8 max-w-2xl mx-auto">
+          <p className="font-mono text-[9px] text-zinc-500 uppercase tracking-[0.4em] mb-6">{'> Ready to get started?'}</p>
+          <h2 className="font-display text-4xl lg:text-6xl font-light text-white mb-12 max-w-3xl mx-auto tracking-tightest leading-[0.95]">
             Let's build your<br />next AI solution.
           </h2>
           <StarBorder as={Link} to="/contact" color="#5227FF" speed="4s" className="font-bold">

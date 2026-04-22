@@ -74,7 +74,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] tracking-tight mb-8"
+            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tightest mb-10"
           >
             Technology-first.<br />Intelligence-driven.
           </motion.h1>
@@ -117,7 +117,7 @@ export default function About() {
             >
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-purple-400 mb-6">Vision</p>
-              <h3 className="font-display text-2xl md:text-3xl font-medium text-white mb-4 tracking-tight">
+              <h3 className="font-display text-2xl md:text-3xl font-light text-white mb-6 tracking-tightest leading-[0.95]">
                 The backbone of next-generation intelligent infrastructure
               </h3>
               <p className="text-zinc-500 text-base leading-relaxed font-light">
@@ -133,7 +133,7 @@ export default function About() {
             >
               <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent-cyan mb-6">Mission</p>
-              <h3 className="font-display text-2xl md:text-3xl font-medium text-white mb-4 tracking-tight">
+              <h3 className="font-display text-2xl md:text-3xl font-light text-white mb-6 tracking-tightest leading-[0.95]">
                 Scalable AI systems that automate, improve, and decide
               </h3>
               <p className="text-zinc-500 text-base leading-relaxed font-light">
@@ -150,7 +150,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <SectionLabel>What We Do</SectionLabel>
-              <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-6">
+              <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-8 leading-[0.95]">
                 We design and build intelligent systems
               </h2>
               <p className="text-zinc-400 text-base leading-relaxed mb-10">
@@ -226,7 +226,7 @@ export default function About() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>Who We Serve</SectionLabel>
-          <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-16">
+          <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             Built for teams that build
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -254,7 +254,7 @@ export default function About() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>Our Edge</SectionLabel>
-          <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-16">
+          <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             Why SingleCore Labs
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

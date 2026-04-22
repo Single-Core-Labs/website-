@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle, ArrowRight } from 'lucide-react'
+import SectionLabel from '../components/SectionLabel'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -30,24 +31,30 @@ export default function Contact() {
   }
 
   return (
-    <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="bg-black pt-32 pb-20">
-      <div className="max-w-3xl mx-auto px-6">
+    <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="bg-transparent pt-40 pb-32">
+      <div className="max-w-4xl mx-auto px-6">
 
         {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-5xl font-light text-white mb-6 tracking-tight">
+        <div className="mb-16">
+          <SectionLabel>Connect</SectionLabel>
+          <h1 className="font-display text-6xl md:text-8xl font-light text-white mt-6 mb-8 tracking-tightest leading-[0.9]">
             Get in touch
           </h1>
-          <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
+          <p className="text-zinc-500 text-lg md:text-xl leading-relaxed max-w-2xl font-light">
             We're building the next generation of AI tools and we'd love to have you onboard.
             Tell us about your project and let's see how we can help.
           </p>
         </div>
 
         {/* Form Container */}
-        <div className="bg-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="bg-white/[0.01] border border-white/[0.06] rounded-[2.5rem] p-10 md:p-16 shadow-super backdrop-blur-3xl">
           <form
-            onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              console.log('Form submitted');
+              setSubmitted(true);
+              window.scrollTo(0, 0);
+            }}
             className="space-y-8"
           >
             {/* Row 1: First & Last Name */}
@@ -56,14 +63,14 @@ export default function Contact() {
                 <label className="text-sm font-medium text-zinc-300">First name*</label>
                 <input
                   type="text" required placeholder="First name"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all"
+                  className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15"
                 />
               </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-zinc-300">Last name*</label>
+              <div className="space-y-3">
+                <label className="text-[13px] font-medium text-zinc-400 tracking-tight">Last name*</label>
                 <input
                   type="text" required placeholder="Last name"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all"
+                  className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15"
                 />
               </div>
             </div>
@@ -74,14 +81,14 @@ export default function Contact() {
                 <label className="text-sm font-medium text-zinc-300">Company name*</label>
                 <input
                   type="text" required placeholder="Company"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all"
+                  className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15"
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-zinc-300">Job title*</label>
                 <input
                   type="text" required placeholder="Job title"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all"
+                  className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15"
                 />
               </div>
             </div>
@@ -91,7 +98,7 @@ export default function Contact() {
               <label className="text-sm font-medium text-zinc-300">Work email*</label>
               <input
                 type="email" required placeholder="email@company.com"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all"
+                className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15"
               />
             </div>
 
@@ -100,7 +107,7 @@ export default function Contact() {
               <label className="text-sm font-medium text-zinc-300">Country*</label>
               <input
                 type="text" required placeholder="Select country"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all"
+                className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15"
               />
             </div>
 
@@ -143,7 +150,7 @@ export default function Contact() {
               <label className="text-sm font-medium text-zinc-300 block">Please describe your project in detail*</label>
               <textarea
                 required rows="4" placeholder="Describe your project (data type, volume, timeline, budget, etc.)"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 transition-all resize-none"
+                className="w-full bg-white/[0.02] border border-white/[0.08] rounded-2xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all font-light hover:border-white/15 resize-none"
               />
             </div>
 
@@ -158,10 +165,10 @@ export default function Contact() {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full py-4 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group shadow-xl shadow-white/5"
+              className="btn-primary w-full py-5 text-base"
             >
               Submit Request
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
           </form>
         </div>

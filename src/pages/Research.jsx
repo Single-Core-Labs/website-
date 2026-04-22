@@ -55,7 +55,7 @@ export default function Research() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white max-w-4xl mx-auto leading-[1.1] tracking-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white max-w-5xl mx-auto leading-[0.9] tracking-tightest"
           >
             AI Research That Powers Real Products
           </motion.h1>
@@ -74,7 +74,7 @@ export default function Research() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>Research Focus</SectionLabel>
-          <h2 className="text-4xl lg:text-5xl font-light text-white mb-16 tracking-tight">Focus Areas</h2>
+          <h2 className="text-4xl lg:text-6xl font-light text-white mb-20 tracking-tightest leading-[0.95]">Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map(({ icon: Icon, title, desc }, i) => (
               <motion.div
@@ -102,8 +102,8 @@ export default function Research() {
         <div className="section-container py-32 flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
           <div>
             <SectionLabel>Collaborate</SectionLabel>
-            <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight">Partner with our research team</h2>
-            <p className="text-zinc-500 text-sm mt-4 max-w-2xl font-mono uppercase tracking-widest">University collaborations and industry partnerships available.</p>
+            <h2 className="text-5xl lg:text-7xl font-light text-white tracking-tightest leading-[0.95]">Partner with our research team</h2>
+            <p className="text-zinc-500 text-sm mt-8 max-w-2xl font-mono uppercase tracking-[0.4em]">University collaborations and industry partnerships available.</p>
           </div>
           <Link to="/contact" className="bg-black text-white py-4 px-10 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all shrink-0">
             Get in Touch

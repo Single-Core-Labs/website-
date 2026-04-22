@@ -4,12 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        black: '#00000f',
         bg: {
-          primary: '#000000',
-          secondary: '#000000',
-          tertiary: '#000000',
-          surface: '#000000',
-          surface2: '#000000',
+          primary: '#00000f',
+          secondary: '#00000f',
+          tertiary: '#00000f',
+          surface: '#00000f',
+          surface2: '#00000f',
         },
         accent: {
           primary: '#FFFFFF',

@@ -17,7 +17,7 @@ export default function Enterprise() {
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
       {/* ── Hero ── */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black pt-20">
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/8 blur-[140px] rounded-full pointer-events-none" />
         <div className="section-container relative z-10 text-center max-w-5xl">
@@ -26,7 +26,7 @@ export default function Enterprise() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] tracking-tight mb-8"
+            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] tracking-tightest mb-10"
           >
             AI that works<br />at enterprise scale
           </motion.h1>
@@ -54,7 +54,7 @@ export default function Enterprise() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>Two Tracks</SectionLabel>
-          <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-16">
+          <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             Pick your path
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -130,7 +130,7 @@ export default function Enterprise() {
         <div className="section-container">
           <div className="text-center mb-16">
             <SectionLabel className="justify-center">Why Us</SectionLabel>
-            <h2 className="font-display text-4xl lg:text-5xl font-light text-white tracking-tight mt-4">
+            <h2 className="font-display font-light text-4xl lg:text-6xl font-light text-white tracking-tightest mt-6 mb-12 leading-[0.95]">
               What makes us different
             </h2>
           </div>

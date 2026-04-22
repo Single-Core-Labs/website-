@@ -45,10 +45,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-             <SectionLabel className="justify-center mb-4 opacity-70 scale-90">The Generative AI Platform</SectionLabel>
-             <h1 className="font-display font-light text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tightest text-white mb-8 max-w-4xl mx-auto">
-               AI at scale.<br />
-               Without the chaos.
+             <SectionLabel className="justify-center mb-6 opacity-60">Intelligence meets instinct</SectionLabel>
+             <h1 className="font-display font-light text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tightest text-white mb-10 max-w-5xl mx-auto">
+               Building the future<br />of Agentic AI
              </h1>
           </motion.div>
           <motion.p
@@ -81,13 +80,13 @@ export default function Home() {
       {/* ─── TRUST BAR ─── */}
       <section className="py-12 md:py-20 bg-black border-y border-white/5">
         <div className="section-container">
-          <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-8 md:mb-12">
-            Backed by Engineers & Researchers from
+          <p className="font-mono text-[9px] text-zinc-500 uppercase tracking-[0.4em] text-center mb-10 md:mb-16">
+            Trusted by Leaders in AI & Technology
           </p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-20 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-            <span className="text-lg md:text-2xl font-semibold text-white tracking-tighter">Bank of America</span>
-            <span className="text-lg md:text-2xl font-semibold text-white tracking-tighter">GlobalLogic</span>
-            <span className="text-lg md:text-2xl font-semibold text-white tracking-tighter">Cognizant</span>
+          <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center opacity-30 grayscale hover:opacity-60 transition-all duration-1000">
+            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">Bank of America</span>
+            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">GlobalLogic</span>
+            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">Cognizant</span>
           </div>
         </div>
       </section>
@@ -123,39 +122,43 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 max-w-7xl mx-auto">
             {/* Large Card */}
-            <StarBorder as="div" color="#5227FF" speed="4s" className="md:col-span-2 md:row-span-2 group p-10 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-purple-500/30 transition-all cursor-pointer flex flex-col justify-between overflow-hidden relative">
+            <StarBorder as={Link} to="/enterprise/agentic" color="#5227FF" speed="6s" className="md:col-span-2 md:row-span-2 group p-12 rounded-[2.5rem] bg-white/[0.01] border border-white/[0.06] hover:border-purple-500/30 transition-all cursor-pointer flex flex-col justify-between overflow-hidden relative">
               <div className="relative z-10">
-                <span className="text-[10px] font-mono text-purple-400 uppercase tracking-widest mb-4 block">Featured Solution</span>
-                <h3 className="text-3xl font-semibold text-white mb-4">Insurance & Risk</h3>
-                <p className="text-zinc-400 text-base leading-relaxed max-w-xs">AI-powered claims processing, risk assessment, and fraud detection agents that scale with your business.</p>
+                <span className="text-[9px] font-mono text-purple-400/80 uppercase tracking-[0.3em] mb-6 block">
+                Featured Solution</span>
+                <h3 className="text-4xl font-semibold text-white mb-6 tracking-tight">Insurance & Risk</h3>
+                <p className="text-zinc-400 text-lg leading-relaxed max-w-sm font-light">AI-powered claims processing, risk assessment, and fraud detection agents that scale with your business.</p>
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-purple-500/10 blur-[100px] rounded-full group-hover:bg-purple-500/20 transition-all" />
-              <div className="mt-12 flex items-center gap-2 text-white font-medium group-hover:gap-4 transition-all">
-                Learn more <ArrowRight className="w-4 h-4" />
+              <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-purple-500/10 blur-[120px] rounded-full group-hover:bg-purple-500/20 transition-all duration-700" />
+              <div className="mt-16 flex items-center gap-3 text-white/90 font-medium group-hover:gap-5 transition-all duration-300">
+                Learn more <ArrowRight className="w-5 h-5" />
               </div>
             </StarBorder>
 
             {/* Medium Card 1 */}
-            <StarBorder as="div" color="#06B6D4" speed="5s" className="md:col-span-2 group p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-cyan-500/30 transition-all cursor-pointer block relative overflow-hidden">
-              <h3 className="text-xl font-semibold text-white mb-2">Healthcare</h3>
-              <p className="text-zinc-500 text-sm max-w-sm">Clinical decision support, patient intake automation, and medical data analysis.</p>
-              <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-40 transition-opacity">
-                <div className="w-12 h-12 rounded-full border border-cyan-500" />
+            <StarBorder as={Link} to="/contact" color="#06B6D4" speed="8s" className="md:col-span-2 group p-10 rounded-[2.5rem] bg-white/[0.01] border border-white/[0.05] hover:border-cyan-500/20 transition-all cursor-pointer block relative overflow-hidden">
+              <div className="relative z-10">
+                <span className="text-[9px] font-mono text-cyan-400/80 uppercase tracking-[0.3em] mb-4 block">Industry Leader</span>
+                <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">Healthcare</h3>
+                <p className="text-zinc-500 text-base max-w-sm font-light">Clinical decision support, patient intake automation, and medical data analysis.</p>
+              </div>
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <div className="w-16 h-16 rounded-full border border-cyan-500" />
               </div>
             </StarBorder>
 
             {/* Small Card 1 */}
-            <StarBorder as="div" color="#10B981" speed="6s" className="group p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-green-500/30 transition-all cursor-pointer block">
-              <h3 className="text-xl font-semibold text-white mb-2">Finance</h3>
-              <p className="text-zinc-500 text-sm">Algorithmic trading and compliance agents.</p>
+            <StarBorder as={Link} to="/contact" color="#10B981" speed="10s" className="group p-10 rounded-[2.5rem] bg-white/[0.01] border border-white/[0.06] hover:border-green-500/30 transition-all cursor-pointer block">
+              <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">Finance</h3>
+              <p className="text-zinc-500 text-base font-light">Algorithmic trading and compliance agents.</p>
             </StarBorder>
 
             {/* Small Card 2 */}
-            <StarBorder as="div" color="#F59E0B" speed="7s" className="group p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all cursor-pointer block">
-              <h3 className="text-xl font-semibold text-white mb-2">Public Sector</h3>
-              <p className="text-zinc-500 text-sm">Secure AI for government operations.</p>
+            <StarBorder as={Link} to="/contact" color="#F59E0B" speed="12s" className="group p-10 rounded-[2.5rem] bg-white/[0.01] border border-white/[0.06] hover:border-amber-500/30 transition-all cursor-pointer block">
+              <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">Public Sector</h3>
+              <p className="text-zinc-500 text-base font-light">Secure AI for government operations.</p>
             </StarBorder>
           </div>
         </div>

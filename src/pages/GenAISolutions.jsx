@@ -81,7 +81,7 @@ export default function GenAISolutions() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] tracking-tight mb-8"
+            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] tracking-tightest mb-10"
           >
             GenAI that ships<br />to production
           </motion.h1>
@@ -117,7 +117,7 @@ export default function GenAISolutions() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
             <div>
               <SectionLabel>What We Build</SectionLabel>
-              <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4">
+              <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-8 leading-[0.95]">
                 Six GenAI capabilities,<br />one team
               </h2>
             </div>
@@ -154,7 +154,7 @@ export default function GenAISolutions() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>How It Works</SectionLabel>
-          <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-16">
+          <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             From first call to production
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

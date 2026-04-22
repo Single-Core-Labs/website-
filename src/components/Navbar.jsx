@@ -35,8 +35,8 @@ const allLinks = [
   { to: '/services', label: 'Services' },
   { to: '/research', label: 'Research' },
   { to: '/enterprise', label: 'Enterprise' },
-  { to: '/enterprise/agentic', label: '↳ Agentic Solutions' },
-  { to: '/enterprise/genai', label: '↳ GenAI Solutions' },
+  { to: '/enterprise/agentic', label: 'Agentic Solutions' },
+  { to: '/enterprise/genai', label: 'GenAI Solutions' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -48,7 +48,7 @@ function DropdownMenu({ items }) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 8, scale: 0.97 }}
       transition={{ duration: 0.15, ease: 'easeOut' }}
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-80 bg-black/90 backdrop-blur-3xl border border-white/10 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-50 p-2"
+      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-80 bg-black/80 backdrop-blur-3xl border border-white/10 rounded-[2rem] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.8)] z-50 p-2"
     >
       <div className="grid gap-1">
         {items.map((item, i) => {
@@ -105,8 +105,8 @@ function NavItem({ item }) {
         to={item.to}
         end={item.to === '/'}
         className={({ isActive }) =>
-          `px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 ${
-            isActive ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white'
+          `px-5 py-2.5 rounded-full text-[13px] font-medium tracking-tight transition-all duration-300 ${
+            isActive ? 'text-white bg-white/5 border border-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'
           }`
         }
       >
@@ -121,8 +121,8 @@ function NavItem({ item }) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(o => !o)}
-        className={`flex items-center gap-1.5 px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide transition-all duration-300 ${
-          isActive ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white'
+        className={`flex items-center gap-1.5 px-5 py-2.5 rounded-full text-[13px] font-medium tracking-tight transition-all duration-300 ${
+          isActive ? 'text-white bg-white/5 border border-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'
         }`}
       >
         {item.label}
@@ -171,7 +171,7 @@ export default function Navbar() {
       <motion.header
         initial={{ y: -100, x: '-50%' }}
         animate={{ y: 0, x: '-50%' }}
-        className="fixed top-6 left-1/2 z-50 hidden md:flex items-center bg-black/60 backdrop-blur-3xl border border-white/5 p-1.5 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+        className="fixed top-8 left-1/2 z-50 hidden md:flex items-center bg-black/60 backdrop-blur-2xl border border-white/10 p-1 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-white/20 transition-colors duration-500"
       >
         <nav className="flex items-center gap-1">
           {navItems.map(item => (
@@ -180,7 +180,7 @@ export default function Navbar() {
           <div className="w-px h-4 bg-white/10 mx-2" />
           <Link
             to="/contact"
-            className="px-6 py-2.5 rounded-full text-[12px] uppercase tracking-wider font-bold bg-white text-black hover:bg-zinc-200 transition-all shadow-lg shadow-white/5"
+            className="btn-primary !py-2.5 !px-6 !text-[11px] uppercase tracking-widest"
           >
             Start
           </Link>

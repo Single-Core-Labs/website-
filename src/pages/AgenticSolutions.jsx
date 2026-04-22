@@ -74,7 +74,7 @@ export default function AgenticSolutions() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] tracking-tight mb-8"
+            className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] tracking-tightest mb-10"
           >
             Agentic Solutions<br />that actually work
           </motion.h1>
@@ -110,7 +110,7 @@ export default function AgenticSolutions() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <SectionLabel>The Platform</SectionLabel>
-              <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-6">
+              <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-8 leading-[0.95]">
                 Expert services meets<br />agent training platform
               </h2>
               <p className="text-zinc-400 text-lg leading-relaxed mb-10">
@@ -149,7 +149,7 @@ export default function AgenticSolutions() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>How We Deliver</SectionLabel>
-          <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-16">
+          <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             Four ways we build agents
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -177,7 +177,7 @@ export default function AgenticSolutions() {
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
           <SectionLabel>The Process</SectionLabel>
-          <h2 className="font-display font-light text-4xl lg:text-5xl text-white tracking-tight mt-4 mb-16">
+          <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             From raw data to reliable agents
           </h2>
           <div className="space-y-4">
