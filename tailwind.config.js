@@ -4,13 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        black: '#00000f',
+        black: '#000000',
+        scale: {
+          dark: '#000000',
+          card: '#0a0a0a',
+          border: 'rgba(255, 255, 255, 0.08)',
+          text: {
+            primary: '#FFFFFF',
+            secondary: '#a1a1aa',
+            muted: '#71717a',
+          },
+          accent: {
+            blue: '#0066FF',
+            purple: '#8B5CF6',
+            cyan: '#06B6D4',
+          }
+        },
         bg: {
-          primary: '#00000f',
-          secondary: '#00000f',
-          tertiary: '#00000f',
-          surface: '#00000f',
-          surface2: '#00000f',
+          primary: '#000000',
+          secondary: '#000000',
+          tertiary: '#000000',
+          surface: '#000000',
+          surface2: '#000000',
         },
         accent: {
           primary: '#FFFFFF',
@@ -29,7 +44,7 @@ export default {
       },
       fontFamily: {
         sans: ['"Instrument Sans"', '"Outfit"', 'system-ui', 'sans-serif'],
-        display: ['"Instrument Sans"', '"Outfit"', 'sans-serif'],
+        display: ['"Outfit"', '"Instrument Sans"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {
@@ -38,6 +53,7 @@ export default {
         'subtle-grid-dot': 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)',
         'halftone': 'radial-gradient(circle, #fff 1px, transparent 1px)',
         'premium-gradient': 'linear-gradient(135deg, #5227FF 0%, #FF9FFC 100%)',
+        'scale-gradient': 'linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
       },
       backgroundSize: {
         'grid-20': '20px 20px',

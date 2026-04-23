@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Cpu, Sparkles, Shield, BarChart3, Users, Zap } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 
 // Nav config — items with `children` get a dropdown
 const navItems = [
@@ -10,17 +10,18 @@ const navItems = [
     label: 'Platform',
     to: '/products',
     children: [
-      { to: '/products', label: 'Overview', desc: 'The full-stack AI platform', icon: Cpu },
-      { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents', icon: Zap },
-      { to: '/enterprise/genai', label: 'GenAI Solutions', desc: 'RAG and LLM fine-tuning', icon: Sparkles },
+      { to: '/products', label: 'Data Engine', desc: 'The full-stack AI platform' },
+      { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents' },
+      { to: '/enterprise/genai', label: 'Generative AI', desc: 'RAG and LLM fine-tuning' },
     ],
   },
   {
     label: 'Solutions',
     to: '/services',
     children: [
-      { to: '/services', label: 'Services', desc: 'Expert AI implementation', icon: Users },
-      { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale', icon: Shield },
+      { to: '/services', label: 'Services', desc: 'Expert AI implementation' },
+      { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale' },
+      { to: '/research', label: 'Leaderboards', desc: 'Frontier AI evaluations' },
     ],
   },
   { to: '/research', label: 'Research' },
@@ -52,18 +53,12 @@ function DropdownMenu({ items }) {
     >
       <div className="grid gap-1">
         {items.map((item, i) => {
-          const Icon = item.icon
           return (
             <Link
               key={i}
               to={item.to}
-              className="flex items-start gap-4 px-4 py-3 hover:bg-white/5 rounded-2xl transition-all group"
+              className="flex items-start gap-4 px-5 py-4 hover:bg-white/5 rounded-2xl transition-all group"
             >
-              {Icon && (
-                <div className="mt-1 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
-                  <Icon className="w-4 h-4 text-zinc-400 group-hover:text-white" />
-                </div>
-              )}
               <div className="flex flex-col gap-0.5">
                 <span className="text-[13px] font-medium text-white group-hover:text-accent-cyan transition-colors">
                   {item.label}
