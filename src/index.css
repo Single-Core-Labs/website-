@@ -141,22 +141,15 @@
     backface-visibility: hidden;
   }
   
-  .text-gradient-blue {
-    background: linear-gradient(135deg, #00d4ff, #0066ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   .text-gradient-purple {
-    background: linear-gradient(135deg, #7b2fff, #0066ff);
+    background: linear-gradient(135deg, #D8B4FE, #8B5CF6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .glow-border-blue {
-    box-shadow: 0 0 0 1px rgba(0, 102, 255, 0.3), 0 0 20px rgba(0, 102, 255, 0.1);
+  .glow-border-purple {
+    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.3), 0 0 20px rgba(139, 92, 246, 0.1);
   }
 
   .animate-pulse-slow {

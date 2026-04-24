@@ -57,7 +57,7 @@ export default function Contact() {
     >
       {/* Background Decor */}
       <div className="absolute inset-0 bg-subtle-grid opacity-10 pointer-events-none" />
-      <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-scale-accent-blue/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-scale-accent-purple/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-scale-accent-purple/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">
@@ -75,7 +75,7 @@ export default function Contact() {
 
         {/* Form Container */}
         <div className="bg-scale-card border border-scale-border rounded-[2.5rem] p-8 md:p-16 shadow-[0_24px_80px_rgba(0,0,0,0.5)] relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-scale-accent-blue via-scale-accent-purple to-scale-accent-cyan opacity-50" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-scale-accent-purple via-scale-accent-purple to-scale-accent-cyan opacity-50" />
           
           <form onSubmit={handleSubmit} className="space-y-12">
             
@@ -179,8 +179,8 @@ export default function Contact() {
                   ].map((service) => (
                     <label key={service} className="relative group cursor-pointer">
                       <input type="checkbox" className="peer sr-only" />
-                      <div className="flex items-center gap-3 px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-sm text-scale-text-secondary transition-all peer-checked:border-scale-accent-blue peer-checked:bg-scale-accent-blue/5 group-hover:bg-white/[0.05]">
-                        <div className="w-4 h-4 rounded border border-white/20 flex items-center justify-center peer-checked:bg-scale-accent-blue peer-checked:border-scale-accent-blue">
+                      <div className="flex items-center gap-3 px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-sm text-scale-text-secondary transition-all peer-checked:border-scale-accent-purple peer-checked:bg-scale-accent-purple/5 group-hover:bg-white/[0.05]">
+                        <div className="w-4 h-4 rounded border border-white/20 flex items-center justify-center peer-checked:bg-scale-accent-purple peer-checked:border-scale-accent-purple">
                           <CheckCircle className="w-3 h-3 text-white hidden peer-checked:block" />
                         </div>
                         {service}

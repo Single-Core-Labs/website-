@@ -15,7 +15,7 @@ export default {
             muted: '#71717a',
           },
           accent: {
-            blue: '#0066FF',
+            blue: '#8B5CF6',
             purple: '#8B5CF6',
             cyan: '#06B6D4',
           }
@@ -30,7 +30,7 @@ export default {
         accent: {
           primary: '#FFFFFF',
           secondary: '#E5E5E5',
-          blue: '#2563EB',
+          blue: '#7C3AED',
           cyan: '#06B6D4',
           purple: '#7C3AED',
           glow: 'rgba(255, 255, 255, 0.05)',
@@ -53,7 +53,7 @@ export default {
         'subtle-grid-dot': 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)',
         'halftone': 'radial-gradient(circle, #fff 1px, transparent 1px)',
         'premium-gradient': 'linear-gradient(135deg, #5227FF 0%, #FF9FFC 100%)',
-        'scale-gradient': 'linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+        'scale-gradient': 'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
       },
       backgroundSize: {
         'grid-20': '20px 20px',

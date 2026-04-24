@@ -22,13 +22,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-subtle-grid bg-grid-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] opacity-20 pointer-events-none" />
         
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-scale-accent-blue/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
           <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="absolute inset-0 pointer-events-none">
           <LightPillar
-            topColor="#0066FF"
+            topColor="#8B5CF6"
             bottomColor="#8B5CF6"
             intensity={0.8}
             rotationSpeed={0.2}
@@ -109,7 +109,7 @@ export default function Home() {
             <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-8">
               Convert your proprietary data and domain expertise into intelligent agents that evolve through continuous human feedback. Build AI systems that don't just respond — they learn, adapt, and improve with every interaction.
             </p>
-            <StarBorder as={Link} to="/enterprise/agentic" color="#5227FF" speed="4s" className="inline-flex items-center gap-2 font-medium">
+            <StarBorder as={Link} to="/enterprise/agentic" color="#8B5CF6" speed="4s" className="inline-flex items-center gap-2 font-medium">
               Explore Agentic Solutions <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </StarBorder>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
 
       {/* ─── DOMAINS (BENTO BOX) ─── */}
       <section className="py-20 md:py-32 bg-black border-t border-white/[0.06] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-scale-accent-blue/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-scale-accent-purple/5 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="section-container relative z-10">
           <div className="text-center mb-12 md:mb-20">
@@ -137,7 +137,7 @@ export default function Home() {
               whileHover={{ y: -5 }}
               className="md:col-span-3 md:row-span-2 group p-8 md:p-12 rounded-[2.5rem] bg-scale-card border border-scale-border hover:border-white/20 transition-all cursor-pointer flex flex-col justify-between overflow-hidden relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-scale-accent-blue/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-br from-scale-accent-purple/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
                 <h3 className="text-3xl font-medium text-white mb-4 tracking-tight">Healthcare</h3>
                 <p className="text-scale-text-secondary text-base md:text-lg leading-relaxed max-w-sm font-light">
@@ -235,7 +235,7 @@ export default function Home() {
           <p className="font-mono text-zinc-500 text-sm max-w-md mx-auto mb-10">
             Book a free 30-minute consultation. We'll understand your problem and tell you exactly how we'd solve it.
           </p>
-          <StarBorder as={Link} to="/contact" color="#5227FF" speed="4s" className="font-bold">
+          <StarBorder as={Link} to="/contact" color="#8B5CF6" speed="4s" className="font-bold">
             Start the Conversation
           </StarBorder>
         </div>

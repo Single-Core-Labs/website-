@@ -18,7 +18,7 @@ const testimonials = [
 ]
 
 const mentors = [
-  { initials: 'RV', name: 'Rahul Verma', role: 'Lead — AI Systems', bg: 'bg-accent-blue/20 text-accent-blue' },
+  { initials: 'RV', name: 'Rahul Verma', role: 'Lead — AI Systems', bg: 'bg-accent-purple/20 text-accent-purple' },
   { initials: 'KN', name: 'Kavita Nair', role: 'Lead — MLOps', bg: 'bg-accent-purple/20 text-accent-purple' },
   { initials: 'AS', name: 'Ankit Singh', role: 'Lead — GPU Infra', bg: 'bg-accent-cyan/20 text-accent-cyan' },
 ]

@@ -16,8 +16,8 @@
   background: linear-gradient(
     90deg,
     transparent,
-    #3fe9ff,
-    #5227ff,
+    #8B5CF6,
+    #D8B4FE,
     transparent
   );
   z-index: 0;
@@ -33,8 +33,8 @@
   background: linear-gradient(
     90deg,
     transparent,
-    #5227ff,
-    #3fe9ff,
+    #D8B4FE,
+    #8B5CF6,
     transparent
   );
   z-index: 0;

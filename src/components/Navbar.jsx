@@ -60,7 +60,7 @@ function DropdownMenu({ items }) {
               className="flex items-start gap-4 px-5 py-4 hover:bg-white/5 rounded-2xl transition-all group"
             >
               <div className="flex flex-col gap-0.5">
-                <span className="text-[13px] font-medium text-white group-hover:text-accent-cyan transition-colors">
+                <span className="text-[13px] font-medium text-white group-hover:text-accent-purple transition-colors">
                   {item.label}
                 </span>
                 {item.desc && (
@@ -153,12 +153,12 @@ export default function Navbar() {
               src={`${import.meta.env.BASE_URL}assets/logo.png`}
               alt="Single core labs"
               className="w-9 h-9 object-contain relative z-10"
-            />
-            <div className="absolute inset-0 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </div>
-          <span className="font-display font-medium text-xl text-white tracking-tightest group-hover:text-accent-cyan transition-colors whitespace-nowrap hidden sm:block">
-            Single core labs
-          </span>
+          />
+          <div className="absolute inset-0 bg-white/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        </div>
+        <span className="font-display font-medium text-xl text-white tracking-tightest group-hover:text-accent-purple transition-colors whitespace-nowrap hidden sm:block">
+          Single core labs
+        </span>
         </Link>
       </motion.div>
 
