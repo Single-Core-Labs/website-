@@ -42,9 +42,15 @@ const pillars = [
   }
 ]
 
+import { Helmet } from 'react-helmet-async'
+
 export default function About() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+      <Helmet>
+        <title>About Us | Single Core Labs - Enterprise AI Practitioners</title>
+        <meta name="description" content="Single Core Labs is an enterprise AI services, product, and research company closing the gap between AI promise and production." />
+      </Helmet>
 
       {/* ── Hero ── */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-black pt-20">

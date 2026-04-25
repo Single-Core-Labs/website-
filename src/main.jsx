@@ -6,6 +6,7 @@ import '@fontsource/inter/500.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
 import './index.css'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 
 if ('scrollRestoration' in window.history) {
@@ -14,6 +15,8 @@ if ('scrollRestoration' in window.history) {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </StrictMode>,
 )

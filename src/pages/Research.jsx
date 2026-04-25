@@ -37,9 +37,15 @@ const focusAreas = [
   },
 ]
 
+import { Helmet } from 'react-helmet-async'
+
 export default function Research() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+      <Helmet>
+        <title>AI Research & Leadership | Single Core Labs</title>
+        <meta name="description" content="Frontier AI research powering enterprise products. We study agentic systems, observability, and specialized LLM applications." />
+      </Helmet>
 
       {/* Hero */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">

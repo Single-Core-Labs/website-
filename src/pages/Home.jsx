@@ -11,9 +11,15 @@ const pageVariants = {
   exit: { opacity: 0, transition: { duration: 0.3 } },
 }
 
+import { Helmet } from 'react-helmet-async'
+
 export default function Home() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+      <Helmet>
+        <title>Single Core Labs | Enterprise AI Infrastructure & Services</title>
+        <meta name="description" content="Sovereign AI cloud and infrastructure lifecycle management. We build production-grade agentic systems and scalable AI pipelines for the modern enterprise." />
+      </Helmet>
 
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-black">

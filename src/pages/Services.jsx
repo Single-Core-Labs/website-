@@ -32,6 +32,10 @@ const pageVariants = {
 export default function Services() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+      <Helmet>
+        <title>AI Services & Solutions | Single Core Labs</title>
+        <meta name="description" content="Expert AI implementation services, from custom model development to production-grade automation agents." />
+      </Helmet>
 
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black">
