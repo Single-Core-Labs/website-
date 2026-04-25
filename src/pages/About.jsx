@@ -36,7 +36,7 @@ const whoWeServe = [
   { label: 'Startups', desc: 'Building scalable products that need to move fast without breaking.' },
   { label: 'Engineering Teams', desc: 'SRE, DevOps, and backend teams drowning in operational complexity.' },
   { label: 'AI-first Companies', desc: 'Teams that need AI infrastructure done right, not bolted on.' },
-  { label: 'Enterprises', desc: 'Organisations modernising legacy infrastructure for the next decade.' },
+  { label: 'Enterprises', desc: 'Organizations modernizing legacy infrastructure for the next decade.' },
 ]
 
 const edge = [
@@ -57,7 +57,7 @@ const roadmap = [
   { step: '01', title: 'Launch SRE Agent Platform', desc: 'An autonomous SRE agent that detects, diagnoses, and resolves infrastructure incidents without human intervention.' },
   { step: '02', title: 'Internal Developer Tooling Ecosystem', desc: 'A suite of developer tools that reduce toil, automate repetitive tasks, and give engineering teams back their time.' },
   { step: '03', title: 'Startup AI Infrastructure Partnerships', desc: 'Embedded partnerships with early-stage startups to build and own their AI infrastructure from the ground up.' },
-  { step: '04', title: 'Enterprise Scale', desc: 'Bringing the same intelligent systems to larger organisations — with the reliability and compliance they require.' },
+  { step: '04', title: 'Enterprise Scale', desc: 'Bringing the same intelligent systems to larger organizations — with the reliability and compliance they require.' },
 ]
 
 export default function About() {

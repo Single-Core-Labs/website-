@@ -130,7 +130,7 @@ export default function Enterprise() {
         <div className="section-container">
           <div className="text-center mb-16">
 
-            <h2 className="font-display font-light text-4xl lg:text-6xl font-light text-white tracking-tightest mt-6 mb-12 leading-[0.95]">
+            <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-12 leading-[0.95]">
               What makes us different
             </h2>
           </div>

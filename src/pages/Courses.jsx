@@ -11,9 +11,11 @@ const pageVariants = {
   exit: { opacity: 0, transition: { duration: 0.3 } },
 }
 
+/* cspell:ignore Arjun Mehta Fintech Bootcamp Priya Sharma Rohan Kapoor Rahul Verma Kavita Ankit */
+
 const testimonials = [
   { name: 'Arjun Mehta', role: 'Backend Engineer → AI Infra Lead, Fintech Startup', body: 'The LLM Bootcamp was incredibly hands-on. Within 3 months I went from writing REST APIs to leading our LLM fine-tuning infrastructure. The instructors are exactly the kind of engineers you want to learn from.' },
-  { name: 'Priya Sharma', role: 'Data Analyst → MLOps Engineer, HealthTech', body: 'The curriculum is dense in the best way — real production scenarios, real clusters. No toybox examples. Single core labs treated us like engineers, not students.' },
+  { name: 'Priya Sharma', role: 'Data Analyst → MLOps Engineer, HealthTech', body: 'The curriculum is dense in the best way — real production scenarios, real clusters. No toy box examples. Single core labs treated us like engineers, not students.' },
   { name: 'Rohan Kapoor', role: 'Software Engineer → GPU Infra Engineer, Defense Tech', body: 'I had zero knowledge about Kubernetes or GPU management. After 8 weeks I was running distributed training jobs on an actual H100 cluster. Life-changing.' },
 ]
 
@@ -35,7 +37,7 @@ export default function Courses() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
             From Engineer to AI Infra Lead
           </h1>
-          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono text-sm uppercase tracking-widest">
+          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono uppercase tracking-widest">
             Cohort-based live training designed for software engineers.
           </p>
         </div>
