@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star } from 'lucide-react'
-import SectionLabel from '../components/SectionLabel'
+
 import CourseCard from '../components/CourseCard'
 import { courses } from '../data/courses'
 
@@ -31,7 +31,7 @@ export default function Courses() {
       <section className="relative pt-48 pb-24 overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-10" />
         <div className="section-container relative z-10 text-center">
-          <SectionLabel className="justify-center">Education & Certification</SectionLabel>
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
             From Engineer to AI Infra Lead
           </h1>
@@ -44,7 +44,7 @@ export default function Courses() {
       {/* Course cards */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>Cohort Programs</SectionLabel>
+
           <h2 className="text-4xl lg:text-5xl font-light text-white mb-16 tracking-tight">Upcoming Cohorts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((c, i) => <CourseCard key={c.id} course={c} index={i} />)}
@@ -55,7 +55,7 @@ export default function Courses() {
       {/* How it works */}
       <section className="section-padding">
         <div className="section-container">
-          <SectionLabel>Learning Experience</SectionLabel>
+
           <h2 className="text-4xl lg:text-5xl font-extrabold text-text-primary mb-16 tracking-tight">How it Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -82,7 +82,7 @@ export default function Courses() {
       {/* Mentors */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>Faculty</SectionLabel>
+
           <h2 className="text-4xl lg:text-5xl font-light text-white mb-16 tracking-tight">Your Instructors</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {mentors.map((m, i) => (
@@ -108,7 +108,7 @@ export default function Courses() {
       {/* Testimonials */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>Alumni Stories</SectionLabel>
+
           <h2 className="text-4xl lg:text-5xl font-light text-white mb-16 tracking-tight">What Alumni Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
@@ -137,7 +137,7 @@ export default function Courses() {
       {/* Enroll CTA */}
       <section className="bg-black border-t border-white/5">
         <div className="section-container py-32 flex flex-col items-center text-center">
-          <SectionLabel>Next Cohort Starting Soon</SectionLabel>
+
           <h2 className="text-5xl md:text-6xl font-light text-white max-w-2xl mx-auto tracking-tight mb-8 leading-tight">
             Join the Next Generation of Engineers
           </h2>

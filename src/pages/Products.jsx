@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import SectionLabel from '../components/SectionLabel'
+
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -19,7 +19,7 @@ export default function Products() {
       className="min-h-screen pt-32 pb-20 bg-black flex flex-col items-center justify-center text-center px-4"
     >
       <div className="section-container">
-        <SectionLabel className="justify-center">Product</SectionLabel>
+
         
         <h1 className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white tracking-tightest mt-10 mb-10 leading-[0.9]">
           Coming Soon

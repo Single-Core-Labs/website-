@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import SectionLabel from '../components/SectionLabel'
+
 import StarBorder from '../components/StarBorder'
 
 const services = [
@@ -37,7 +37,7 @@ export default function Services() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-[0.05]" />
         <div className="section-container relative z-10 text-center">
-          <SectionLabel className="justify-center">What We Do</SectionLabel>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

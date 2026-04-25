@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import SectionLabel from '../components/SectionLabel'
+
 import StarBorder from '../components/StarBorder'
 
 const pageVariants = {
@@ -21,7 +21,7 @@ export default function Enterprise() {
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/8 blur-[140px] rounded-full pointer-events-none" />
         <div className="section-container relative z-10 text-center max-w-5xl">
-          <SectionLabel className="justify-center">Enterprise</SectionLabel>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function Enterprise() {
       {/* ── Two tracks ── */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>Two Tracks</SectionLabel>
+
           <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             Pick your path
           </h2>
@@ -129,7 +129,7 @@ export default function Enterprise() {
       <section className="section-padding border-t border-white/[0.06] bg-black">
         <div className="section-container">
           <div className="text-center mb-16">
-            <SectionLabel className="justify-center">Why Us</SectionLabel>
+
             <h2 className="font-display font-light text-4xl lg:text-6xl font-light text-white tracking-tightest mt-6 mb-12 leading-[0.95]">
               What makes us different
             </h2>

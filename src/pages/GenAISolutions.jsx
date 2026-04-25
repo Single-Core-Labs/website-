@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import SectionLabel from '../components/SectionLabel'
+
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -76,7 +76,7 @@ export default function GenAISolutions() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cyan-500/8 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="section-container relative z-10 text-center max-w-5xl">
-          <SectionLabel className="justify-center">Enterprise · GenAI</SectionLabel>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export default function GenAISolutions() {
         <div className="section-container">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
             <div>
-              <SectionLabel>What We Build</SectionLabel>
+
               <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-8 leading-[0.95]">
                 Six GenAI capabilities,<br />one team
               </h2>
@@ -153,7 +153,7 @@ export default function GenAISolutions() {
       {/* ── How it works ── */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>How It Works</SectionLabel>
+
           <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             From first call to production
           </h2>

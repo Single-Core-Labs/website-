@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import DataFlowCanvas from '../components/DataFlowCanvas'
-import SectionLabel from '../components/SectionLabel'
 import StarBorder from '../components/StarBorder'
 import { AuroraBackground } from '../components/AuroraBackground'
 
@@ -37,7 +36,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                <SectionLabel className="mb-6">Frontier AI Infrastructure</SectionLabel>
+
                 <h1 className="font-display font-light text-5xl lg:text-[84px] leading-[1.05] tracking-tightest text-white mb-8">
                   AI at scale<br />
                   Without the chaos
@@ -92,7 +91,7 @@ export default function Home() {
       <section className="py-20 md:py-32 bg-black border-t border-white/[0.06]">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
-            <SectionLabel className="justify-center">Applied AI</SectionLabel>
+
             <h2 className="font-display text-3xl md:text-5xl font-light text-white mt-4 mb-6 tracking-tight">
               Agentic Solutions
             </h2>
@@ -112,7 +111,7 @@ export default function Home() {
         
         <div className="section-container relative z-10">
           <div className="text-center mb-12 md:mb-20">
-            <SectionLabel className="justify-center mb-4 tracking-[0.2em] font-mono">Solutions</SectionLabel>
+
             <h2 className="font-display text-3xl md:text-5xl font-light text-white mt-4 mb-6 tracking-tightest">
               Built for the most<br />demanding AI workloads
             </h2>
@@ -172,7 +171,7 @@ export default function Home() {
       <section className="section-padding border-t border-white/[0.06] bg-black">
         <div className="section-container">
           <div className="text-center">
-            <SectionLabel className="justify-center">Enterprise</SectionLabel>
+
             <h2 className="font-display text-4xl lg:text-6xl font-light text-white mt-4 mb-4 tracking-tight">
               AI for the Enterprise
             </h2>
@@ -190,7 +189,7 @@ export default function Home() {
       <section className="py-32 bg-black border-t border-white/[0.06]">
         <div className="section-container">
           <div className="text-center mb-16">
-            <SectionLabel className="justify-center">Why Us</SectionLabel>
+
             <h2 className="font-display text-4xl lg:text-5xl font-light text-white mt-4 mb-4 tracking-tight">
               How We Deliver Value
             </h2>

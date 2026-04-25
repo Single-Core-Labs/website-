@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import SectionLabel from '../components/SectionLabel'
+
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -69,7 +69,7 @@ export default function AgenticSolutions() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-600/10 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="section-container relative z-10 text-center max-w-5xl">
-          <SectionLabel className="justify-center">Enterprise · Agentic</SectionLabel>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function AgenticSolutions() {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <SectionLabel>The Platform</SectionLabel>
+
               <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-8 leading-[0.95]">
                 Expert services meets<br />agent training platform
               </h2>
@@ -148,7 +148,7 @@ export default function AgenticSolutions() {
       {/* ── Four pillars ── */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>How We Deliver</SectionLabel>
+
           <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             Four ways we build agents
           </h2>
@@ -176,7 +176,7 @@ export default function AgenticSolutions() {
       {/* ── Process ── */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>The Process</SectionLabel>
+
           <h2 className="font-display font-light text-4xl lg:text-6xl text-white tracking-tightest mt-6 mb-20 leading-[0.95]">
             From raw data to reliable agents
           </h2>

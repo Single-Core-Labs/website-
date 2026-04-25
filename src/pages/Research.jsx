@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Activity, Bot, Stethoscope, Container, Database } from 'lucide-react'
-import SectionLabel from '../components/SectionLabel'
+
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -50,7 +50,7 @@ export default function Research() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="section-container relative z-10 text-center">
-          <SectionLabel className="justify-center">Research & Development</SectionLabel>
+
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Research() {
       {/* Focus Areas */}
       <section className="section-padding bg-black border-t border-white/5">
         <div className="section-container">
-          <SectionLabel>Research Focus</SectionLabel>
+
           <h2 className="text-4xl lg:text-6xl font-light text-white mb-20 tracking-tightest leading-[0.95]">Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map(({ icon: Icon, title, desc }, i) => (
@@ -101,7 +101,7 @@ export default function Research() {
       <section className="bg-black border-t border-white/5">
         <div className="section-container py-32 flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
           <div>
-            <SectionLabel>Collaborate</SectionLabel>
+
             <h2 className="text-5xl lg:text-7xl font-light text-white tracking-tightest leading-[0.95]">Partner with our research team</h2>
             <p className="text-zinc-500 text-sm mt-8 max-w-2xl font-mono uppercase tracking-[0.4em]">University collaborations and industry partnerships available.</p>
           </div>
