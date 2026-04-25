@@ -27,40 +27,46 @@ export default function Blog() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, i) => (
-            <motion.article
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="card-surface p-8 group flex flex-col h-full"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono uppercase tracking-widest text-zinc-400">
-                  {post.category}
-                </span>
-                <span className="text-zinc-600 text-[10px] font-mono uppercase tracking-widest">
-                  {post.date}
-                </span>
-              </div>
-              
-              <h2 className="font-display text-2xl font-light text-white mb-4 group-hover:text-purple-400 transition-colors leading-tight">
-                {post.title}
-              </h2>
-              
-              <p className="text-zinc-500 text-sm leading-relaxed mb-8 flex-1">
-                {post.excerpt}
-              </p>
-
-              <Link 
-                to={`/blog/${post.slug}`}
-                className="inline-flex items-center gap-2 text-sm text-white font-medium group-hover:gap-4 transition-all"
+          {blogPosts.length > 0 ? (
+            blogPosts.map((post, i) => (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="card-surface p-8 group flex flex-col h-full"
               >
-                Read Article <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.article>
-          ))}
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono uppercase tracking-widest text-zinc-400">
+                    {post.category}
+                  </span>
+                  <span className="text-zinc-600 text-[10px] font-mono uppercase tracking-widest">
+                    {post.date}
+                  </span>
+                </div>
+                
+                <h2 className="font-display text-2xl font-light text-white mb-4 group-hover:text-purple-400 transition-colors leading-tight">
+                  {post.title}
+                </h2>
+                
+                <p className="text-zinc-500 text-sm leading-relaxed mb-8 flex-1">
+                  {post.excerpt}
+                </p>
+
+                <Link 
+                  to={`/blog/${post.slug}`}
+                  className="inline-flex items-center gap-2 text-sm text-white font-medium group-hover:gap-4 transition-all"
+                >
+                  Read Article <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.article>
+            ))
+          ) : (
+            <div className="col-span-full py-20 text-center card-surface border-dashed">
+              <p className="text-zinc-500 font-light italic">Technical research and insights coming soon.</p>
+            </div>
+          )}
         </div>
 
         {/* Newsletter / CTA */}

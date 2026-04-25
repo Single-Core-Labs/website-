@@ -67,7 +67,7 @@ export default function Contact() {
         {/* Header */}
         <div className="mb-16 text-left">
           <h1 className="text-5xl md:text-6xl font-light text-white mb-6 tracking-tightest">
-            Build the Future of AI
+            Contact Us
           </h1>
           <p className="text-scale-text-secondary text-lg md:text-xl leading-relaxed max-w-2xl">
             Join leading AI teams accelerating their development with Single Core Labs. 
