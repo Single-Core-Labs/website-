@@ -30,43 +30,46 @@ export default function Home() {
 
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none" />
 
-          <div className="section-container relative z-10 text-center w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <h1 className="font-display font-light text-5xl md:text-[90px] leading-[1.05] tracking-tight text-white mb-8 max-w-4xl mx-auto">
-                AI at scale<br />
-                Without the chaos
-              </h1>
-            </motion.div>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal tracking-tight"
-            >
-              Single Core Labs delivers the data engine and agentic solutions to power the next generation of enterprise AI.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col sm:flex-row justify-center gap-6 items-center"
-            >
-              <Link 
-                to="/contact" 
-                className="px-6 py-2.5 bg-white text-black hover:bg-zinc-200 transition-all rounded-full text-sm font-semibold flex items-center gap-2 shadow-2xl shadow-white/5 group"
+          <div className="section-container relative z-10 w-full pt-20 pb-12 md:pt-40 md:pb-32">
+            <div className="max-w-4xl text-left">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                Book a Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/products" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium tracking-wide flex items-center gap-2 group">
-                Explore Platform <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-              </Link>
-            </motion.div>
+                <SectionLabel className="mb-6">Frontier AI Infrastructure</SectionLabel>
+                <h1 className="font-display font-light text-5xl lg:text-[84px] leading-[1.05] tracking-tightest text-white mb-8">
+                  AI at scale<br />
+                  Without the chaos
+                </h1>
+              </motion.div>
+              
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-zinc-400 text-lg lg:text-xl max-w-2xl mb-12 leading-relaxed font-light tracking-tight"
+              >
+                Single Core Labs delivers the data engine and agentic solutions to power the next generation of enterprise AI.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col sm:flex-row justify-start gap-6 items-center sm:items-start"
+              >
+                <Link 
+                  to="/contact" 
+                  className="px-8 py-3 bg-white text-black hover:bg-zinc-200 transition-all rounded-full text-sm font-semibold flex items-center gap-2 shadow-2xl shadow-white/10 group"
+                >
+                  Book a Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link to="/products" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium tracking-wide flex items-center gap-2 group pt-3">
+                  Explore Platform <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </AuroraBackground>
       </section>
