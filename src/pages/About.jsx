@@ -62,7 +62,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display font-light text-5xl md:text-7xl lg:text-[84px] text-white leading-[1.05] tracking-tightest mb-10"
+            className="font-display font-light text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-10"
           >
             Engineering the <br />Future of Enterprise AI
           </motion.h1>
