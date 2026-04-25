@@ -8,6 +8,8 @@ const pageVariants = {
   exit: { opacity: 0, y: -10, transition: { duration: 0.3 } },
 }
 
+/* cspell:ignore RLHF */
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)

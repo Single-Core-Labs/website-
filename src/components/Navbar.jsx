@@ -7,21 +7,14 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 const navItems = [
   { to: '/', label: 'Home' },
   {
-    label: 'Platform',
-    to: '/products',
-    children: [
-      { to: '/products', label: 'Data Engine', desc: 'The full-stack AI platform' },
-      { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents' },
-      { to: '/enterprise/genai', label: 'Generative AI', desc: 'RAG and LLM fine-tuning' },
-    ],
-  },
-  {
     label: 'Solutions',
     to: '/services',
     children: [
+      { to: '/products', label: 'Data Engine', desc: 'The full-stack AI platform' },
       { to: '/services', label: 'Services', desc: 'Expert AI implementation' },
       { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale' },
-      { to: '/research', label: 'Leaderboards', desc: 'Frontier AI evaluations' },
+      { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents' },
+      { to: '/enterprise/genai', label: 'Generative AI', desc: 'RAG and LLM fine-tuning' },
     ],
   },
   { to: '/research', label: 'Research' },
@@ -32,7 +25,6 @@ const navItems = [
 // Flat list for mobile drawer
 const allLinks = [
   { to: '/', label: 'Home' },
-  { to: '/products', label: 'Products' },
   { to: '/services', label: 'Services' },
   { to: '/research', label: 'Research' },
   { to: '/enterprise', label: 'Enterprise' },
