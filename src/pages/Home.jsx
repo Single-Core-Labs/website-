@@ -7,6 +7,7 @@ const LightPillar = lazy(() => import('../components/LightPillar'))
 import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
 import StarBorder from '../components/StarBorder'
+import { AuroraBackground } from '../components/AuroraBackground'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -19,73 +20,75 @@ export default function Home() {
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        {/* Background Grid and Glows */}
-        <div className="absolute inset-0 bg-subtle-grid bg-grid-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] opacity-20 pointer-events-none" />
-        
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
-        </div>
-
-        <div className="absolute inset-0 pointer-events-none">
-          <Suspense fallback={null}>
-            <LightPillar
-              topColor="#8B5CF6"
-              bottomColor="#8B5CF6"
-              intensity={0.8}
-              rotationSpeed={0.2}
-              glowAmount={0.001}
-              pillarWidth={4}
-              pillarHeight={0.3}
-              noiseIntensity={0}
-              pillarRotation={15}
-              interactive={false}
-              mixBlendMode="screen"
-              quality="medium"
-            />
-          </Suspense>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none" />
-
-        <div className="section-container relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h1 className="font-display font-light text-5xl md:text-7xl leading-[1.1] tracking-tightest text-white mb-6 max-w-4xl mx-auto">
-              AI at scale.<br />
-              Without the chaos.
-            </h1>
-          </motion.div>
+      <section className="relative overflow-hidden bg-black">
+        <AuroraBackground className="min-h-screen">
+          {/* Background Grid and Glows */}
+          <div className="absolute inset-0 bg-subtle-grid bg-grid-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] opacity-20 pointer-events-none" />
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-scale-text-secondary text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light"
-          >
-            Single Core Labs delivers the data engine and agentic solutions to power the next generation of enterprise AI.
-          </motion.p>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
+            <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row justify-center gap-6 items-center"
-          >
-            <Link 
-              to="/contact" 
-              className="px-6 py-2.5 bg-white text-black hover:bg-zinc-200 transition-all rounded-full text-sm font-semibold flex items-center gap-2 shadow-2xl shadow-white/5 group"
+          <div className="absolute inset-0 pointer-events-none">
+            <Suspense fallback={null}>
+              <LightPillar
+                topColor="#8B5CF6"
+                bottomColor="#8B5CF6"
+                intensity={0.8}
+                rotationSpeed={0.2}
+                glowAmount={0.001}
+                pillarWidth={4}
+                pillarHeight={0.3}
+                noiseIntensity={0}
+                pillarRotation={15}
+                interactive={false}
+                mixBlendMode="screen"
+                quality="medium"
+              />
+            </Suspense>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none" />
+
+          <div className="section-container relative z-10 text-center w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              Book a Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/products" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium tracking-wide flex items-center gap-2 group">
-              Explore Platform <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-            </Link>
-          </motion.div>
-        </div>
+              <h1 className="font-display font-light text-5xl md:text-7xl leading-[1.1] tracking-tightest text-white mb-6 max-w-4xl mx-auto">
+                AI at scale.<br />
+                Without the chaos.
+              </h1>
+            </motion.div>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="text-scale-text-secondary text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light"
+            >
+              Single Core Labs delivers the data engine and agentic solutions to power the next generation of enterprise AI.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col sm:flex-row justify-center gap-6 items-center"
+            >
+              <Link 
+                to="/contact" 
+                className="px-6 py-2.5 bg-white text-black hover:bg-zinc-200 transition-all rounded-full text-sm font-semibold flex items-center gap-2 shadow-2xl shadow-white/5 group"
+              >
+                Book a Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link to="/products" className="text-zinc-400 hover:text-white transition-colors text-sm font-medium tracking-wide flex items-center gap-2 group">
+                Explore Platform <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </Link>
+            </motion.div>
+          </div>
+        </AuroraBackground>
       </section>
 
       {/* ─── TRUST BAR ─── */}

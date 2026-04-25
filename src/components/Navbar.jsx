@@ -134,18 +134,32 @@ function NavItem({ item }) {
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
 
   useEffect(() => { setMobileOpen(false) }, [location])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
       {/* ── Logo — fixed top-left ── */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="fixed top-6 left-6 z-50"
+        animate={{ 
+          opacity: 1, 
+          x: 0, 
+          top: isScrolled ? 20 : 24, 
+          scale: isScrolled ? 0.9 : 1 
+        }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed left-6 z-50 origin-top-left"
       >
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative">
@@ -165,8 +179,15 @@ export default function Navbar() {
       {/* ── Centered pill nav ── */}
       <motion.header
         initial={{ y: -100, x: '-50%' }}
-        animate={{ y: 0, x: '-50%' }}
-        className="fixed top-8 left-1/2 z-50 hidden md:flex items-center bg-black/60 backdrop-blur-2xl border border-white/10 p-1 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-white/20 transition-colors duration-500"
+        animate={{ 
+          y: 0, 
+          x: '-50%',
+          top: isScrolled ? 16 : 32,
+          padding: isScrolled ? '0.25rem' : '0.375rem',
+          backgroundColor: isScrolled ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.6)',
+        }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed left-1/2 z-50 hidden md:flex items-center backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-white/20"
       >
         <nav className="flex items-center gap-1">
           {navItems.map(item => (
@@ -185,8 +206,12 @@ export default function Navbar() {
       {/* ── Mobile hamburger ── */}
       <motion.button
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="fixed top-6 right-6 z-50 md:hidden text-white p-2 hover:bg-white/5 rounded-full transition-colors"
+        animate={{ 
+          opacity: 1,
+          top: isScrolled ? 20 : 24 
+        }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed right-6 z-50 md:hidden text-white p-2 hover:bg-white/5 rounded-full transition-colors"
         onClick={() => setMobileOpen(o => !o)}
       >
         {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
