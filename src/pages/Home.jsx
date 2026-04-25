@@ -8,7 +8,6 @@ import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
 import StarBorder from '../components/StarBorder'
 import { AuroraBackground } from '../components/AuroraBackground'
-import ResearchShowcase from '../components/ResearchShowcase'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -185,9 +184,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ─── OPEN RESEARCH SHOWCASE ─── */}
-      <ResearchShowcase />
 
       {/* ─── AI FOR THE ENTERPRISE ─── */}
       <section className="section-padding border-t border-white/[0.06] bg-black">
