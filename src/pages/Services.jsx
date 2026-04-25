@@ -36,7 +36,7 @@ export default function Services() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-[0.05]" />
-        <div className="section-container relative z-10 text-center">
+        <div className="section-container relative z-10 text-left">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

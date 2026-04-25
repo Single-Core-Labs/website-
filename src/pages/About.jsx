@@ -68,7 +68,7 @@ export default function About() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/8 blur-[140px] rounded-full pointer-events-none" />
-        <div className="section-container relative z-10 text-center max-w-5xl">
+        <div className="section-container relative z-10 text-left max-w-6xl">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed font-light tracking-tight"
+            className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-12 leading-relaxed font-light tracking-tight"
           >
             SingleCore Labs builds intelligent systems, scalable infrastructure, and AI-driven solutions for modern enterprises — simplifying complex operations and accelerating innovation.
           </motion.p>
@@ -90,7 +90,7 @@ export default function About() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-wrap justify-start gap-4"
           >
             <a
               href={googleFormUrl}

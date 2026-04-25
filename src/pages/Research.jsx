@@ -49,13 +49,13 @@ export default function Research() {
         {/* Centered glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-        <div className="section-container relative z-10 text-center">
+        <div className="section-container relative z-10 text-left">
 
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white max-w-5xl mx-auto leading-[0.9] tracking-tightest"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white max-w-5xl leading-[0.9] tracking-tightest"
           >
             AI Research That Powers Real Products
           </motion.h1>
@@ -63,7 +63,7 @@ export default function Research() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-zinc-400 text-lg max-w-2xl mx-auto mt-6 leading-relaxed"
+            className="text-zinc-400 text-lg max-w-2xl mt-6 leading-relaxed"
           >
             We don't just implement AI — we study it. Our research feeds directly into the products and services we build for enterprises.
           </motion.p>

@@ -16,7 +16,7 @@ export default function Products() {
       initial="initial" 
       animate="animate" 
       exit="exit"
-      className="min-h-screen pt-32 pb-20 bg-black flex flex-col items-center justify-center text-center px-4"
+      className="min-h-screen pt-32 pb-20 bg-black flex flex-col items-start justify-center text-left"
     >
       <div className="section-container">
 
@@ -25,7 +25,7 @@ export default function Products() {
           Coming Soon
         </h1>
         
-        <p className="text-zinc-500 font-mono text-[11px] max-w-xl mx-auto mb-16 leading-relaxed uppercase tracking-[0.4em]">
+        <p className="text-zinc-500 font-mono text-[11px] max-w-xl mb-16 leading-relaxed uppercase tracking-[0.4em]">
           We are currently building proprietary AI products that will change the way you interact with data and infrastructure.
         </p>
 

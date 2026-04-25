@@ -32,12 +32,12 @@ export default function Courses() {
       {/* Hero */}
       <section className="relative pt-48 pb-24 overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-10" />
-        <div className="section-container relative z-10 text-center">
+        <div className="section-container relative z-10 text-left">
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl mx-auto leading-[1] tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white max-w-4xl leading-[1] tracking-tight">
             From Engineer to AI Infra Lead
           </h1>
-          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mx-auto mt-10 leading-relaxed font-mono uppercase tracking-widest">
+          <p className="text-zinc-500 text-lg lg:text-xl max-w-2xl mt-10 leading-relaxed font-mono uppercase tracking-widest">
             Cohort-based live training designed for software engineers.
           </p>
         </div>

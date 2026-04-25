@@ -20,7 +20,7 @@ export default function Enterprise() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black pt-20">
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/8 blur-[140px] rounded-full pointer-events-none" />
-        <div className="section-container relative z-10 text-center max-w-5xl">
+        <div className="section-container relative z-10 text-left max-w-6xl">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Enterprise() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-zinc-400 text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="text-zinc-400 text-lg max-w-2xl mb-12 leading-relaxed"
           >
             Two distinct tracks — Agentic Solutions for teams building autonomous workflows, and GenAI Solutions for teams shipping production AI products. Both backed by research. Both built to last.
           </motion.p>

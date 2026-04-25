@@ -75,7 +75,7 @@ export default function GenAISolutions() {
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cyan-500/8 blur-[140px] rounded-full pointer-events-none" />
 
-        <div className="section-container relative z-10 text-center max-w-5xl">
+        <div className="section-container relative z-10 text-left max-w-6xl">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export default function GenAISolutions() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-zinc-400 text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="text-zinc-400 text-lg max-w-2xl mb-12 leading-relaxed"
           >
             Concrete GenAI deliverables — RAG pipelines, fine-tuned models, production APIs, and evaluation systems — built by engineers who've done it before.
           </motion.p>
@@ -97,7 +97,7 @@ export default function GenAISolutions() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-wrap justify-start gap-4"
           >
             <a
               href={googleFormUrl}

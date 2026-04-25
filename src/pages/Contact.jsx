@@ -63,7 +63,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         
         {/* Header */}
-        <div className="mb-16 text-center md:text-left">
+        <div className="mb-16 text-left">
           <h1 className="text-5xl md:text-6xl font-light text-white mb-6 tracking-tightest">
             Build the Future of AI
           </h1>
