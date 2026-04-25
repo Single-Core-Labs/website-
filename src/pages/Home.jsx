@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronRight } from 'lucide-react'
-import LightPillar from '../components/LightPillar'
+import { lazy, Suspense } from 'react'
+
+const LightPillar = lazy(() => import('../components/LightPillar'))
 import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
 import StarBorder from '../components/StarBorder'
@@ -27,20 +29,22 @@ export default function Home() {
         </div>
 
         <div className="absolute inset-0 pointer-events-none">
-          <LightPillar
-            topColor="#8B5CF6"
-            bottomColor="#8B5CF6"
-            intensity={0.8}
-            rotationSpeed={0.2}
-            glowAmount={0.001}
-            pillarWidth={4}
-            pillarHeight={0.3}
-            noiseIntensity={0}
-            pillarRotation={15}
-            interactive={false}
-            mixBlendMode="screen"
-            quality="high"
-          />
+          <Suspense fallback={null}>
+            <LightPillar
+              topColor="#8B5CF6"
+              bottomColor="#8B5CF6"
+              intensity={0.8}
+              rotationSpeed={0.2}
+              glowAmount={0.001}
+              pillarWidth={4}
+              pillarHeight={0.3}
+              noiseIntensity={0}
+              pillarRotation={15}
+              interactive={false}
+              mixBlendMode="screen"
+              quality="medium"
+            />
+          </Suspense>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none" />
 
