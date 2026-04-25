@@ -15,9 +15,11 @@ const navItems = [
       { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale' },
       { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents' },
       { to: '/enterprise/genai', label: 'Generative AI', desc: 'RAG and LLM fine-tuning' },
+      { to: '/case-studies', label: 'Case Studies', desc: 'Real-world impact stories' },
     ],
   },
   { to: '/research', label: 'Research' },
+  { to: '/blog', label: 'Blog' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -30,6 +32,8 @@ const allLinks = [
   { to: '/enterprise', label: 'Enterprise' },
   { to: '/enterprise/agentic', label: 'Agentic Solutions' },
   { to: '/enterprise/genai', label: 'GenAI Solutions' },
+  { to: '/case-studies', label: 'Case Studies' },
+  { to: '/blog', label: 'Blog' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]

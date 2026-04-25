@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Automating Global Supply Chain Logistics",
+    "client": "LogiTech International",
+    "impact": "40% Cost Reduction",
+    "desc": "Deploying autonomous agents to manage real-time inventory and shipping route optimization.",
+    "slug": "supply-chain-logistics",
+    "color": "purple",
+    "content": "Full case study content goes here..."
+  },
+  {
+    "id": 2,
+    "title": "Sovereign AI for National Healthcare",
+    "client": "Ministry of Health",
+    "impact": "99.9% Data Privacy",
+    "desc": "Building on-premise infrastructure for secure LLM deployment across state hospitals.",
+    "slug": "sovereign-healthcare-ai",
+    "color": "cyan",
+    "content": "Full case study content goes here..."
+  },
+  {
+    "id": 3,
+    "title": "Next-Gen Financial Fraud Detection",
+    "client": "FinGuard Bank",
+    "impact": "15x Speed Increase",
+    "desc": "Implementing custom RAG pipelines to detect anomalous transactions in milliseconds.",
+    "slug": "financial-fraud-detection",
+    "color": "emerald",
+    "content": "Full case study content goes here..."
+  }
+]

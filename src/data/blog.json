@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Agentic AI in Enterprise Workflows",
+    "excerpt": "How autonomous agents are moving from research labs to mission-critical business operations.",
+    "date": "April 20, 2024",
+    "author": "Dr. Sarah Chen",
+    "category": "Agentic AI",
+    "slug": "future-of-agentic-ai",
+    "content": "Full article content goes here..."
+  },
+  {
+    "id": 2,
+    "title": "Optimizing RAG Pipelines for High-Latency Environments",
+    "excerpt": "Technical strategies for maintaining performance in complex retrieval-augmented generation systems.",
+    "date": "April 15, 2024",
+    "author": "Alex Rivest",
+    "category": "Engineering",
+    "slug": "optimizing-rag-pipelines",
+    "content": "Full article content goes here..."
+  },
+  {
+    "id": 3,
+    "title": "Why Most Enterprise AI Pilots Fail",
+    "excerpt": "A practitioner's guide to crossing the chasm from proof-of-concept to production.",
+    "date": "April 10, 2024",
+    "author": "James Wilson",
+    "category": "Strategy",
+    "slug": "why-ai-pilots-fail",
+    "content": "Full article content goes here..."
+  }
+]
