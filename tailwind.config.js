@@ -45,8 +45,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"Instrument Sans"', '"Outfit"', 'system-ui', 'sans-serif'],
-        display: ['"Outfit"', '"Instrument Sans"', 'sans-serif'],
+        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        display: ['"Inter"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {

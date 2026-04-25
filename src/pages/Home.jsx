@@ -8,6 +8,7 @@ import DataFlowCanvas from '../components/DataFlowCanvas'
 import SectionLabel from '../components/SectionLabel'
 import StarBorder from '../components/StarBorder'
 import { AuroraBackground } from '../components/AuroraBackground'
+import ResearchShowcase from '../components/ResearchShowcase'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -56,9 +57,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="font-display font-light text-5xl md:text-7xl leading-[1.1] tracking-tightest text-white mb-6 max-w-4xl mx-auto">
-                AI at scale.<br />
-                Without the chaos.
+              <h1 className="font-display font-light text-5xl md:text-[90px] leading-[1.05] tracking-tight text-white mb-8 max-w-4xl mx-auto">
+                AI at scale<br />
+                Without the chaos
               </h1>
             </motion.div>
             
@@ -66,7 +67,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-scale-text-secondary text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light"
+              className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal tracking-tight"
             >
               Single Core Labs delivers the data engine and agentic solutions to power the next generation of enterprise AI.
             </motion.p>
@@ -142,12 +143,12 @@ export default function Home() {
             {/* Large Card: Healthcare */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-3 md:row-span-2 group p-8 md:p-12 rounded-[2.5rem] bg-scale-card border border-scale-border hover:border-white/20 transition-all cursor-pointer flex flex-col justify-between overflow-hidden relative"
+              className="md:col-span-3 md:row-span-2 group p-8 md:p-12 card-surface cursor-pointer flex flex-col justify-between"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-scale-accent-purple/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
-                <h3 className="text-3xl font-medium text-white mb-4 tracking-tight">Healthcare</h3>
-                <p className="text-scale-text-secondary text-base md:text-lg leading-relaxed max-w-sm font-light">
+                <h3 className="text-3xl font-semibold text-white mb-4 tracking-tight">Healthcare</h3>
+                <p className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-sm">
                   AI-driven clinical decision support, patient intake automation, and secure medical data analysis for modern health systems.
                 </p>
               </div>
@@ -159,12 +160,12 @@ export default function Home() {
             {/* Medium Card: Finance */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-3 group p-8 md:p-10 rounded-[2.5rem] bg-scale-card border border-scale-border hover:border-white/20 transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between"
+              className="md:col-span-3 group p-8 md:p-10 card-surface cursor-pointer flex flex-col justify-between"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-scale-accent-purple/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
-                <h3 className="text-2xl font-medium text-white mb-3 tracking-tight">Finance</h3>
-                <p className="text-scale-text-secondary text-sm md:text-base max-w-md font-light">
+                <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">Finance</h3>
+                <p className="text-zinc-400 text-sm md:text-base max-w-md">
                   Algorithmic risk assessment, fraud detection, and automated compliance agents for global financial institutions.
                 </p>
               </div>
@@ -176,14 +177,17 @@ export default function Home() {
             {/* Small Card: Insurance */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-3 group p-8 rounded-[2.5rem] bg-scale-card border border-scale-border hover:border-white/20 transition-all cursor-pointer"
+              className="md:col-span-3 group p-8 card-surface cursor-pointer"
             >
-              <h3 className="text-xl font-medium text-white mb-2 tracking-tight">Insurance</h3>
-              <p className="text-scale-text-muted text-sm font-light">AI-powered claims processing and intelligent risk modeling for the next generation of insurance providers.</p>
+              <h3 className="text-xl font-semibold text-white mb-2 tracking-tight">Insurance</h3>
+              <p className="text-zinc-400 text-sm">AI-powered claims processing and intelligent risk modeling for the next generation of insurance providers.</p>
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* ─── OPEN RESEARCH SHOWCASE ─── */}
+      <ResearchShowcase />
 
       {/* ─── AI FOR THE ENTERPRISE ─── */}
       <section className="section-padding border-t border-white/[0.06] bg-black">
