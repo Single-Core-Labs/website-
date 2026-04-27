@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ChevronRight } from 'lucide-react'
-import DataFlowCanvas from '../components/DataFlowCanvas'
+import { lazy, Suspense } from 'react'
 import StarBorder from '../components/StarBorder'
-import Beams from '../components/Beams'
+const Beams = lazy(() => import('../components/Beams'))
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -25,16 +25,18 @@ export default function Home() {
       <section className="relative overflow-hidden bg-black min-h-screen flex items-center">
         {/* Beams Background */}
         <div className="absolute inset-0 z-0">
-          <Beams
-            beamWidth={3}
-            beamHeight={30}
-            beamNumber={20}
-            lightColor="#ffffff"
-            speed={2}
-            noiseIntensity={1.75}
-            scale={0.2}
-            rotation={30}
-          />
+          <Suspense fallback={<div className="w-full h-full bg-black" />}>
+            <Beams
+              beamWidth={3}
+              beamHeight={30}
+              beamNumber={20}
+              lightColor="#ffffff"
+              speed={2}
+              noiseIntensity={1.75}
+              scale={0.2}
+              rotation={30}
+            />
+          </Suspense>
         </div>
 
         {/* Background Grid and Glows */}
