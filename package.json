@@ -25,6 +25,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^6.0.1",
     "autoprefixer": "^10.4.19",
+    "esbuild": "^0.28.0",
     "postcss": "^8.4.38",
     "shadcn": "^4.2.0",
     "tailwindcss": "^3.4.3",

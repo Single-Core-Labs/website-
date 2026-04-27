@@ -8,8 +8,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
-    cssMinify: true,
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -21,9 +20,8 @@ export default defineConfig({
               return 'vendor-framer';
             }
             if (id.includes('lucide-react')) {
-              return 'vendor-icons';
+              return 'vendor-ui';
             }
-            return 'vendor';
           }
         },
       },
