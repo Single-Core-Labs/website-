@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { lazy, Suspense } from 'react'
 import StarBorder from '../components/StarBorder'
+import DecryptedText from '../components/DecryptedText'
 const Beams = lazy(() => import('../components/Beams'))
 
 const pageVariants = {
@@ -58,19 +59,40 @@ export default function Home() {
               >
 
                 <h1 className="font-display font-light text-5xl lg:text-[84px] leading-[1.05] tracking-tightest text-white mb-8">
-                  AI at scale<br />
-                  Without the chaos
+                  <DecryptedText 
+                    text="AI at scale" 
+                    animateOn="view" 
+                    revealDirection="start"
+                    sequential={true}
+                    encryptedClassName="text-purple-500"
+                  />
+                  <br />
+                  <DecryptedText 
+                    text="Without the chaos" 
+                    animateOn="view" 
+                    revealDirection="start"
+                    sequential={true}
+                    speed={100}
+                    encryptedClassName="text-purple-500"
+                  />
                 </h1>
               </motion.div>
               
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="text-zinc-400 text-lg lg:text-xl max-w-2xl mb-12 leading-relaxed font-light tracking-tight"
               >
-                Single Core Labs delivers the data engine and agentic solutions to power the next generation of enterprise AI.
-              </motion.p>
+                <DecryptedText 
+                  text="Single Core Labs delivers agentic solutions to power the next generation of enterprise AI." 
+                  animateOn="view"
+                  revealDirection="start"
+                  sequential={true}
+                  speed={30}
+                  encryptedClassName="text-purple-500 opacity-50"
+                />
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

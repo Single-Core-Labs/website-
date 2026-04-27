@@ -10,7 +10,6 @@ const navItems = [
     label: 'Solutions',
     to: '/services',
     children: [
-      { to: '/products', label: 'Data Engine', desc: 'The full-stack AI platform' },
       { to: '/services', label: 'Services', desc: 'Expert AI implementation' },
       { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale' },
       { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents' },

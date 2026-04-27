@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import DecryptedText from '../components/DecryptedText'
 
 
 const pageVariants = {
@@ -76,7 +77,22 @@ export default function AgenticSolutions() {
             transition={{ duration: 0.8 }}
             className="font-display font-light text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] tracking-tightest mb-10"
           >
-            Agentic Solutions<br />that actually work
+            <DecryptedText 
+              text="Agentic Solutions" 
+              animateOn="view" 
+              revealDirection="start"
+              sequential={true}
+              encryptedClassName="text-purple-500"
+            />
+            <br />
+            <DecryptedText 
+              text="that actually work" 
+              animateOn="view" 
+              revealDirection="start"
+              sequential={true}
+              speed={100}
+              encryptedClassName="text-purple-500"
+            />
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
