@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import DataFlowCanvas from '../components/DataFlowCanvas'
 import StarBorder from '../components/StarBorder'
-import { AuroraBackground } from '../components/AuroraBackground'
+import Beams from '../components/Beams'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -22,18 +22,30 @@ export default function Home() {
       </Helmet>
 
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden bg-black">
-        <AuroraBackground className="min-h-screen">
-          {/* Background Grid and Glows */}
-          <div className="absolute inset-0 bg-subtle-grid bg-grid-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] opacity-20 pointer-events-none" />
-          
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
-            <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
-          </div>
+      <section className="relative overflow-hidden bg-black min-h-screen flex items-center">
+        {/* Beams Background */}
+        <div className="absolute inset-0 z-0">
+          <Beams
+            beamWidth={3}
+            beamHeight={30}
+            beamNumber={20}
+            lightColor="#ffffff"
+            speed={2}
+            noiseIntensity={1.75}
+            scale={0.2}
+            rotation={30}
+          />
+        </div>
 
+        {/* Background Grid and Glows */}
+        <div className="absolute inset-0 bg-subtle-grid bg-grid-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] opacity-20 pointer-events-none z-[1]" />
+        
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none z-[2]">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-scale-accent-purple/10 blur-[120px] rounded-full" />
+        </div>
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none z-[3]" />
 
           <div className="section-container relative z-10 w-full pt-20 pb-12 md:pt-40 md:pb-32">
             <div className="max-w-4xl text-left">
@@ -76,7 +88,6 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </AuroraBackground>
       </section>
 
       {/* ─── TRUST BAR ─── */}

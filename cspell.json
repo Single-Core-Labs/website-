@@ -10,6 +10,15 @@
     "genai",
     "Csvg",
     "Crect",
-    "BENTO"
+    "BENTO",
+    "drei",
+    "metalness",
+    "frameloop",
+    "cnoise",
+    "newpos",
+    "curpos",
+    "nextpos",
+    "beginnormal",
+    "shadcn"
   ]
 }
