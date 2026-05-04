@@ -9,6 +9,13 @@
     box-sizing: border-box;
   }
 
+  /* Global GPU Acceleration for media and interactive elements */
+  img, svg, video, canvas, a, button {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: auto;
+  }
+
   html {
     scroll-behavior: smooth;
   }
