@@ -14,6 +14,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [step, setStep] = useState(1)
+  const [agreed, setAgreed] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -204,13 +205,25 @@ export default function Contact() {
             {/* Submit Section */}
             <div className="pt-6 border-t border-scale-border">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <p className="text-xs text-scale-text-muted max-w-sm leading-relaxed text-center md:text-left">
-                  By submitting this form, you agree to our <a href="#" className="text-white hover:underline">Privacy Policy</a> and consent to being contacted regarding our services.
-                </p>
+                <label className="relative group cursor-pointer flex items-start gap-3 max-w-sm text-left">
+                  <input 
+                    type="checkbox" 
+                    required 
+                    className="peer sr-only" 
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
+                  />
+                  <div className="w-4 h-4 rounded border border-white/20 flex items-center justify-center shrink-0 mt-0.5 transition-all group-has-[:checked]:bg-scale-accent-purple group-has-[:checked]:border-scale-accent-purple group-hover:border-white/40">
+                    <CheckCircle className="w-3 h-3 text-white hidden group-has-[:checked]:block" />
+                  </div>
+                  <p className="text-xs text-scale-text-muted leading-relaxed">
+                    By submitting this form, you agree to our <a href="#" className="text-white hover:underline">Privacy Policy</a> and consent to being contacted regarding our services.
+                  </p>
+                </label>
                 <button 
                   type="submit"
-                  disabled={loading}
-                  className="w-full md:w-auto px-12 py-5 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-3 group shadow-[0_0_40px_rgba(255,255,255,0.1)] active:scale-95 disabled:opacity-50"
+                  disabled={loading || !agreed}
+                  className="w-full md:w-auto px-12 py-5 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-3 group shadow-[0_0_40px_rgba(255,255,255,0.1)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <Loader2 className="w-5 h-5 animate-spin" />
