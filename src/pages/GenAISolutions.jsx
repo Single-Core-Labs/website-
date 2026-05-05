@@ -73,7 +73,7 @@ export default function GenAISolutions() {
       {/* ── Hero ── */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cyan-500/8 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/8 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="section-container relative z-10 text-left max-w-6xl">
 
