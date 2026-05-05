@@ -136,11 +136,11 @@ export default function GenAISolutions() {
                 transition={{ delay: i * 0.07, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="card-surface p-8 group relative overflow-hidden flex flex-col"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-                <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-accent-cyan mb-4 block">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+                <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-accent-purple mb-4 block">
                   {item.tag}
                 </span>
-                <h3 className="font-display text-xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                <h3 className="font-display text-xl font-light text-white mb-3 tracking-tight group-hover:text-accent-purple transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-zinc-500 text-sm leading-relaxed flex-1">{item.desc}</p>
