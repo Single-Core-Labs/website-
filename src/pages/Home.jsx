@@ -120,10 +120,10 @@ export default function Home() {
           <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-8 md:mb-12">
             Backed by engineers from
           </p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center opacity-30 grayscale hover:opacity-60 transition-all duration-1000">
-            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">Bank of America</span>
-            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">GlobalLogic</span>
-            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">Cognizant</span>
+          <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
+            <img src="/assets/boa.svg" alt="Bank of America" className="h-8 md:h-10 w-auto object-contain brightness-0 invert" />
+            <img src="/assets/globallogic.svg" alt="GlobalLogic" className="h-8 md:h-10 w-auto object-contain brightness-0 invert" />
+            <img src="/assets/cognizant.svg" alt="Cognizant" className="h-6 md:h-8 w-auto object-contain brightness-0 invert" />
           </div>
         </div>
       </section>
