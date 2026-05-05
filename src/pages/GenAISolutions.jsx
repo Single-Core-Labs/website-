@@ -198,7 +198,7 @@ export default function GenAISolutions() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className="px-8 py-10 text-center flex flex-col items-center"
               >
-                <div className="font-display text-5xl font-light text-white/[0.05] mb-4">{num}</div>
+                <div className="font-display text-5xl font-light text-white/20 mb-4">{num}</div>
                 <h3 className="font-display text-lg font-semibold text-white mb-3">{title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">{desc}</p>
               </motion.div>
