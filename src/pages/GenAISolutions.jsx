@@ -73,7 +73,7 @@ export default function GenAISolutions() {
       {/* ── Hero ── */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0 grid-bg opacity-[0.04]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cyan-500/8 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500/8 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="section-container relative z-10 text-left max-w-6xl">
 
@@ -136,11 +136,11 @@ export default function GenAISolutions() {
                 transition={{ delay: i * 0.07, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="card-surface p-8 group relative overflow-hidden flex flex-col"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-                <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-accent-cyan mb-4 block">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+                <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-accent-purple mb-4 block">
                   {item.tag}
                 </span>
-                <h3 className="font-display text-xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                <h3 className="font-display text-xl font-light text-white mb-3 tracking-tight group-hover:text-accent-purple transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-zinc-500 text-sm leading-relaxed flex-1">{item.desc}</p>
@@ -167,11 +167,11 @@ export default function GenAISolutions() {
                 transition={{ delay: i * 0.1, duration: 0.6 }}
                 className="card-surface p-8 group relative overflow-hidden"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
-                <div className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.2em] mb-4 group-hover:text-accent-cyan transition-colors">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+                <div className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.2em] mb-4 group-hover:text-accent-purple transition-colors">
                   {item.step}
                 </div>
-                <h3 className="font-display text-lg font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">
+                <h3 className="font-display text-lg font-light text-white mb-3 tracking-tight group-hover:text-accent-purple transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{item.desc}</p>
@@ -198,7 +198,7 @@ export default function GenAISolutions() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className="px-8 py-10 text-center flex flex-col items-center"
               >
-                <div className="font-display text-5xl font-light text-white/[0.05] mb-4">{num}</div>
+                <div className="font-display text-5xl font-light text-white/20 mb-4">{num}</div>
                 <h3 className="font-display text-lg font-semibold text-white mb-3">{title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">{desc}</p>
               </motion.div>
