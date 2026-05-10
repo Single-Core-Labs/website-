@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Activity, Bot, Stethoscope, Container, Database } from 'lucide-react'
+import { Activity, Bot, Stethoscope, Container } from 'lucide-react'
 
 
 const pageVariants = {
@@ -29,11 +29,6 @@ const focusAreas = [
     icon: Container, 
     title: 'MLOps & Kubernetes-Native AI Infrastructure', 
     desc: 'LLM + RL for incident remediation, AI workload scheduling, and cost-efficient model serving.'
-  },
-  { 
-    icon: Database, 
-    title: 'Data-Centric AI', 
-    desc: 'Training data quality measurement, domain-specific dataset construction, and active learning pipelines.'
   },
 ]
 
