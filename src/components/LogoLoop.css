@@ -1,0 +1,93 @@
+.logoloop {
+  position: relative;
+  width: 100%;
+  height: var(--logo-height);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.logoloop__inner {
+  display: flex;
+  width: max-content;
+  /* Removed gap here for pixel-perfect loop */
+  animation: scroll var(--speed) linear infinite var(--direction);
+  align-items: center;
+}
+
+.logoloop:hover .logoloop__inner {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logoloop__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* Use padding to handle the gap precisely */
+  padding-right: var(--gap);
+  position: relative;
+}
+
+/* Wider fade edges for cinematic feel */
+.logoloop--fade::before,
+.logoloop--fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: clamp(80px, 15%, 250px);
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logoloop--fade::before {
+  left: 0;
+  background: linear-gradient(to right, var(--fade-color), transparent);
+}
+
+.logoloop--fade::after {
+  right: 0;
+  background: linear-gradient(to left, var(--fade-color), transparent);
+}
+
+/* Overrides provided by the user */
+
+/* Lift color on item hover */
+.logoloop--scale-hover .logoloop__item:hover span,
+.logoloop--scale-hover .logoloop__item:hover img {
+  filter: brightness(0) invert(0.9) !important;
+  transition: all 0.3s ease;
+}
+
+/* Separator dot between items - Centered in the gap */
+.logoloop__item::after {
+  content: '·';
+  color: rgba(255, 102, 0, 0.4);
+  font-size: 32px;
+  position: absolute;
+  right: calc(var(--gap) / 2);
+  top: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* Scale on hover effect */
+.logoloop--scale-hover .logoloop__item {
+  transition: transform 0.3s ease;
+}
+
+.logoloop--scale-hover .logoloop__item:hover {
+  transform: scale(1.05);
+}
