@@ -107,31 +107,26 @@ export default function Home() {
             Backed by engineers from
           </motion.p>
 
-          <div className="flex flex-wrap justify-center items-center gap-0">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
             {[
-              { name: 'Bank of America', delay: 0.1 },
-              { name: 'GlobalLogic',     delay: 0.2 },
-              { name: 'Cognizant',       delay: 0.3 },
-            ].map(({ name, delay }, i, arr) => (
+              { name: 'Bank of America', src: '/assets/boa.svg', delay: 0.1, h: 'h-8 md:h-10' },
+              { name: 'GlobalLogic',     src: '/assets/globallogic.svg', delay: 0.2, h: 'h-8 md:h-10' },
+              { name: 'Cognizant',       src: '/assets/cognizant.svg', delay: 0.3, h: 'h-6 md:h-8' },
+            ].map(({ name, src, delay, h }) => (
               <motion.div
                 key={name}
                 initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 0.5, y: 0 }}
                 viewport={{ once: true }}
+                whileHover={{ opacity: 1, scale: 1.05 }}
                 transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center"
+                className="flex items-center grayscale invert brightness-0"
               >
-                <span
-                  className="px-8 md:px-14 py-2 text-lg md:text-2xl font-semibold text-zinc-500 tracking-tight
-                             hover:text-zinc-200 transition-colors duration-500 cursor-default select-none
-                             whitespace-nowrap"
-                  style={{ letterSpacing: '-0.02em' }}
-                >
-                  {name}
-                </span>
-                {i < arr.length - 1 && (
-                  <span className="w-px h-5 bg-white/10 shrink-0" />
-                )}
+                <img 
+                  src={src} 
+                  alt={name} 
+                  className={`${h} w-auto object-contain`} 
+                />
               </motion.div>
             ))}
           </div>

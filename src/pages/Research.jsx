@@ -89,12 +89,12 @@ export default function Research() {
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="card-surface p-10 flex flex-col md:flex-row gap-8 items-start group cursor-default"
               >
-                <div className="relative w-16 h-16 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 group-hover:bg-accent-cyan/10 group-hover:text-accent-cyan transition-all duration-500">
-                  <div className="absolute inset-0 bg-accent-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative w-16 h-16 rounded-2xl flex items-center justify-center bg-white/5 text-white shrink-0 group-hover:bg-accent-purple/10 group-hover:text-accent-purple transition-all duration-500">
+                  <div className="absolute inset-0 bg-accent-purple/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <Icon className="w-7 h-7 relative z-10" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-cyan transition-colors">{title}</h3>
+                  <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-accent-purple transition-colors">{title}</h3>
                   <p className="text-zinc-500 text-sm leading-relaxed">{desc}</p>
                 </div>
               </motion.div>
