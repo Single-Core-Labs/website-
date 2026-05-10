@@ -102,31 +102,32 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-[9px] font-mono text-zinc-600 uppercase tracking-[0.35em] text-center mb-10 md:mb-14"
+            className="text-[10px] md:text-xs font-mono text-zinc-500 uppercase tracking-[0.4em] text-center mb-12 md:mb-16"
           >
             Backed by engineers from
           </motion.p>
 
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+          <div className="flex flex-wrap justify-center items-center gap-x-12 md:gap-x-20 gap-y-8">
             {[
-              { name: 'Bank of America', src: '/assets/boa.svg', delay: 0.1, h: 'h-8 md:h-10' },
-              { name: 'GlobalLogic',     src: '/assets/globallogic.svg', delay: 0.2, h: 'h-8 md:h-10' },
-              { name: 'Cognizant',       src: '/assets/cognizant.svg', delay: 0.3, h: 'h-6 md:h-8' },
-            ].map(({ name, src, delay, h }) => (
+              { name: 'Bank of America', delay: 0.1 },
+              { name: 'GlobalLogic',     delay: 0.2 },
+              { name: 'Cognizant',       delay: 0.3 },
+            ].map(({ name, delay }) => (
               <motion.div
                 key={name}
                 initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 0.5, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ opacity: 1, scale: 1.05 }}
-                transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center grayscale invert brightness-0"
+                transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+                className="group"
               >
-                <img 
-                  src={src} 
-                  alt={name} 
-                  className={`${h} w-auto object-contain`} 
-                />
+                <span
+                  className="text-2xl md:text-4xl font-display font-medium text-white/20 
+                             group-hover:text-white transition-all duration-700 cursor-default select-none
+                             whitespace-nowrap tracking-tightest"
+                >
+                  {name}
+                </span>
               </motion.div>
             ))}
           </div>
