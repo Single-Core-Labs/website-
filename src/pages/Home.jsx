@@ -59,22 +59,9 @@ export default function Home() {
               >
 
                 <h1 className="font-display font-light text-5xl lg:text-[84px] leading-[1.05] tracking-tightest text-white mb-8">
-                  <DecryptedText 
-                    text="AI at scale" 
-                    animateOn="view" 
-                    revealDirection="start"
-                    sequential={true}
-                    encryptedClassName="text-purple-500"
-                  />
+                  AI at scale
                   <br />
-                  <DecryptedText 
-                    text="Without the chaos" 
-                    animateOn="view" 
-                    revealDirection="start"
-                    sequential={true}
-                    speed={100}
-                    encryptedClassName="text-purple-500"
-                  />
+                  Without the chaos
                 </h1>
               </motion.div>
               
@@ -84,14 +71,7 @@ export default function Home() {
                 transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="text-zinc-400 text-lg lg:text-xl max-w-2xl mb-12 leading-relaxed font-light tracking-tight"
               >
-                <DecryptedText 
-                  text="Single Core Labs delivers agentic solutions to power the next generation of enterprise AI." 
-                  animateOn="view"
-                  revealDirection="start"
-                  sequential={true}
-                  speed={30}
-                  encryptedClassName="text-purple-500 opacity-50"
-                />
+                Single Core Labs delivers agentic solutions to power the next generation of enterprise AI.
               </motion.div>
 
               <motion.div
@@ -115,15 +95,45 @@ export default function Home() {
       </section>
 
       {/* ─── TRUST BAR ─── */}
-      <section className="py-12 md:py-20 bg-black border-y border-white/5">
+      <section className="py-14 md:py-24 bg-black border-y border-white/[0.06] overflow-hidden">
         <div className="section-container">
-          <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em] text-center mb-8 md:mb-12">
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-[9px] font-mono text-zinc-600 uppercase tracking-[0.35em] text-center mb-10 md:mb-14"
+          >
             Backed by engineers from
-          </p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center opacity-30 grayscale hover:opacity-60 transition-all duration-1000">
-            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">Bank of America</span>
-            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">GlobalLogic</span>
-            <span className="text-xl md:text-3xl font-bold text-white tracking-tighter">Cognizant</span>
+          </motion.p>
+
+          <div className="flex flex-wrap justify-center items-center gap-0">
+            {[
+              { name: 'Bank of America', delay: 0.1 },
+              { name: 'GlobalLogic',     delay: 0.2 },
+              { name: 'Cognizant',       delay: 0.3 },
+            ].map(({ name, delay }, i, arr) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+                className="flex items-center"
+              >
+                <span
+                  className="px-8 md:px-14 py-2 text-lg md:text-2xl font-semibold text-zinc-500 tracking-tight
+                             hover:text-zinc-200 transition-colors duration-500 cursor-default select-none
+                             whitespace-nowrap"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  {name}
+                </span>
+                {i < arr.length - 1 && (
+                  <span className="w-px h-5 bg-white/10 shrink-0" />
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

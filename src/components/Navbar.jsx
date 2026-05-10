@@ -5,36 +5,33 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 
 // Nav config — items with `children` get a dropdown
 const navItems = [
-  { to: '/', label: 'Home' },
+  { to: '/products', label: 'Products' },
+  { to: '/research', label: 'Research' },
   {
     label: 'Solutions',
-    to: '/services',
+    to: '/enterprise/agentic',
     children: [
-      { to: '/services', label: 'Services', desc: 'Expert AI implementation' },
-      { to: '/enterprise', label: 'Enterprise', desc: 'Solutions for large scale' },
       { to: '/enterprise/agentic', label: 'Agentic Solutions', desc: 'Build autonomous AI agents' },
       { to: '/enterprise/genai', label: 'Generative AI', desc: 'RAG and LLM fine-tuning' },
-      { to: '/case-studies', label: 'Case Studies', desc: 'Real-world impact stories' },
     ],
   },
-  { to: '/research', label: 'Research' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/enterprise', label: 'Enterprise' },
+  { to: '/government', label: 'Government' },
+  { to: '/blog', label: 'Resources' },
+  { to: '/contact', label: 'Book a Demo →' },
 ]
 
 // Flat list for mobile drawer
 const allLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
+  { to: '/products', label: 'Products' },
   { to: '/research', label: 'Research' },
+  { to: '/enterprise/agentic', label: 'Solutions' },
+  { to: '/enterprise/agentic', label: '↳ Agentic Solutions' },
+  { to: '/enterprise/genai', label: '↳ GenAI Solutions' },
   { to: '/enterprise', label: 'Enterprise' },
-  { to: '/enterprise/agentic', label: 'Agentic Solutions' },
-  { to: '/enterprise/genai', label: 'GenAI Solutions' },
-  { to: '/case-studies', label: 'Case Studies' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/government', label: 'Government' },
+  { to: '/blog', label: 'Resources' },
+  { to: '/contact', label: 'Book a Demo →' },
 ]
 
 function DropdownMenu({ items }) {
@@ -190,10 +187,10 @@ export default function Navbar() {
           ))}
           <div className="w-px h-4 bg-white/10 mx-2" />
           <Link
-            to="/contact"
+            to="/login"
             className="btn-primary !py-2.5 !px-6 !text-[11px] uppercase tracking-widest"
           >
-            Start
+            Log In
           </Link>
         </nav>
       </motion.header>
@@ -238,10 +235,10 @@ export default function Navbar() {
               </NavLink>
             ))}
             <Link
-              to="/contact"
+              to="/login"
               className="w-full text-center bg-black text-white py-4 rounded-full font-bold border border-white/10 hover:border-white/40 transition-all mt-2"
             >
-              Get started
+              Log In
             </Link>
           </motion.div>
         )}
