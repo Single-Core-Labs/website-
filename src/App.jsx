@@ -4,6 +4,8 @@ import { lazy, Suspense } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import YCBackground from './components/YCBackground'
+import YCCursor from './components/YCCursor'
 
 const Home = lazy(() => import('./pages/Home'))
 const Research = lazy(() => import('./pages/Research'))
@@ -22,7 +24,7 @@ const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'))
 function PageLoader() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-white/10 border-t-white/50 rounded-full animate-spin" />
+      <div className="w-8 h-8 border-2 border-white/10 border-t-[#FF6600] rounded-full animate-spin" />
     </div>
   )
 }
@@ -35,6 +37,7 @@ function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/solutions" element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/research" element={<Research />} />
           <Route path="/contact" element={<Contact />} />
@@ -56,13 +59,14 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-bg-primary flex flex-col relative">
-        <div className="grain-overlay pointer-events-none" />
-        <div className="global-grid pointer-events-none" />
+      <div className="min-h-screen bg-[#0A0A0B] text-white selection:bg-[#FF6600]/30 selection:text-white">
+        <YCCursor />
+        <YCBackground />
         <Navbar />
-        <main className="flex-1">
+        <main className="relative z-10">
           <AnimatedRoutes />
         </main>
+        {/* Only show footer on subpages or at the bottom of home if needed */}
         <Footer />
       </div>
     </BrowserRouter>
